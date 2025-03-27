@@ -73,7 +73,7 @@ def load_regs():
 
 
 class LogParser:
-    def __init__(self, log_format, indir='./', outdir='./result/', rex=[], data_type='2k', shot=0, example_size=0,
+    def __init__(self, log_format, indir='./', outdir='./result/', rex=[], data_type='2k', shot=0, example_size=10,
                  # 修改为 deepseek-chat
                  model="deepseek-chat", selection_method="LILAC"):
         self.path = indir

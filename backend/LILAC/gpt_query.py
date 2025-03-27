@@ -62,7 +62,7 @@ def infer_llm(instruction, exemplars, query, log_message,
 
             url = f"{deepseek.api_base}/chat/completions"
             print(f"Request URL: {url}")
-            print(f"Request Headers: {headers}")
+            #print(f"Request Headers: {headers}")
             print(f"Request Payload: {payload}")
 
             response = requests.post(
