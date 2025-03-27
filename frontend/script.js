@@ -1,5 +1,5 @@
 let username;
-const backendApiUrl = 'http://localhost:8080';
+const backendApiUrl = 'http://192.168.50.11:8080';
 
 function showModule(moduleId) {
     const modules = document.querySelectorAll('.module');

@@ -45,9 +45,11 @@ def infer_llm(instruction, exemplars, query, log_message, model='deepseek-reason
     messages.append({"role": "user", "content": query})
 
     retry_times = 0
+    max_retries = 5  # 增加重试次数
+    timeout = 30  # 增加超时时间为 30 秒
     print("model: ", model)
 
-    while retry_times < 3:
+    while retry_times < max_retries:
         try:
             # 使用 requests 直接调用 DeepSeek API
             headers = {
@@ -70,7 +72,7 @@ def infer_llm(instruction, exemplars, query, log_message, model='deepseek-reason
                 url,
                 headers=headers,
                 json=payload,
-                timeout=40  # 设置超时时间为 40 秒，可根据需要调整
+                timeout=timeout  # 使用新的超时时间
             )
             response.raise_for_status()
 
@@ -82,7 +84,7 @@ def infer_llm(instruction, exemplars, query, log_message, model='deepseek-reason
             if "list index out of range" in str(e):
                 break
             retry_times += 1
-            time.sleep(1)  # 添加延迟避免频繁调用
+            time.sleep(2)  # 增加延迟时间为 2 秒，避免频繁调用
 
     print(f"Failed to get response from DeepSeek after {retry_times} retries.")
     if exemplars is not None and len(exemplars) > 0:

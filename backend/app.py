@@ -10,7 +10,7 @@ from LILAC.LILAC import save_results_to_csv
 from flask_cors import CORS  # 导入 CORS
 
 app = Flask(__name__)
-CORS(app, origins="http://172.24.88.83:8080")  # 配置允许的源
+CORS(app, origins="http://192.168.50.11:8080")  # 配置允许的源
 
 # 配置项
 LOG_FILE_PATH = 'log.txt'
@@ -120,42 +120,44 @@ def cache_templates(log_data, cache):
 
 # 日志解析模块
 def parse_logs(log_data, cache):
-    try:
-        start_time = time.time()
-        parsed_count = 0
-        parsed_results = []
-        template_lines = []  # 用于存储模板信息
+    start_time = time.time()
+    parsed_count = 0
+    parsed_results = []
+    template_lines = []  # 用于存储模板信息
 
-        for log in log_data:
-            result = cache.match_event(log)
-            if result[0] == "NoMatch":
-                new_template, normal = query_template_from_deepseek_with_check(log)
-                template_id = cache.add_templates(new_template, normal, result[2])
-            else:
-                template_id = result[1]
+    for log in log_data:
+        # 尝试在模板缓存中查找匹配的模板
+        result = cache.match_event(log)
+        if result[0] == "NoMatch":
+            # 未找到匹配的模板，调用大语言模型进行模板查询
+            new_template, normal = query_template_from_deepseek_with_check(log)
+            template_id = cache.add_templates(new_template, normal, result[2])
+        else:
+            # 找到匹配的模板，直接使用该模板进行解析
+            template_id = result[1]
 
-            parsed_count += 1
-            parsed_time = time.time() - start_time
-            parsed_results.append({
-                'message': log,
-                'template': cache.template_list[template_id],
-                'time': parsed_time
-            })
-            template_lines.append(cache.template_list[template_id])
+        parsed_count += 1
+        parsed_time = time.time() - start_time
+        parsed_results.append({
+            'message': log,
+            'template': cache.template_list[template_id],
+            'time': parsed_time
+        })
+        template_lines.append(cache.template_list[template_id])
 
-        end_time = time.time()
-        parsing_speed = parsed_count / (end_time - start_time)
+    end_time = time.time()
+    parsing_speed = parsed_count / (end_time - start_time)
 
-        # 将模板信息写入 template.txt 文件
-        os.makedirs(TEMPLATE_DIR, exist_ok=True)  # 确保目录存在
-        with open(TEMPLATE_FILE_PATH, 'w') as template_file:
-            for line in template_lines:
-                template_file.write(line + '\n')
+    # 将模板信息写入 template.txt 文件
+    template_dir = os.path.join(os.path.dirname(__file__), 'templates')
+    os.makedirs(template_dir, exist_ok=True)  # 确保目录存在
+    template_file_path = os.path.join(template_dir, 'template.txt')
 
-        return parsed_count, parsing_speed, parsed_results
-    except Exception as e:
-        print(f"Parse logs error: {e}")
-        return 0, 0, []
+    with open(template_file_path, 'w') as template_file:
+        for line in template_lines:
+            template_file.write(line + '\n')
+
+    return parsed_count, parsing_speed, parsed_results
 
 # 结果输出模块
 def output_results(parsed_results):
