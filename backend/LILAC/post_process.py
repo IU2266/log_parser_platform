@@ -6,7 +6,6 @@ param_regex = [
 ]
 
 
-
 def correct_single_template(template, user_strings=None):
     """Apply all rules to process a template.
 

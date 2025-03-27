@@ -3,7 +3,6 @@ import re
 import string
 import random
 
-
 def lcs_distance(x, y):
     seq1 = x.split()
     seq2 = y.split()

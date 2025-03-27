@@ -8,7 +8,6 @@ import multiprocessing as mp
 import string
 
 
-
 def print_tree(move_tree, indent=' '):
     for key, value in move_tree.items():
         if isinstance(value, dict):

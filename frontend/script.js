@@ -1,7 +1,6 @@
 let username;
 const backendApiUrl = 'http://172.25.101.33:8080';
 
-
 function showModule(moduleId) {
     const modules = document.querySelectorAll('.module');
     modules.forEach(module => {
