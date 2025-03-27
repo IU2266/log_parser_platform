@@ -1,5 +1,5 @@
 let username;
-const backendApiUrl = 'http://localhost:5000';
+const backendApiUrl = 'http://localhost:8080';
 
 function showModule(moduleId) {
     const modules = document.querySelectorAll('.module');
@@ -33,10 +33,12 @@ function uploadLogFile() {
             method: 'POST',
             body: formData
         })
-        .then(response => response.json())
-        .then(data => {
+       .then(response => response.json())
+       .then(data => {
             hasUploadedFile = true;
-            document.getElementById('data-source-list').innerHTML = `数据源名称: ${file.name}, 类型: 文件, 状态: 正常采集`;
+            // 显示数据源列表
+            document.getElementById('data-source-list').innerHTML = `数据源名称: ${data.data_source_name}, 类型: 文件, 状态: 正常采集`;
+            // 显示采集的实时状态
             document.getElementById('collection-status').innerHTML = `采集的日志数量: ${data.log_count}, 采集速度: ${data.collection_speed} 条/秒`;
         });
     }
@@ -99,9 +101,12 @@ function viewCache() {
 
 function parseLogs() {
     if (hasPreprocessed) {
-        fetch(`${backendApiUrl}/parse`)
-        .then(response => response.json())
-        .then(data => {
+        fetch(`${backendApiUrl}/parse`, {
+            method: 'GET',
+            timeout: 60000  // 设置超时时间为 60 秒，可根据需要调整
+        })
+       .then(response => response.json())
+       .then(data => {
             hasParsed = true;
             document.getElementById('parsing-progress').innerHTML = `已解析的日志数量: ${data.parsed_count}, 解析速度: ${data.parsing_speed} 条/秒`;
             const resultList = data.results.map(result => `日志消息: ${result.message}, 模板: ${result.template}, 解析时间: ${result.time}`).join('<br>');
@@ -109,7 +114,6 @@ function parseLogs() {
         });
     }
 }
-
 function outputResults() {
     if (hasParsed) {
         fetch(`${backendApiUrl}/output`)

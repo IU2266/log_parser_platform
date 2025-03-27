@@ -16,7 +16,7 @@ def get_deepseek_key(file_path="D:/log_parser_platform/deepseek_key.txt"):
             api_base = file.readline().strip()
             api_key = file.readline().strip()
             print(f"API Base: {api_base}")  # 调试输出
-            print(f"API Key: {'*' * (len(api_key)-4)}{api_key[-4:]}")  # 安全打印密钥
+           # print(f"API Key: {'*' * (len(api_key)-4)}{api_key[-4:]}")  # 安全打印密钥
         return api_base, api_key
     except Exception as e:
         print(f"Error loading API key: {e}")
@@ -27,10 +27,13 @@ deepseek.api_base, deepseek.api_key = get_deepseek_key()
 
 
 def infer_llm(instruction, exemplars, query, log_message, model='deepseek-reasoner', temperature=0.0, max_tokens=2048):
+    # 添加更详细的日志模板抽象要求
+    detailed_instruction = instruction + " 日期格式如 Thu Jun 09 06:07:04 2005 应抽象为 {date}，版本号如 1.9dev2、2.0.49 应抽象为 {version}，进程 ID 如 2330、2337 应抽象为 {pid}，文件路径如 /usr/sbin/suexec、/etc/httpd/conf/workers2.properties 应抽象为 {file_path}。"
+
     # 构造 messages
     messages = [
         {"role": "system", "content": "You are an expert of log parsing, and now you will help to do log parsing."},
-        {"role": "user", "content": instruction},
+        {"role": "user", "content": detailed_instruction},
         {"role": "assistant", "content": "Sure, I can help you with log parsing."},
     ]
 
@@ -67,7 +70,7 @@ def infer_llm(instruction, exemplars, query, log_message, model='deepseek-reason
                 url,
                 headers=headers,
                 json=payload,
-                timeout=20  # 设置超时时间为 20 秒，可根据需要调整
+                timeout=40  # 设置超时时间为 40 秒，可根据需要调整
             )
             response.raise_for_status()
 
@@ -89,6 +92,9 @@ def infer_llm(instruction, exemplars, query, log_message, model='deepseek-reason
                          'answer': 'Log template: `try to connected to host: {ip_address}, finished.`'}]
             return infer_llm(instruction, examples, query, log_message, model, temperature, max_tokens)
     return 'Log message: `{}`'.format(log_message)
+
+
+
 def get_response_from_deepseek_key(query, examples=[], model='deepseek-reasoner', temperature=0.0):
     instruction = "I want you to act like an expert of log parsing. I will give you a log message delimited by backticks. You must identify and abstract all the dynamic variables in logs with {placeholder} and output a static log template. Print the input log's template delimited by backticks."
     if examples is None or len(examples) == 0:

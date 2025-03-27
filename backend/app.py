@@ -6,11 +6,19 @@ import pandas as pd
 from flask import Flask, request, jsonify, send_file, send_from_directory
 from LILAC.parsing_cache import ParsingCache
 from LILAC.gpt_query import query_template_from_deepseek_with_check
-from LILAC.LILAC import save_results_to_csv, load_regs, LogParser
+from LILAC.LILAC import save_results_to_csv
 from flask_cors import CORS  # 导入 CORS
 
 app = Flask(__name__)
-CORS(app)  # 启用 CORS，允许所有源访问
+CORS(app, origins="http://172.24.88.83:8080")  # 配置允许的源
+
+# 配置项
+LOG_FILE_PATH = 'log.txt'
+TEMPLATE_DIR = os.path.join(os.path.dirname(__file__), 'templates')
+TEMPLATE_FILE_PATH = os.path.join(TEMPLATE_DIR, 'template.txt')
+CACHE_FILE_PATH = 'cache.pkl'
+OUTPUT_FILE_PATH = 'output.csv'
+OUTPUT_TEMPLATE_FILE_PATH = 'output_templates.csv'
 
 # 获取本地 IP 地址
 def get_local_ip():
@@ -25,32 +33,47 @@ def get_local_ip():
 
 # 日志采集模块
 def upload_file(log_file):
-    start_time = time.time()
-    log_lines = log_file.readlines()
-    end_time = time.time()
-    log_count = len(log_lines)
-    collection_speed = log_count / (end_time - start_time) if (end_time - start_time) > 0 else 0
+    try:
+        start_time = time.time()
+        log_lines = log_file.readlines()
+        end_time = time.time()
+        log_count = len(log_lines)
+        elapsed_time = end_time - start_time
+        collection_speed = log_count / elapsed_time if elapsed_time > 0 else 0  # 避免除以零
 
-    # 创建 log.txt 文件并写入日志数据
-    with open('log.txt', 'w') as log_file:
-        log_file.writelines([line.decode('utf-8') for line in log_lines])
+        # 打印每一行日志数据的类型
+        for line in log_lines:
+            print(f"Line type: {type(line)}, Content: {line}")
 
-    return log_lines, log_count, collection_speed
+        # 创建 log.txt 文件并写入日志数据
+        with open(LOG_FILE_PATH, 'w') as log_file:
+            log_file.writelines([line.decode('utf-8') for line in log_lines])
+
+        return log_lines, log_count, collection_speed
+    except Exception as e:
+        print(f"Upload file error: {e}")
+        return [], 0, 0
 
 # 日志预处理模块
 def preprocess_logs(log_data):
-    before_example = log_data[0].decode('utf-8') if log_data else ""
-    # 清洗和格式化处理
-    log_data = [re.sub(r'\s+', ' ', line.decode('utf-8').strip()) for line in log_data]
-    after_example = log_data[0] if log_data else ""
-    removed_count = len(before_example) - len(after_example) if log_data else 0
-    # 生成正则表达式并转换为 DataFrame
-    log_format = '<Date> <Time> <Pid> <Level> <Component>: <Content>'
-    headers, regex = generate_logformat_regex(log_format)
-    logdf = log_to_dataframe(log_data, regex, headers, log_format)
-    field_count = len(logdf.columns) if not logdf.empty else 0
-    return log_data, before_example, after_example, removed_count, field_count
-
+    try:
+        # 假设 log_data 是字节串，将其解码为字符串
+        if isinstance(log_data, bytes):
+            log_data = log_data.decode('utf-8')
+        before_example = log_data[0]  # 这里假设 log_data 是字符串列表
+        # 清洗和格式化处理
+        log_data = [re.sub(r'\s+', ' ', line.strip()) for line in log_data]
+        after_example = log_data[0]
+        removed_count = len(before_example) - len(after_example)
+        # 生成正则表达式并转换为 DataFrame
+        log_format = '<Date> <Time> <Pid> <Level> <Component>: <Content>'
+        headers, regex = generate_logformat_regex(log_format)
+        logdf = log_to_dataframe(log_data, regex, headers, log_format)
+        field_count = len(logdf.columns)
+        return log_data, before_example, after_example, removed_count, field_count
+    except Exception as e:
+        print(f"Preprocess logs error: {e}")
+        return [], "", "", 0, 0
 def generate_logformat_regex(logformat):
     headers = []
     splitters = re.split(r'(<[^<>]+>)', logformat)
@@ -62,7 +85,6 @@ def generate_logformat_regex(logformat):
         else:
             header = splitters[k].strip('<').strip('>')
             regex += '(?P<%s>.*?)' % header
-            headers.append(header)
     regex = re.compile('^' + regex + '$')
     return headers, regex
 
@@ -82,75 +104,78 @@ def log_to_dataframe(log_data, regex, headers, logformat):
 
 # 模板缓存模块
 def cache_templates(log_data, cache):
-    template_count = len(cache.template_list)
-    hit_count = 0
-    total_count = len(log_data)
-    for log in log_data:
-        result = cache.match_event(log)
-        if result[0] != "NoMatch":
-            hit_count += 1
-    cache_hit_rate = (hit_count / total_count) * 100 if total_count > 0 else 0
-    return cache, template_count, cache_hit_rate
+    try:
+        template_count = len(cache.template_list)
+        hit_count = 0
+        total_count = len(log_data)
+        for log in log_data:
+            result = cache.match_event(log)
+            if result[0] != "NoMatch":
+                hit_count += 1
+        cache_hit_rate = (hit_count / total_count) * 100 if total_count > 0 else 0
+        return cache, template_count, cache_hit_rate
+    except Exception as e:
+        print(f"Cache templates error: {e}")
+        return cache, 0, 0
 
 # 日志解析模块
 def parse_logs(log_data, cache):
-    start_time = time.time()
-    parsed_count = 0
-    parsed_results = []
-    template_lines = []  # 用于存储模板信息
+    try:
+        start_time = time.time()
+        parsed_count = 0
+        parsed_results = []
+        template_lines = []  # 用于存储模板信息
 
-    for log in log_data:
-        result = cache.match_event(log)
-        if result[0] == "NoMatch":
-            new_template, normal = query_template_from_deepseek_with_check(log)
-            template_id = cache.add_templates(new_template, normal, result[2])
-        else:
-            template_id = result[1]
+        for log in log_data:
+            result = cache.match_event(log)
+            if result[0] == "NoMatch":
+                new_template, normal = query_template_from_deepseek_with_check(log)
+                template_id = cache.add_templates(new_template, normal, result[2])
+            else:
+                template_id = result[1]
 
-        parsed_count += 1
-        parsed_time = time.time() - start_time
-        parsed_results.append({
-            'message': log,
-            'template': cache.template_list[template_id],
-            'time': parsed_time
-        })
-        template_lines.append(cache.template_list[template_id])
+            parsed_count += 1
+            parsed_time = time.time() - start_time
+            parsed_results.append({
+                'message': log,
+                'template': cache.template_list[template_id],
+                'time': parsed_time
+            })
+            template_lines.append(cache.template_list[template_id])
 
-    end_time = time.time()
-    parsing_speed = parsed_count / (end_time - start_time) if (end_time - start_time) > 0 else 0
+        end_time = time.time()
+        parsing_speed = parsed_count / (end_time - start_time)
 
-    # 将模板信息写入 template.txt 文件
-    template_dir = os.path.join(os.path.dirname(__file__), 'templates')
-    os.makedirs(template_dir, exist_ok=True)  # 确保目录存在
-    template_file_path = os.path.join(template_dir, 'template.txt')
+        # 将模板信息写入 template.txt 文件
+        os.makedirs(TEMPLATE_DIR, exist_ok=True)  # 确保目录存在
+        with open(TEMPLATE_FILE_PATH, 'w') as template_file:
+            for line in template_lines:
+                template_file.write(line + '\n')
 
-    with open(template_file_path, 'w') as template_file:
-        for line in template_lines:
-            template_file.write(line + '\n')
-
-    return parsed_count, parsing_speed, parsed_results
+        return parsed_count, parsing_speed, parsed_results
+    except Exception as e:
+        print(f"Parse logs error: {e}")
+        return 0, 0, []
 
 # 结果输出模块
 def output_results(parsed_results):
-    # 保存为 CSV 文件
-    log_file = 'log.txt'
-    template_file = os.path.join(os.path.dirname(__file__), 'templates', 'template.txt')
-    cache_file = 'cache.pkl'
-    output_file = 'output.csv'
-    output_template_file = 'output_templates.csv'
-    save_results_to_csv(log_file, template_file, cache_file, output_file, output_template_file)
-    # 统计不同模板的出现频率
-    frequency = {}
-    for result in parsed_results:
-        template = result['template']
-        if template in frequency:
-            frequency[template] += 1
-        else:
-            frequency[template] = 1
-    # 计算解析准确率（这里简单假设全部正确）
-    accuracy = 100
-    return frequency, accuracy
-
+    try:
+        # 保存为 CSV 文件
+        save_results_to_csv(LOG_FILE_PATH, TEMPLATE_FILE_PATH, CACHE_FILE_PATH, OUTPUT_FILE_PATH, OUTPUT_TEMPLATE_FILE_PATH)
+        # 统计不同模板的出现频率
+        frequency = {}
+        for result in parsed_results:
+            template = result['template']
+            if template in frequency:
+                frequency[template] += 1
+            else:
+                frequency[template] = 1
+        # 计算解析准确率（这里简单假设全部正确）
+        accuracy = 100
+        return frequency, accuracy
+    except Exception as e:
+        print(f"Output results error: {e}")
+        return {}, 0
 
 # 添加根路径路由
 @app.route('/')
@@ -186,15 +211,19 @@ def upload():
     if log_file:
         log_data, log_count, collection_speed = upload_file(log_file)
         return jsonify({
+            'data_source_name': log_file.filename,  # 添加数据源名称
             'log_count': log_count,
             'collection_speed': collection_speed
         })
+    return jsonify({"error": "No log file provided"}), 400
+
+
 
 @app.route('/preprocess', methods=['GET'])
 def preprocess():
     try:
-        with open('log.txt', 'r') as f:
-            log_data = f.read().encode('utf-8').splitlines()
+        with open(LOG_FILE_PATH, 'r') as f:
+            log_data = f.readlines()
         log_data, before_example, after_example, removed_count, field_count = preprocess_logs(log_data)
         return jsonify({
             'before_example': before_example,
@@ -208,8 +237,8 @@ def preprocess():
 @app.route('/cache', methods=['GET'])
 def cache():
     try:
-        with open('log.txt', 'r') as f:
-            log_data = f.read().encode('utf-8').splitlines()
+        with open(LOG_FILE_PATH, 'r') as f:
+            log_data = f.readlines()
         cache = ParsingCache()
         cache, template_count, cache_hit_rate = cache_templates(log_data, cache)
         return jsonify({
@@ -221,30 +250,35 @@ def cache():
 
 @app.route('/clear-cache', methods=['GET'])
 def clear_cache():
-    # 这里简单返回清空信息，实际可添加清空缓存逻辑
-    return jsonify({
-        'message': '缓存已清空'
-    })
+    try:
+        # 实际的清空缓存逻辑
+        cache = ParsingCache()
+        cache.clear()
+        return jsonify({
+            'message': '缓存已清空'
+        })
+    except Exception as e:
+        print(f"Clear cache error: {e}")
+        return jsonify({"error": "Failed to clear cache"}), 500
 
 @app.route('/view-cache', methods=['GET'])
 def view_cache():
     try:
-        with open('log.txt', 'r') as f:
-            log_data = f.read().encode('utf-8').splitlines()
+        # 实际的查看缓存逻辑
         cache = ParsingCache()
-        cache, _, _ = cache_templates(log_data, cache)
-        templates = cache.template_list
+        templates = cache.get_templates()
         return jsonify({
             'templates': templates
         })
-    except FileNotFoundError:
-        return jsonify({"error": "Log file not found"}), 404
+    except Exception as e:
+        print(f"View cache error: {e}")
+        return jsonify({"error": "Failed to view cache"}), 500
 
 @app.route('/parse', methods=['GET'])
 def parse():
     try:
-        with open('log.txt', 'r') as f:
-            log_data = f.read().encode('utf-8').splitlines()
+        with open(LOG_FILE_PATH, 'r') as f:
+            log_data = f.readlines()
         cache = ParsingCache()
         parsed_count, parsing_speed, parsed_results = parse_logs(log_data, cache)
         return jsonify({
@@ -258,8 +292,8 @@ def parse():
 @app.route('/output', methods=['GET'])
 def output():
     try:
-        with open('log.txt', 'r') as f:
-            log_data = f.read().encode('utf-8').splitlines()
+        with open(LOG_FILE_PATH, 'r') as f:
+            log_data = f.readlines()
         cache = ParsingCache()
         parsed_count, parsing_speed, parsed_results = parse_logs(log_data, cache)
         frequency, accuracy = output_results(parsed_results)
@@ -274,7 +308,6 @@ def output():
 @app.errorhandler(404)
 def page_not_found(e):
     return jsonify({"error": "Page not found"}), 404
-
 
 if __name__ == "__main__":
     local_ip = get_local_ip()

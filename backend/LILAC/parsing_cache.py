@@ -7,6 +7,7 @@ from datetime import datetime
 import multiprocessing as mp
 import string
 
+
 def print_tree(move_tree, indent=' '):
     for key, value in move_tree.items():
         if isinstance(value, dict):
@@ -34,15 +35,8 @@ class ParsingCache(object):
     def __init__(self):
         self.template_tree = {}
         self.template_list = []
-    
-    def add_templates(self, event_template, insert=True, relevant_templates=[]):
 
-            # if "<*>" not in event_template:
-            #     self.template_tree["$CONSTANT_TEMPLATE$"][event_template] = event_template
-            #     continue
-            # original_template = event_template
-            # event_template = self._preprocess_template(event_template)
-            #print("event template after preprocess: ", event_template)
+    def add_templates(self, event_template, insert=True, relevant_templates=[]):
         template_tokens = message_split(event_template)
         if not template_tokens or event_template == "<*>":
             return -1
@@ -50,13 +44,12 @@ class ParsingCache(object):
             id = self.insert(event_template, template_tokens, len(self.template_list))
             self.template_list.append(event_template)
             return id
-        # print("relevant templates: ", relevant_templates)
         max_similarity = 0
         similar_template = None
         for rt in relevant_templates:
             splited_template1, splited_template2 = rt.split(), event_template.split()
             if len(splited_template1) != len(splited_template2):
-                continue 
+                continue
             similarity = lcs_similarity(splited_template1, splited_template2)
             if similarity > max_similarity:
                 max_similarity = similarity
@@ -71,8 +64,7 @@ class ParsingCache(object):
             id = self.insert(event_template, template_tokens, len(self.template_list))
             self.template_list.append(event_template)
             return id
-            #print("template tokens: ", template_tokens)
-            
+
     def insert(self, event_template, template_tokens, template_id):
         start_token = template_tokens[0]
         if start_token not in self.template_tree:
@@ -92,7 +84,7 @@ class ParsingCache(object):
             template_tokens.count("<*>"),
             event_template,
             template_id
-        )  # statistic length, count of <*>, original_log, template_id
+        )
         return template_id
 
     def modify(self, similar_template, event_template):
@@ -100,25 +92,20 @@ class ParsingCache(object):
         similar_tokens = similar_template.split()
         event_tokens = event_template.split()
         i = 0
-        print(similar_template)
-        print(event_template)
         for token in similar_tokens:
-            print(token, event_tokens[i])
             if token == event_tokens[i]:
                 merged_template.append(token)
             else:
                 merged_template.append("<*>")
             i += 1
         merged_template = " ".join(merged_template)
-        print("merged template: ", merged_template)
         success, old_ids = self.delete(similar_template)
         if not success:
             return False, -1
         self.insert(merged_template, message_split(merged_template), old_ids)
         self.template_list[old_ids] = merged_template
         return True, old_ids
-        
-    
+
     def delete(self, event_template):
         template_tokens = message_split(event_template)
         start_token = template_tokens[0]
@@ -137,17 +124,20 @@ class ParsingCache(object):
         del move_tree["".join(template_tokens)]
         return True, old_id
 
-
     def match_event(self, log):
         return tree_match(self.template_tree, log)
 
-
     def _preprocess_template(self, template):
-        # template = re.sub("<NUM>", "<*>", template)
-        # if template.count("<*>") > 50:
-        #     first_start_pos = template.index("<*>")
-        #     template = template[0 : first_start_pos + 3]
         return template
+
+    # 新增 clear 方法
+    def clear(self):
+        self.template_tree = {}
+        self.template_list = []
+
+    # 新增 get_templates 方法
+    def get_templates(self):
+        return self.template_list
 
 
 def post_process_tokens(tokens, punc):
@@ -164,45 +154,30 @@ def post_process_tokens(tokens, punc):
     return tokens
 
 
-#splitter_regex = re.compile("(<\*>|[^A-Za-z])")
 def message_split(message):
-    #print(string.punctuation)
     punc = "!\"#$%&'()+,-/:;=?@.[\]^_`{|}~"
-    #print(punc)
-    #punc = re.sub("[*<>\.\-\/\\]", "", string.punctuation)
     splitters = "\s\\" + "\\".join(punc)
-    #print(splitters)
-    #splitters = "\\".join(punc)
-    # splitter_regex = re.compile("([{}]+)".format(splitters))
     splitter_regex = re.compile("([{}])".format(splitters))
     tokens = re.split(splitter_regex, message)
 
     tokens = list(filter(lambda x: x != "", tokens))
-    
-    #print("tokens: ", tokens)
     tokens = post_process_tokens(tokens, punc)
 
     tokens = [
         token.strip()
         for token in tokens
-        if token != "" and token != ' ' 
+        if token != "" and token != ' '
     ]
     tokens = [
         token
         for idx, token in enumerate(tokens)
         if not (token == "<*>" and idx > 0 and tokens[idx - 1] == "<*>")
     ]
-    #print("tokens: ", tokens)
-    #tokens = [token.strip() for token in message.split()]
-    #print(tokens)
     return tokens
 
 
-
 def tree_match(match_tree, log_content):
-
     log_tokens = message_split(log_content)
-        #print("log tokens: ", log_tokens)
     template, template_id, parameter_str = match_template(match_tree, log_tokens)
     if template:
         return (template, template_id, parameter_str)
@@ -239,35 +214,33 @@ def get_all_templates(move_tree):
 
 
 def find_template(move_tree, log_tokens, result, parameter_list, depth):
-    flag = 0 # no futher find
+    flag = 0
     if len(log_tokens) == 0:
         for key, value in move_tree.items():
             if isinstance(value, tuple):
                 result.append((key, value, tuple(parameter_list)))
-                flag = 2 # match
+                flag = 2
         if "<*>" in move_tree:
             parameter_list.append("")
             move_tree = move_tree["<*>"]
             if isinstance(move_tree, tuple):
                 result.append(("<*>", None, None))
-                flag = 2 # match
+                flag = 2
             else:
                 for key, value in move_tree.items():
                     if isinstance(value, tuple):
                         result.append((key, value, tuple(parameter_list)))
-                        flag = 2 # match
-        # return (True, [])
+                        flag = 2
     else:
         token = log_tokens[0]
-
         relevant_templates = []
-        
+
         if token in move_tree:
-            find_result = find_template(move_tree[token], log_tokens[1:], result, parameter_list,depth+1)
+            find_result = find_template(move_tree[token], log_tokens[1:], result, parameter_list, depth + 1)
             if find_result[0]:
-                flag = 2 # match
+                flag = 2
             elif flag != 2:
-                flag = 1 # futher find but no match
+                flag = 1
                 relevant_templates = relevant_templates + find_result[1]
         if "<*>" in move_tree:
             if isinstance(move_tree["<*>"], dict):
@@ -278,32 +251,27 @@ def find_template(move_tree, log_tokens, result, parameter_list, depth):
                     if not isinstance(nv, tuple):
                         next_continue_keys.append(nk)
                 idx = 0
-                # print("len : ", len(log_tokens))
                 while idx < len(log_tokens):
                     token = log_tokens[idx]
-                    # print("try", token)
                     if token in next_continue_keys:
-                        # print("add", "".join(log_tokens[0:idx]))
                         parameter_list.append("".join(log_tokens[0:idx]))
-                        # print("End at", idx, parameter_list)
                         find_result = find_template(
-                            move_tree["<*>"], log_tokens[idx:], result, parameter_list,depth+1
+                            move_tree["<*>"], log_tokens[idx:], result, parameter_list, depth + 1
                         )
                         if find_result[0]:
-                            flag = 2 # match
+                            flag = 2
                         elif flag != 2:
-                            flag = 1 # futher find but no match
-                            # relevant_templates = relevant_templates + find_result[1]
+                            flag = 1
                         if parameter_list:
                             parameter_list.pop()
                     idx += 1
                 if idx == len(log_tokens):
                     parameter_list.append("".join(log_tokens[0:idx]))
                     find_result = find_template(
-                        move_tree["<*>"], log_tokens[idx + 1 :], result, parameter_list,depth+1
+                        move_tree["<*>"], log_tokens[idx + 1:], result, parameter_list, depth + 1
                     )
                     if find_result[0]:
-                        flag = 2 # match
+                        flag = 2
                     else:
                         if flag != 2:
                             flag = 1
@@ -315,7 +283,6 @@ def find_template(move_tree, log_tokens, result, parameter_list, depth):
     if flag == 1:
         return (False, relevant_templates)
     if flag == 0:
-        # print(log_tokens, flag)
         if depth >= 2:
             return (False, get_all_templates(move_tree))
         else:
