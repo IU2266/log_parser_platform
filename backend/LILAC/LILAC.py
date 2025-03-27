@@ -74,7 +74,7 @@ def load_regs():
 
 
 class LogParser:
-    def __init__(self, log_format, indir='./', outdir='./result/', rex=[], data_type='2k', shot=0, example_size=10,
+    def __init__(self, log_format, indir='./', outdir='./result/', rex=[], data_type='2k', shot=5, example_size=10,
                  # 修改为 deepseek-chat
                  model="deepseek-chat", selection_method="LILAC"):
         self.path = indir
@@ -91,7 +91,8 @@ class LogParser:
         start_time = datetime.now()
         self.logName = logName
         dataset_name = logName.split('_')[0]
-        output_path = os.path.join(f"../../temp/lilac_temp_{self.data_type}_{self.shot}_{self.example_size}_{self.model}", dataset_name)
+        output_path = os.path.join(
+            f"../../temp/lilac_temp_{self.data_type}_{self.shot}_{self.example_size}_{self.model}", dataset_name)
         evaluation_path = f"../../result/result_LILAC_{self.data_type}_{self.shot}_{self.example_size}_{self.model}/"
         if os.path.exists(os.path.join(evaluation_path, f"{dataset_name}_{self.data_type}.log_structured.csv")):
             print(f"{dataset_name} already exists.")
@@ -118,6 +119,7 @@ class LogParser:
             cache = ParsingCache()
             idx = 0
 
+        # 修改部分
         if self.shot > 0:
             file_path = f"D:/log_parser_platform/sampled_examples/{dataset_name}/{self.shot}shot.json"
             if os.path.exists(file_path):
@@ -133,7 +135,8 @@ class LogParser:
         cache_step = total_line // 5
         if idx + 1 < total_line:
             for log in list(self.df_log[idx:]['Content']):
-                flag = self.process_log(cache, [log], log_messages, log_templates, idx, prompt_cases, regs_common, total_line)
+                flag = self.process_log(cache, [log], log_messages, log_templates, idx, prompt_cases, regs_common,
+                                        total_line)
                 idx += 1
                 if flag:
                     num_query += 1

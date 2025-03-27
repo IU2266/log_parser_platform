@@ -96,16 +96,128 @@ def infer_llm(instruction, exemplars, query, log_message,
 def get_response_from_deepseek_key(query, examples=[],
                                    # 修改为 deepseek-chat
                                    model='deepseek-chat', temperature=0.0):
-    instruction = "I want you to act like an expert of log parsing. I will give you a log message delimited by backticks. You must identify and abstract all the dynamic variables in logs with {placeholder} and output a static log template. Print the input log's template delimited by backticks."
+    instruction = "I want you to act like an expert of log parsing. I will give you a log message delimited by backticks. You must identify and abstract all the dynamic variables in logs with {placeholder} and output a static log template. Print ONLY the input log's template delimited by backticks, without any additional explanations. The template should be specific enough to match the original log message."
+
     if examples is None or len(examples) == 0:
-        examples = [{'query': 'Log message: `try to connected to host: 172.16.254.1, finished.`',
-                     'answer': 'Log template: `try to connected to host: {ip_address}, finished.`'}]
+        examples = [
+            {'query': 'Log message: `try to connected to host: 172.16.254.1, finished.`',
+             'answer': 'Log template: `try to connected to host: {ip_address}, finished.`'},
+            {
+                'query': 'Log message: `Feb 28 01:49:02 combo sshd(pam_unix)[6737]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=www.buller.hoover.fresno.k12.ca.us  user=root`',
+                'answer': 'Log template: `{date} {time} {host} sshd(pam_unix)[{pid}]: authentication failure; logname= uid={uid} euid={euid} tty={ssh_type} ruser= rhost={rhost}  user={user}`'},
+            # 可以添加更多示例
+            {"query": "LDAP: Built with OpenLDAP LDAP SDK", "answer": "LDAP: Built with OpenLDAP LDAP SDK"},
+            {"query": "LDAP: SSL support unavailable", "answer": "LDAP: SSL support unavailable"},
+            {"query": "suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)",
+             "answer": "suEXEC mechanism enabled (wrapper: {variables})"},
+            {"query": "Digest: generating secret for digest authentication ...",
+             "answer": "Digest: generating secret for digest authentication ..."},
+            {"query": "config.update(): Can't create worker.jni:onStartup",
+             "answer": "config.update(): Can't create {variables}"},
+            {"query": "config.update(): Can't create worker.jni:onShutdown",
+             "answer": "config.update(): Can't create {variables}"},
+            {"query": "[client 210.245.151.81] Attempt to serve directory: /var/www/html/",
+             "answer": "[client {variables}] Attempt to serve directory: {variables}"},
+            {"query": "[client 210.115.233.107] script not found or unable to stat: /var/www/cgi-bin/awstats.pl",
+             "answer": "[client {variables}] script not found or unable to stat: {variables}"},
+            {"query": "[client 210.91.137.35] request failed: URI too long (longer than 8190)",
+             "answer": "[client {variables}] request failed: URI too long (longer than {variables})"},
+            {"query": "[client 218.1.115.14] Directory index forbidden by rule: /var/www/html/",
+             "answer": "[client {variables}] Directory index forbidden by rule: {variables}"},
+            {"query": "Graceful restart requested, doing restart",
+             "answer": "Graceful restart requested, doing restart"},
+            {"query": "jk2_init() Can't find child 12569 in scoreboard",
+             "answer": "jk2_init() Can't find child {variables} in scoreboard"},
+            {"query": "config.update(): Can't create worker.jni:onShutdown",
+             "answer": "config.update(): Can't create {variables}"},
+            {"query": "[client 63.192.33.37] request failed: URI too long (longer than 8190)",
+             "answer": "[client {variables}] request failed: URI too long (longer than {variables})"},
+            {"query": "mod_jk2 Shutting down", "answer": "mod_jk2 Shutting down"},
+            {"query": "config.update(): Can't create worker.jni:onStartup",
+             "answer": "config.update(): Can't create {variables}"},
+            {"query": "suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)",
+             "answer": "suEXEC mechanism enabled (wrapper: {variables})"},
+            {"query": "[client 222.173.144.38] request failed: error reading the headers",
+             "answer": "[client {variables}] request failed: error reading the headers"},
+            {"query": "mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.",
+             "answer": "mod_python: Creating {variables} session mutexes based on {variables} max processes and {variables} max threads."},
+            {"query": "mod_jk child init 1 -2", "answer": "mod_jk child init {variables} {variables}"},
+            {"query": "config.update(): Can't create vm:", "answer": "config.update(): Can't create {variables}"},
+            {"query": "[client 216.104.137.150] Directory index forbidden by rule: /var/www/html/",
+             "answer": "[client {variables}] Directory index forbidden by rule: {variables}"},
+            {"query": "[client 213.150.166.78] File does not exist: /var/www/html/sumthin",
+             "answer": "[client {variables}] File does not exist: {variables}"},
+            {"query": "Digest: done", "answer": "Digest: done"},
+            {"query": "Digest: generating secret for digest authentication ...",
+             "answer": "Digest: generating secret for digest authentication ..."},
+            {"query": "child process 29765 still did not exit, sending a SIGTERM",
+             "answer": "child process {variables} still did not exit, sending a SIGTERM"},
+            {"query": "[client 61.19.188.17] request failed: URI too long (longer than 8190)",
+             "answer": "[client {variables}] request failed: URI too long (longer than {variables})"},
+            {"query": "[client 83.173.150.63] request failed: URI too long (longer than 8190)",
+             "answer": "[client {variables}] request failed: URI too long (longer than {variables})"},
+            {"query": "env.createBean2(): Factory error creating worker.jni:onStartup ( worker.jni, onStartup)",
+             "answer": "env.createBean2(): Factory error creating {variables} ({variables}, {variables})"},
+            {"query": "env.createBean2(): Factory error creating worker.jni:onStartup ( worker.jni, onStartup)",
+             "answer": "env.createBean2(): Factory error creating {variables} ({variables}, {variables})"},
+            {"query": "[client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/",
+             "answer": "[client {variables}] attempt to invoke directory as script: {variables}"},
+            {"query": "[client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/",
+             "answer": "[client {variables}] attempt to invoke directory as script: {variables}"},
+            {"query": "config.update(): Can't create channel.jni:jni",
+             "answer": "config.update(): Can't create {variables}"},
+            {"query": "config.update(): Can't create vm:", "answer": "config.update(): Can't create {variables}"},
+            {"query": "Apache/2.0.49 (Fedora) configured -- resuming normal operations",
+             "answer": "Apache/{variables} configured -- resuming normal operations"},
+            {"query": "Apache/2.0.49 (Fedora) configured -- resuming normal operations",
+             "answer": "Apache/{variables} configured -- resuming normal operations"},
+            {"query": "jk2_init() Found child 3734 in scoreboard slot 75",
+             "answer": "jk2_init() Found child {variables} in scoreboard slot {variables}"},
+            {"query": "mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.",
+             "answer": "mod_python: Creating {variables} session mutexes based on {variables} max processes and {variables} max threads."},
+            {"query": "config.update(): Can't create worker.jni:onStartup",
+             "answer": "config.update(): Can't create {variables}"},
+            {"query": "config.update(): Can't create worker.jni:onShutdown",
+             "answer": "config.update(): Can't create {variables}"},
+            {"query": "LDAP: SSL support unavailable", "answer": "LDAP: SSL support unavailable"},
+            {"query": "[client 60.177.74.172] Directory index forbidden by rule: /var/www/html/",
+             "answer": "[client {variables}] Directory index forbidden by rule: {variables}"},
+            {"query": "child process 707 still did not exit, sending a SIGTERM",
+             "answer": "child process {variables} still did not exit, sending a SIGTERM"},
+            {"query": "[client 218.232.109.223] script not found or unable to stat: /var/www/cgi-bin/awstats.pl",
+             "answer": "[client {variables}] script not found or unable to stat: {variables}"},
+            {"query": "jk2_init() Can't find child 5671 in scoreboard",
+             "answer": "jk2_init() Can't find child {variables} in scoreboard"},
+            {"query": "env.createBean2(): Factory error creating channel.jni:jni ( channel.jni, jni)",
+             "answer": "env.createBean2(): Factory error creating {variables} ({variables}, {variables})"},
+            {"query": "mod_jk child workerEnv in error state 3",
+             "answer": "mod_jk child workerEnv in error state {variables}"},
+            {"query": "LDAP: Built with OpenLDAP LDAP SDK", "answer": "LDAP: Built with OpenLDAP LDAP SDK"},
+            {"query": "mod_jk2 Shutting down", "answer": "mod_jk2 Shutting down"},
+            {"query": "[client 210.245.151.81] Attempt to serve directory: /var/www/html/",
+             "answer": "[client {variables}] Attempt to serve directory: {variables}"},
+            {"query": "[client 61.158.112.131] File does not exist: /var/www/html/sumthin",
+             "answer": "[client {variables}] File does not exist: {variables}"},
+            {"query": "mod_jk child init 1 -2", "answer": "mod_jk child init {variables} {variables}"},
+            {"query": "Digest: done", "answer": "Digest: done"},
+            {"query": "Digest: generating secret for digest authentication ...",
+             "answer": "Digest: generating secret for digest authentication ..."},
+            {"query": "Graceful restart requested, doing restart",
+             "answer": "Graceful restart requested, doing restart"},
+            {"query": "workerEnv.init() ok /etc/httpd/conf/workers2.properties",
+             "answer": "workerEnv.init() ok {variables}"},
+            {"query": "[client 213.238.117.47] request failed: error reading the headers",
+             "answer": "[client {variables}] request failed: error reading the headers"},
+            {"query": "suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)",
+             "answer": "suEXEC mechanism enabled (wrapper: {variables})"},
+
+        ]
     question = 'Log message: `{}`'.format(query)
     responses = infer_llm(instruction, examples, question, query,
                           model, temperature, max_tokens=2048)
     return responses
 
-def query_template_from_deepseek(log_message, examples=[], model='deepseek-reasoner'):
+def query_template_from_deepseek(log_message, examples=[], model='deepseek-chat'):
     if len(log_message.split()) == 1:
         return log_message, False
     response = get_response_from_deepseek_key(log_message, examples, model)
@@ -140,15 +252,16 @@ def query_template_from_deepseek(log_message, examples=[], model='deepseek-reaso
 
 
 def post_process_template(template, regs_common):
+    # 调整正则表达式，避免过度替换
     pattern = r'\{(\w+)\}'
     template = re.sub(pattern, "<*>", template)
     for reg in regs_common:
         template = reg.sub("<*>", template)
     template = correct_single_template(template)
+    # 检查模板是否过于通用
     static_part = template.replace("<*>", "")
     punc = string.punctuation
-    static_chars = [s for s in static_part if s != ' ' and s not in punc]
-    if len(static_chars) > 5:  # 示例阈值
+    if len(static_part.strip()) > 0 and any(s not in punc and s != ' ' for s in static_part):
         return template, True
     print("Get a too general template. Error.")
     return "", False
@@ -157,14 +270,18 @@ def post_process_template(template, regs_common):
 def query_template_from_deepseek_with_check(log_message, regs_common=[], examples=[],
                                             # 修改为 deepseek-chat
                                             model="deepseek-chat"):
-    template, flag = query_template_from_deepseek(log_message, examples, model)
+    template, flag = query_template_from_deepseek(log_message, examples, model='deepseek-chat')
+    print(f"DeepSeek response: {template}, Flag: {flag}")  # 添加调试信息
     if len(template) == 0 or flag == False:
         print(f"DeepSeek error")
     else:
         tree = ParsingCache()
         template, flag = post_process_template(template, regs_common)
+        print(f"Post-processed template: {template}, Flag: {flag}")  # 添加调试信息
         if flag:
             tree.add_templates(template)
+            result = tree.match_event(log_message)
+            print(f"Match result: {result}")  # 添加调试信息
             if tree.match_event(log_message)[0] == "NoMatch":
                 print("==========================================================")
                 print(log_message)
