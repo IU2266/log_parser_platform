@@ -26,7 +26,7 @@ def get_deepseek_key(file_path="D:/log_parser_platform/deepseek_key.txt"):
 deepseek.api_base, deepseek.api_key = get_deepseek_key()
 
 
-def infer_llm(instruction, exemplars, query, log_message, model='deepseek-reasoner', temperature=0.0, max_tokens=2048):
+def infer_llm(instruction, exemplars, query, log_message, model='deepseek-reasoner', temperature=0.0, max_tokens=1024):
     # 添加更详细的日志模板抽象要求
     detailed_instruction = instruction + " 日期格式如 Thu Jun 09 06:07:04 2005 应抽象为 {date}，版本号如 1.9dev2、2.0.49 应抽象为 {version}，进程 ID 如 2330、2337 应抽象为 {pid}，文件路径如 /usr/sbin/suexec、/etc/httpd/conf/workers2.properties 应抽象为 {file_path}。"
 
@@ -65,7 +65,7 @@ def infer_llm(instruction, exemplars, query, log_message, model='deepseek-reason
 
             url = f"{deepseek.api_base}/chat/completions"
             print(f"Request URL: {url}")
-            print(f"Request Headers: {headers}")
+            #print(f"Request Headers: {headers}")
             print(f"Request Payload: {payload}")
 
             response = requests.post(
@@ -104,7 +104,7 @@ def get_response_from_deepseek_key(query, examples=[], model='deepseek-reasoner'
                      'answer': 'Log template: `try to connected to host: {ip_address}, finished.`'}]
     question = 'Log message: `{}`'.format(query)
     responses = infer_llm(instruction, examples, question, query,
-                          model, temperature, max_tokens=2048)
+                          model, temperature, max_tokens=1024)
     return responses
 
 

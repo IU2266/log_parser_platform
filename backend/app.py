@@ -10,7 +10,7 @@ from LILAC.LILAC import save_results_to_csv
 from flask_cors import CORS  # 导入 CORS
 
 app = Flask(__name__)
-CORS(app, origins="http://192.168.50.11:8080")  # 配置允许的源
+CORS(app)  # 配置允许的源
 
 # 配置项
 LOG_FILE_PATH = 'log.txt'
