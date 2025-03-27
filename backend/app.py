@@ -126,14 +126,12 @@ def parse_logs(log_data, cache):
     template_lines = []  # 用于存储模板信息
 
     for log in log_data:
-        # 尝试在模板缓存中查找匹配的模板
         result = cache.match_event(log)
         if result[0] == "NoMatch":
-            # 未找到匹配的模板，调用大语言模型进行模板查询
-            new_template, normal = query_template_from_deepseek_with_check(log)
+            # 修改为 deepseek-chat
+            new_template, normal = query_template_from_deepseek_with_check(log, model="deepseek-chat")
             template_id = cache.add_templates(new_template, normal, result[2])
         else:
-            # 找到匹配的模板，直接使用该模板进行解析
             template_id = result[1]
 
         parsed_count += 1
@@ -280,33 +278,29 @@ def view_cache():
 
 @app.route('/parse', methods=['GET'])
 def parse():
-    try:
-        with open(LOG_FILE_PATH, 'r') as f:
-            log_data = f.readlines()
-        cache = ParsingCache()
-        parsed_count, parsing_speed, parsed_results = parse_logs(log_data, cache)
-        return jsonify({
-            'parsed_count': parsed_count,
-            'parsing_speed': parsing_speed,
-            'results': parsed_results
-        })
-    except FileNotFoundError:
-        return jsonify({"error": "Log file not found"}), 404
+    with open('log.txt', 'r') as f:
+        log_data = f.readlines()
+    cache = ParsingCache()
+    # 修改为 deepseek-chat
+    parsed_count, parsing_speed, parsed_results = parse_logs(log_data, cache)
+    return jsonify({
+        'parsed_count': parsed_count,
+        'parsing_speed': parsing_speed,
+        'results': parsed_results
+    })
 
 @app.route('/output', methods=['GET'])
 def output():
-    try:
-        with open(LOG_FILE_PATH, 'r') as f:
-            log_data = f.readlines()
-        cache = ParsingCache()
-        parsed_count, parsing_speed, parsed_results = parse_logs(log_data, cache)
-        frequency, accuracy = output_results(parsed_results)
-        return jsonify({
-            'frequency': frequency,
-            'accuracy': accuracy
-        })
-    except FileNotFoundError:
-        return jsonify({"error": "Log file not found"}), 404
+    with open('log.txt', 'r') as f:
+        log_data = f.readlines()
+    cache = ParsingCache()
+    # 修改为 deepseek-chat
+    parsed_count, parsing_speed, parsed_results = parse_logs(log_data, cache)
+    frequency, accuracy = output_results(parsed_results)
+    return jsonify({
+        'frequency': frequency,
+        'accuracy': accuracy
+    })
 
 # 404 错误处理
 @app.errorhandler(404)

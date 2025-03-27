@@ -74,7 +74,8 @@ def load_regs():
 
 class LogParser:
     def __init__(self, log_format, indir='./', outdir='./result/', rex=[], data_type='2k', shot=0, example_size=0,
-                 model="deepseek-reasoner", selection_method="LILAC"):
+                 # 修改为 deepseek-chat
+                 model="deepseek-chat", selection_method="LILAC"):
         self.path = indir
         self.df_log = None
         self.log_format = log_format
@@ -156,7 +157,7 @@ class LogParser:
                     examples = prompt_select(prompt_cases, log, self.example_size, self.selection_method)
                 else:
                     examples = []
-                # 调用大语言模型获取新的日志模板
+                # 修改为 deepseek-chat
                 new_template, normal = query_template_from_deepseek_with_check(log, regs_common, examples, self.model)
                 print("queried_new_template: ", new_template)
                 template_id = cache.add_templates(new_template, normal, results[2])

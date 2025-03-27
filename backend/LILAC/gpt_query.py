@@ -26,14 +26,13 @@ def get_deepseek_key(file_path="D:/log_parser_platform/deepseek_key.txt"):
 deepseek.api_base, deepseek.api_key = get_deepseek_key()
 
 
-def infer_llm(instruction, exemplars, query, log_message, model='deepseek-reasoner', temperature=0.0, max_tokens=1024):
-    # 添加更详细的日志模板抽象要求
-    detailed_instruction = instruction + " 日期格式如 Thu Jun 09 06:07:04 2005 应抽象为 {date}，版本号如 1.9dev2、2.0.49 应抽象为 {version}，进程 ID 如 2330、2337 应抽象为 {pid}，文件路径如 /usr/sbin/suexec、/etc/httpd/conf/workers2.properties 应抽象为 {file_path}。"
-
+def infer_llm(instruction, exemplars, query, log_message,
+              # 修改为 deepseek-chat
+              model='deepseek-chat', temperature=0.0, max_tokens=2048):
     # 构造 messages
     messages = [
         {"role": "system", "content": "You are an expert of log parsing, and now you will help to do log parsing."},
-        {"role": "user", "content": detailed_instruction},
+        {"role": "user", "content": instruction},
         {"role": "assistant", "content": "Sure, I can help you with log parsing."},
     ]
 
@@ -45,11 +44,9 @@ def infer_llm(instruction, exemplars, query, log_message, model='deepseek-reason
     messages.append({"role": "user", "content": query})
 
     retry_times = 0
-    max_retries = 5  # 增加重试次数
-    timeout = 60  # 增加超时时间为 60 秒
     print("model: ", model)
 
-    while retry_times < max_retries:
+    while retry_times < 3:
         try:
             # 使用 requests 直接调用 DeepSeek API
             headers = {
@@ -65,14 +62,14 @@ def infer_llm(instruction, exemplars, query, log_message, model='deepseek-reason
 
             url = f"{deepseek.api_base}/chat/completions"
             print(f"Request URL: {url}")
-            #print(f"Request Headers: {headers}")
+            print(f"Request Headers: {headers}")
             print(f"Request Payload: {payload}")
 
             response = requests.post(
                 url,
                 headers=headers,
                 json=payload,
-                timeout=timeout  # 使用新的超时时间
+                timeout=20  # 设置超时时间为 20 秒，可根据需要调整
             )
             response.raise_for_status()
 
@@ -84,7 +81,7 @@ def infer_llm(instruction, exemplars, query, log_message, model='deepseek-reason
             if "list index out of range" in str(e):
                 break
             retry_times += 1
-            time.sleep(2)  # 增加延迟时间为 2 秒，避免频繁调用
+            time.sleep(1)  # 添加延迟避免频繁调用
 
     print(f"Failed to get response from DeepSeek after {retry_times} retries.")
     if exemplars is not None and len(exemplars) > 0:
@@ -95,18 +92,17 @@ def infer_llm(instruction, exemplars, query, log_message, model='deepseek-reason
             return infer_llm(instruction, examples, query, log_message, model, temperature, max_tokens)
     return 'Log message: `{}`'.format(log_message)
 
-
-
-def get_response_from_deepseek_key(query, examples=[], model='deepseek-reasoner', temperature=0.0):
+def get_response_from_deepseek_key(query, examples=[],
+                                   # 修改为 deepseek-chat
+                                   model='deepseek-chat', temperature=0.0):
     instruction = "I want you to act like an expert of log parsing. I will give you a log message delimited by backticks. You must identify and abstract all the dynamic variables in logs with {placeholder} and output a static log template. Print the input log's template delimited by backticks."
     if examples is None or len(examples) == 0:
         examples = [{'query': 'Log message: `try to connected to host: 172.16.254.1, finished.`',
                      'answer': 'Log template: `try to connected to host: {ip_address}, finished.`'}]
     question = 'Log message: `{}`'.format(query)
     responses = infer_llm(instruction, examples, question, query,
-                          model, temperature, max_tokens=1024)
+                          model, temperature, max_tokens=2048)
     return responses
-
 
 def query_template_from_deepseek(log_message, examples=[], model='deepseek-reasoner'):
     if len(log_message.split()) == 1:
@@ -150,14 +146,16 @@ def post_process_template(template, regs_common):
     template = correct_single_template(template)
     static_part = template.replace("<*>", "")
     punc = string.punctuation
-    for s in static_part:
-        if s != ' ' and s not in punc:
-            return template, True
+    static_chars = [s for s in static_part if s != ' ' and s not in punc]
+    if len(static_chars) > 5:  # 示例阈值
+        return template, True
     print("Get a too general template. Error.")
     return "", False
 
 
-def query_template_from_deepseek_with_check(log_message, regs_common=[], examples=[], model="deepseek-reasoner"):
+def query_template_from_deepseek_with_check(log_message, regs_common=[], examples=[],
+                                            # 修改为 deepseek-chat
+                                            model="deepseek-chat"):
     template, flag = query_template_from_deepseek(log_message, examples, model)
     if len(template) == 0 or flag == False:
         print(f"DeepSeek error")
