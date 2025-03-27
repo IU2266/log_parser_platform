@@ -46,7 +46,7 @@ def infer_llm(instruction, exemplars, query, log_message, model='deepseek-reason
 
     retry_times = 0
     max_retries = 5  # 增加重试次数
-    timeout = 30  # 增加超时时间为 30 秒
+    timeout = 60  # 增加超时时间为 60 秒
     print("model: ", model)
 
     while retry_times < max_retries:
