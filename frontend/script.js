@@ -16,8 +16,11 @@ function showModule(moduleId) {
     }
     if (moduleId === 'result-output' && !hasParsed) {
         document.getElementById('output-report').innerHTML = '未收到解析结果';
+        document.getElementById('output-chart').innerHTML = '';
     }
 }
+
+
 
 let hasUploadedFile = false;
 let hasPreprocessed = false;

@@ -161,23 +161,25 @@ def parse_logs(log_data, cache):
 
 # 结果输出模块
 def output_results(parsed_results):
-    try:
-        # 保存为 CSV 文件
-        save_results_to_csv(LOG_FILE_PATH, TEMPLATE_FILE_PATH, CACHE_FILE_PATH, OUTPUT_FILE_PATH, OUTPUT_TEMPLATE_FILE_PATH)
-        # 统计不同模板的出现频率
-        frequency = {}
-        for result in parsed_results:
-            template = result['template']
-            if template in frequency:
-                frequency[template] += 1
-            else:
-                frequency[template] = 1
-        # 计算解析准确率（这里简单假设全部正确）
-        accuracy = 100
-        return frequency, accuracy
-    except Exception as e:
-        print(f"Output results error: {e}")
-        return {}, 0
+    # 保存为 CSV 文件
+    log_file = 'log.txt'
+    template_dir = os.path.join(os.path.dirname(__file__), 'templates')
+    template_file = os.path.join(template_dir, 'template.txt')
+    cache_file = 'cache.pkl'
+    output_file = 'output.csv'
+    output_template_file = 'output_templates.csv'
+    save_results_to_csv(log_file, template_file, cache_file, output_file, output_template_file)
+    # 统计不同模板的出现频率
+    frequency = {}
+    for result in parsed_results:
+        template = result['template']
+        if template in frequency:
+            frequency[template] += 1
+        else:
+            frequency[template] = 1
+    # 计算解析准确率（这里简单假设全部正确）
+    accuracy = 100
+    return frequency, accuracy
 
 # 添加根路径路由
 @app.route('/')
