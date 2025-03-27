@@ -6,7 +6,7 @@ import pandas as pd
 from flask import Flask, request, jsonify, send_file, send_from_directory
 from LILAC.parsing_cache import ParsingCache
 from LILAC.gpt_query import query_template_from_deepseek_with_check
-from LILAC.LILAC import save_results_to_csv
+from LILAC.LILAC import save_results_to_csv, load_regs, LogParser
 from flask_cors import CORS  # 导入 CORS
 
 app = Flask(__name__)
@@ -29,7 +29,7 @@ def upload_file(log_file):
     log_lines = log_file.readlines()
     end_time = time.time()
     log_count = len(log_lines)
-    collection_speed = log_count / (end_time - start_time)
+    collection_speed = log_count / (end_time - start_time) if (end_time - start_time) > 0 else 0
 
     # 创建 log.txt 文件并写入日志数据
     with open('log.txt', 'w') as log_file:
@@ -39,16 +39,16 @@ def upload_file(log_file):
 
 # 日志预处理模块
 def preprocess_logs(log_data):
-    before_example = log_data[0].decode('utf-8')
+    before_example = log_data[0].decode('utf-8') if log_data else ""
     # 清洗和格式化处理
     log_data = [re.sub(r'\s+', ' ', line.decode('utf-8').strip()) for line in log_data]
-    after_example = log_data[0]
-    removed_count = len(before_example) - len(after_example)
+    after_example = log_data[0] if log_data else ""
+    removed_count = len(before_example) - len(after_example) if log_data else 0
     # 生成正则表达式并转换为 DataFrame
     log_format = '<Date> <Time> <Pid> <Level> <Component>: <Content>'
     headers, regex = generate_logformat_regex(log_format)
     logdf = log_to_dataframe(log_data, regex, headers, log_format)
-    field_count = len(logdf.columns)
+    field_count = len(logdf.columns) if not logdf.empty else 0
     return log_data, before_example, after_example, removed_count, field_count
 
 def generate_logformat_regex(logformat):
@@ -62,6 +62,7 @@ def generate_logformat_regex(logformat):
         else:
             header = splitters[k].strip('<').strip('>')
             regex += '(?P<%s>.*?)' % header
+            headers.append(header)
     regex = re.compile('^' + regex + '$')
     return headers, regex
 
@@ -116,7 +117,7 @@ def parse_logs(log_data, cache):
         template_lines.append(cache.template_list[template_id])
 
     end_time = time.time()
-    parsing_speed = parsed_count / (end_time - start_time)
+    parsing_speed = parsed_count / (end_time - start_time) if (end_time - start_time) > 0 else 0
 
     # 将模板信息写入 template.txt 文件
     template_dir = os.path.join(os.path.dirname(__file__), 'templates')
@@ -133,7 +134,7 @@ def parse_logs(log_data, cache):
 def output_results(parsed_results):
     # 保存为 CSV 文件
     log_file = 'log.txt'
-    template_file = 'path/to/template.txt'  # 确保路径与生成文件时一致
+    template_file = os.path.join(os.path.dirname(__file__), 'templates', 'template.txt')
     cache_file = 'cache.pkl'
     output_file = 'output.csv'
     output_template_file = 'output_templates.csv'
@@ -191,26 +192,32 @@ def upload():
 
 @app.route('/preprocess', methods=['GET'])
 def preprocess():
-    with open('log.txt', 'r') as f:
-        log_data = f.readlines()
-    log_data, before_example, after_example, removed_count, field_count = preprocess_logs(log_data)
-    return jsonify({
-        'before_example': before_example,
-        'after_example': after_example,
-        'removed_count': removed_count,
-        'field_count': field_count
-    })
+    try:
+        with open('log.txt', 'r') as f:
+            log_data = f.read().encode('utf-8').splitlines()
+        log_data, before_example, after_example, removed_count, field_count = preprocess_logs(log_data)
+        return jsonify({
+            'before_example': before_example,
+            'after_example': after_example,
+            'removed_count': removed_count,
+            'field_count': field_count
+        })
+    except FileNotFoundError:
+        return jsonify({"error": "Log file not found"}), 404
 
 @app.route('/cache', methods=['GET'])
 def cache():
-    with open('log.txt', 'r') as f:
-        log_data = f.readlines()
-    cache = ParsingCache()
-    cache, template_count, cache_hit_rate = cache_templates(log_data, cache)
-    return jsonify({
-        'template_count': template_count,
-        'cache_hit_rate': cache_hit_rate
-    })
+    try:
+        with open('log.txt', 'r') as f:
+            log_data = f.read().encode('utf-8').splitlines()
+        cache = ParsingCache()
+        cache, template_count, cache_hit_rate = cache_templates(log_data, cache)
+        return jsonify({
+            'template_count': template_count,
+            'cache_hit_rate': cache_hit_rate
+        })
+    except FileNotFoundError:
+        return jsonify({"error": "Log file not found"}), 404
 
 @app.route('/clear-cache', methods=['GET'])
 def clear_cache():
@@ -221,35 +228,47 @@ def clear_cache():
 
 @app.route('/view-cache', methods=['GET'])
 def view_cache():
-    # 这里简单返回示例信息，实际可添加查看缓存逻辑
-    templates = []
-    return jsonify({
-        'templates': templates
-    })
+    try:
+        with open('log.txt', 'r') as f:
+            log_data = f.read().encode('utf-8').splitlines()
+        cache = ParsingCache()
+        cache, _, _ = cache_templates(log_data, cache)
+        templates = cache.template_list
+        return jsonify({
+            'templates': templates
+        })
+    except FileNotFoundError:
+        return jsonify({"error": "Log file not found"}), 404
 
 @app.route('/parse', methods=['GET'])
 def parse():
-    with open('log.txt', 'r') as f:
-        log_data = f.readlines()
-    cache = ParsingCache()
-    parsed_count, parsing_speed, parsed_results = parse_logs(log_data, cache)
-    return jsonify({
-        'parsed_count': parsed_count,
-        'parsing_speed': parsing_speed,
-        'results': parsed_results
-    })
+    try:
+        with open('log.txt', 'r') as f:
+            log_data = f.read().encode('utf-8').splitlines()
+        cache = ParsingCache()
+        parsed_count, parsing_speed, parsed_results = parse_logs(log_data, cache)
+        return jsonify({
+            'parsed_count': parsed_count,
+            'parsing_speed': parsing_speed,
+            'results': parsed_results
+        })
+    except FileNotFoundError:
+        return jsonify({"error": "Log file not found"}), 404
 
 @app.route('/output', methods=['GET'])
 def output():
-    with open('log.txt', 'r') as f:
-        log_data = f.readlines()
-    cache = ParsingCache()
-    parsed_count, parsing_speed, parsed_results = parse_logs(log_data, cache)
-    frequency, accuracy = output_results(parsed_results)
-    return jsonify({
-        'frequency': frequency,
-        'accuracy': accuracy
-    })
+    try:
+        with open('log.txt', 'r') as f:
+            log_data = f.read().encode('utf-8').splitlines()
+        cache = ParsingCache()
+        parsed_count, parsing_speed, parsed_results = parse_logs(log_data, cache)
+        frequency, accuracy = output_results(parsed_results)
+        return jsonify({
+            'frequency': frequency,
+            'accuracy': accuracy
+        })
+    except FileNotFoundError:
+        return jsonify({"error": "Log file not found"}), 404
 
 # 404 错误处理
 @app.errorhandler(404)
