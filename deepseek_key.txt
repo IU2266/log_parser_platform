@@ -1,0 +1,2 @@
+https://api.deepseek.com/v1
+sk-0ef7b9985026411bae6f9a7b9c634db1

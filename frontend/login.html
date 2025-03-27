@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            if (username) {
+                // 模拟登录成功，将用户名存储在 localStorage 中
+                localStorage.setItem('username', username);
+                window.location.href = 'index.html';
+            } else {
+                alert('请输入用户名');
+            }
+        }
+    </script>
+</body>
+
+</html>
