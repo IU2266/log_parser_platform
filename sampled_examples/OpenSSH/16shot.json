@@ -1,0 +1,16 @@
+{"query": "Received disconnect from 82.209.247.10: 11: [preauth]", "answer": "Received disconnect from {variables}: {variables}: [preauth]"}
+{"query": "Connection closed by 183.129.173.73 [preauth]", "answer": "Connection closed by {variables} [preauth]"}
+{"query": "pam_unix(sshd:auth): check pass; user unknown", "answer": "pam_unix(sshd:auth): check pass; user unknown"}
+{"query": "reverse mapping checking getaddrinfo for 225-138-140-158.myrepublic.com.sg [158.140.138.225] failed - POSSIBLE BREAK-IN ATTEMPT!", "answer": "reverse mapping checking getaddrinfo for {variables} [{variables}] failed - POSSIBLE BREAK-IN ATTEMPT!"}
+{"query": "Failed password for root from 183.62.140.253 port 60768 ssh2", "answer": "Failed password for {variables} from {variables} port {variables} ssh2"}
+{"query": "Did not receive identification string from 5.188.10.180", "answer": "Did not receive identification string from {variables}"}
+{"query": "error: Received disconnect from 103.99.0.122: 14: No more user authentication methods available. [preauth]", "answer": "error: Received disconnect from {variables}: {variables}: No more user authentication methods available. [preauth]"}
+{"query": "fatal: Read from socket failed: Connection reset by peer [preauth]", "answer": "fatal: Read from socket failed: Connection reset by peer [preauth]"}
+{"query": "Bad packet length 1819045217. [preauth]", "answer": "Bad packet length {variables}. [preauth]"}
+{"query": "Received disconnect from 173.239.228.96: 11: Client disconnecting normally [preauth]", "answer": "Received disconnect from {variables}: {variables}: Client disconnecting normally [preauth]"}
+{"query": "Disconnecting: Packet corrupt [preauth]", "answer": "Disconnecting: Packet corrupt [preauth]"}
+{"query": "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=14.116.171.251 user=root", "answer": "pam_unix(sshd:auth): authentication failure; logname={variables} uid={variables} euid={variables} tty={variables} ruser={variables} rhost={variables} user={variables}"}
+{"query": "Bad protocol version identification 'SSH-2.0_CoreLab-1.0' from 193.201.224.232 port 8864", "answer": "Bad protocol version identification {variables} from {variables} port {variables}"}
+{"query": "pam_unix(sshd:session): session closed for user jmzhu", "answer": "pam_unix(sshd:session): session closed for user {variables}"}
+{"query": "Address 82.209.247.10 maps to mail.trionis.ru, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!", "answer": "Address {variables} maps to {variables} but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!"}
+{"query": "Disconnecting: Too many authentication failures for admin [preauth]", "answer": "Disconnecting: Too many authentication failures for {variables} [preauth]"}

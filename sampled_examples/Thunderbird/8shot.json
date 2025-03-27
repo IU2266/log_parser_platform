@@ -1,0 +1,8 @@
+{"query": "Unable to write meta data for metric proc_run to RRD", "answer": "Unable to write meta data for metric {variables} to RRD"}
+{"query": "#38#-rh1 (Release Date: Fri Dec 10 19:02:14 EST 2004)", "answer": "{variables}-rh1 (Release Date: {variables})"}
+{"query": "ts_kernel_services: module license 'Proprietary' taints kernel.", "answer": "ts_kernel_services: module license {variables} taints kernel."}
+{"query": "pan_common: registered major number 250 for device panasas", "answer": "pan_common: registered major number {variables} for device panasas"}
+{"query": "rpc.statd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "divert: allocating divert_blk for ib0", "answer": "divert: allocating divert_blk for {variables}"}
+{"query": "Unregistering netfilter hooks", "answer": "Unregistering netfilter hooks"}
+{"query": "dcdipm device driver unload failed for kernel 2.6.9-15.EL.rootsmp", "answer": "{variables} device driver unload failed for kernel {variables}"}

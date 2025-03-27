@@ -1,0 +1,32 @@
+{"query": "Removing block manager BlockManagerId(5, mesos-slave-05, 44394)", "answer": "Removing block manager BlockManagerId({variables}, {variables}, {variables})"}
+{"query": "Retrying fetch (3/3) for 1 outstanding blocks after 5000 ms", "answer": "Retrying fetch ({variables}) for {variables} outstanding blocks after {variables} ms"}
+{"query": "Received 4 containers from YARN, launching executors on 0 of them.", "answer": "Received {variables} containers from YARN, launching executors on {variables} of them."}
+{"query": "Ignored failure: java.io.IOException: Connection from mesos-master-1/10.10.34.11:34641 closed", "answer": "Ignored failure: java.io.IOException: Connection from {variables} closed"}
+{"query": "Size of output statuses for shuffle 10 is 595 bytes", "answer": "Size of output statuses for shuffle {variables} is {variables} bytes"}
+{"query": "Invoking stop() from shutdown hook", "answer": "Invoking stop() from shutdown hook"}
+{"query": "Starting Executor Container", "answer": "Starting Executor Container"}
+{"query": "Incomplete task interrupted: Attempting to kill Python Worker", "answer": "Incomplete task interrupted: Attempting to kill Python Worker"}
+{"query": "Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=1003843761537, chunkIndex=0}, buffer=FileSegmentManagedBuffer{file=/opt/hdfs/nodemanager/usercache/curi/appcache/application_1485248649253_0076/blockmgr-dc037334-5e92-45ae-b7b7-642e0abd235d/0c/shuffle_0_0_0.data, offset=0, length=2045089323}} to /10.10.34.27:58087; closing connection", "answer": "Error sending result ChunkFetchSuccess{streamChunkId={variables}, buffer={variables}} to {variables}; closing connection"}
+{"query": "Disabling executor 2.", "answer": "Disabling executor {variables}."}
+{"query": "Uncaught exception:", "answer": "Uncaught exception:"}
+{"query": "SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(yarn, yxsu); users with modify permissions: Set(yarn, yxsu)", "answer": "SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set({variables}, {variables}); users with modify permissions: Set({variables}, {variables})"}
+{"query": "Updating epoch to 20 and clearing cache", "answer": "Updating epoch to {variables} and clearing cache"}
+{"query": "Got job 0 (collect at pnmf4.py:247) with 2 output partitions", "answer": "Got job {variables} (collect at {variables}) with {variables} output partitions"}
+{"query": "Completed container container_1485248649253_0126_01_000013 on host: mesos-slave-22 (state: COMPLETE, exit status: 1)", "answer": "Completed container {variables} on host: {variables} (state: {variables}, exit status: {variables})"}
+{"query": "Executor lost: 7 (epoch 6)", "answer": "Executor lost: {variables} (epoch {variables})"}
+{"query": "Opening proxy : mesos-slave-23:39541", "answer": "Opening proxy : {variables}"}
+{"query": "Running Spark version 1.6.0", "answer": "Running Spark version {variables}"}
+{"query": "Unregistering ApplicationMaster with FAILED (diag message: Uncaught exception: org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply in 120 seconds. This timeout is controlled by spark.rpc.askTimeout)", "answer": "Unregistering ApplicationMaster with {variables}"}
+{"query": "Failed to send RPC 6108445360462139572 to mesos-master-1/10.10.34.11:51096: java.nio.channels.ClosedChannelException", "answer": "Failed to send RPC {variables} to {variables}: {variables}"}
+{"query": "Registered executor NettyRpcEndpointRef(null) (mesos-master-1:41863) with ID 7", "answer": "Registered executor NettyRpcEndpointRef({variables}) ({variables}) with ID {variables}"}
+{"query": "Starting job: count at pnmf4.py:353", "answer": "Starting job: count at {variables}"}
+{"query": "org.apache.spark.SparkException: Exception while starting container container_1485248649253_0048_02_000012 on host mesos-slave-16", "answer": "org.apache.spark.SparkException: Exception while starting container {variables} on host {variables}"}
+{"query": "BlockManagerMaster stopped", "answer": "BlockManagerMaster stopped"}
+{"query": "Don't have map outputs for shuffle 2, fetching them", "answer": "Don't have map outputs for shuffle {variables}, fetching them"}
+{"query": "Resubmitting ShuffleMapStage 4 (reduceByKey at pnmf4.py:371) and ResultStage 5 (collect at pnmf4.py:377) due to fetch failure", "answer": "Resubmitting ShuffleMapStage {variables} (reduceByKey at {variables}) and ResultStage {variables} (collect at {variables}) due to fetch failure"}
+{"query": "Remote daemon shut down; proceeding with flushing remote transports.", "answer": "Remote daemon shut down; proceeding with flushing remote transports."}
+{"query": "YarnClusterScheduler.postStartHook done", "answer": "YarnClusterScheduler.postStartHook done"}
+{"query": "Stage 3 was cancelled", "answer": "Stage {variables} was cancelled"}
+{"query": "Got told to re-register updating block broadcast_14_piece0", "answer": "Got told to re-register updating block {variables}"}
+{"query": "Job 3 failed: count at pnmf4.py:358, took 234.472444 s", "answer": "Job {variables} failed: count at {variables}, took {variables} s"}
+{"query": "Using REPL class URI: http://10.10.18.32:65475", "answer": "Using REPL class URI: {variables}"}

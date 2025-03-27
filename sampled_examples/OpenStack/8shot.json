@@ -1,0 +1,8 @@
+{"query": "Removable base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Removable base files: {variables}"}
+{"query": "HTTP exception thrown: No instances found for any event", "answer": "HTTP exception thrown: No instances found for any event"}
+{"query": "image 0673dd71-34c5-4fbb-86c4-40623fbe45b4 at (/var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742): checking", "answer": "image {variables} at ({variables}): checking"}
+{"query": "[instance: a6899336-f8ec-44d6-991d-3a825df41e52] memory limit: 96258.00 MB, free: 95746.00 MB", "answer": "[instance: {variables}] memory limit: {variables} MB, free: {variables} MB"}
+{"query": "The instance sync for host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us' did not match. Re-created its InstanceList.", "answer": "The instance sync for host {variables} did not match. Re-created its InstanceList."}
+{"query": "[instance: c0cf833b-4c52-45d6-bca1-0cb25b859d36] Claim successful", "answer": "[instance: {variables}] Claim successful"}
+{"query": "[instance: b043f927-338a-4816-bfe2-84ba3d56ecc3] Deleting instance files /var/lib/nova/instances/b043f927-338a-4816-bfe2-84ba3d56ecc3_del", "answer": "[instance: {variables}] Deleting instance files {variables}"}
+{"query": "[instance: ac026b4a-a8d6-4a6c-95d0-3fde50f3e5d1] vcpu limit not specified, defaulting to unlimited", "answer": "[instance: {variables}] vcpu limit not specified, defaulting to unlimited"}

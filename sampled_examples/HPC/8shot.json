@@ -1,0 +1,8 @@
+{"query": "Failed subcommands 3923\\ 3927\\ 3939", "answer": "Failed subcommands {variables}"}
+{"query": "Command has been aborted", "answer": "Command has been aborted"}
+{"query": "boot (command 1973)", "answer": "boot (command {variables})"}
+{"query": "Command has completed successfully", "answer": "Command has completed successfully"}
+{"query": "no recent update", "answer": "no recent update"}
+{"query": "ServerFileSystem: An ServerFileSystem domain panic has occurred on storage341", "answer": "ServerFileSystem: An ServerFileSystem domain panic has occurred on {variables}"}
+{"query": "haltcluster (command 2983)", "answer": "haltcluster (command {variables})"}
+{"query": "power/control problem", "answer": "power/control problem"}

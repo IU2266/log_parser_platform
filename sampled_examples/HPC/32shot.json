@@ -1,0 +1,32 @@
+{"query": "update received", "answer": "update received"}
+{"query": "member_delete (command 2161)", "answer": "member_delete (command {variables})"}
+{"query": "risBoot (command 1904)", "answer": "risBoot (command {variables})"}
+{"query": "ambient=40 threshold exceeded", "answer": "ambient={variables}"}
+{"query": "not responding", "answer": "not responding"}
+{"query": "clusterAddMember (command 1904)", "answer": "clusterAddMember (command {variables})"}
+{"query": "Fan speeds ( 3534 3534 3375 **** 3497 3479 )", "answer": "Fan speeds ( {variables} )"}
+{"query": "power/control problem", "answer": "power/control problem"}
+{"query": "Fan speeds ( 3552 3534 3391 4115 3515 3479 )", "answer": "Fan speeds ( {variables} )"}
+{"query": "haltcluster (command 2127)", "answer": "haltcluster (command {variables})"}
+{"query": "Targeting domains:node-D5 and nodes:node-[160-191] child of command 3398", "answer": "Targeting domains:{variables} and nodes:{variables}"}
+{"query": "1 failed to configure resourcemgmt subsystem err = 10", "answer": "{variables} failed to configure resourcemgmt subsystem err = {variables}"}
+{"query": "Link in reset", "answer": "Link in reset"}
+{"query": "halt (command 2768)", "answer": "halt (command {variables})"}
+{"query": "NIFF: node node-44 detected a failed network connection on network 5.5.224.0 via interface alt0", "answer": "NIFF: node {variables} detected a failed network connection on network {variables} via interface {variables}"}
+{"query": "boot (command 3047)", "answer": "boot (command {variables})"}
+{"query": "PSU status ( off on )", "answer": "PSU status ({variables} {variables})"}
+{"query": "psu failure\\ ambient=31", "answer": "psu failure\\ ambient={variables}"}
+{"query": "bootGenvmunix (command 1901)", "answer": "bootGenvmunix (command {variables})"}
+{"query": "no recent update", "answer": "no recent update"}
+{"query": "power/control ok", "answer": "power/control ok"}
+{"query": "configured out", "answer": "configured out"}
+{"query": "Link error", "answer": "Link error"}
+{"query": "Link error on broadcast tree Interconnect-1T00:00:2:0", "answer": "Link error on broadcast tree {variables}"}
+{"query": "Failed subcommands 3825\\ 3845\\ 3846", "answer": "Failed subcommands {variables}"}
+{"query": "Command has been aborted", "answer": "Command has been aborted"}
+{"query": "fan failure\\ ambient=27", "answer": "fan failure\\ ambient={variables}"}
+{"query": "Command Failed on: node-128\\ node-129\\ node-130\\ node-131\\ node-132\\ node-133\\ node-134\\ node-135", "answer": "Command Failed on: {variables}"}
+{"query": "ServerFileSystem: ServerFileSystem domain root26_local is full", "answer": "ServerFileSystem: ServerFileSystem domain {variables} is full"}
+{"query": "inconsistent nodesets node-7 0x0001affe <ok> node-1 0x0000000e <ok> node-2 0x0000000e <ok> node-0 0x0000000e <ok>", "answer": "inconsistent nodesets {variables} {variables} <ok> {variables} {variables} <ok>"}
+{"query": "Temperature (43C) exceeds warning threshold", "answer": "Temperature {variables} exceeds warning threshold"}
+{"query": "wait (command 3196)", "answer": "wait (command {variables})"}

@@ -1,0 +1,16 @@
+{"query": "Stopping MapTask metrics system...", "answer": "Stopping {variables} metrics system..."}
+{"query": "Moved tmp to done: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging", "answer": "Moved tmp to done: {variables}"}
+{"query": "Retrying connect to server: msra-sa-41:8030. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)", "answer": "Retrying connect to server: {variables}. Already tried {variables} time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries={variables}, sleepTime={variables} MILLISECONDS)"}
+{"query": "Created MRAppMaster for application appattempt_1445144423722_0020_000001", "answer": "Created MRAppMaster for application {variables}"}
+{"query": "Commit go/no-go request from attempt_1445087491445_0005_r_000000_1", "answer": "Commit go/no-go request from {variables}"}
+{"query": "Added attempt_1445144423722_0020_m_000002_1 to list of failed maps", "answer": "Added {variables} to list of failed maps"}
+{"query": "TaskAttempt killed because it ran on unusable node MININT-FNANLI5.fareast.corp.microsoft.com:55629. AttemptId:attempt_1445087491445_0002_m_000006_1", "answer": "TaskAttempt killed because it ran on unusable node {variables}. AttemptId:{variables}"}
+{"query": "Slow ReadProcessor read fields took 48957ms (threshold=30000ms); ack: seqno: -2 status: SUCCESS status: ERROR downstreamAckTimeNanos: 0, targets: [172.22.149.145:50010, 10.86.169.121:50010]", "answer": "Slow ReadProcessor read fields took {variables} (threshold={variables}); ack: seqno: {variables} status: {variables} status: {variables} downstreamAckTimeNanos: {variables}, targets: [{variables}, {variables}]"}
+{"query": "Stopping server on 4236", "answer": "Stopping server on {variables}"}
+{"query": "Exception while unregistering", "answer": "Exception while unregistering"}
+{"query": "task_1445087491445_0002_m_000005 Task Transitioned from NEW to SUCCEEDED", "answer": "{variables} Task Transitioned from {variables} to {variables}"}
+{"query": "assigned 1 of 1 to MSRA-SA-41.fareast.corp.microsoft.com:13562 to fetcher#5", "answer": "assigned {variables} of {variables} to {variables} to fetcher#{variables}"}
+{"query": "Waiting for application to be successfully unregistered.", "answer": "Waiting for application to be successfully unregistered."}
+{"query": "attempt_1445087491445_0005_r_000000_1 Thread started: EventFetcher for fetching Map Completion Events", "answer": "{variables} Thread started: EventFetcher for fetching Map Completion Events"}
+{"query": "Deleting staging directory hdfs://msra-sa-41:9000 /tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0005", "answer": "Deleting staging directory {variables} {variables}"}
+{"query": "MapTask metrics system started", "answer": "{variables} metrics system started"}

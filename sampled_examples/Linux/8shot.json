@@ -1,0 +1,8 @@
+{"query": "Started working: 30 available services", "answer": "Started working: {variables} available services"}
+{"query": "EXT3-fs: hda2: 4 orphan inodes deleted", "answer": "EXT3-fs: {variables}: {variables} orphan inodes deleted"}
+{"query": "Stopping MySQL: succeeded", "answer": "Stopping MySQL: succeeded"}
+{"query": "usbcore: registered new driver hub", "answer": "usbcore: registered new driver {variables}"}
+{"query": "session opened for user cyrus by (uid=0)", "answer": "session opened for user {variables} by {variables}"}
+{"query": "syslogd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "SELinux: Initializing.", "answer": "SELinux: Initializing."}
+{"query": "*** info [startup.c(95)]:", "answer": "*** info [startup.c({variables})]:"}

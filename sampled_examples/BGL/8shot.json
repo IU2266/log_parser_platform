@@ -1,0 +1,8 @@
+{"query": "Ido chip status changed: FF:F2:9F:16:C9:63:00:0D:60:E9:36:9C ip=10.3.1.147 v=13 t=4 status=M Tue Jun 21 07:36:58 PDT 2005", "answer": "Ido chip status changed: {variables} ip={variables} v={variables} t={variables} status={variables} {variables}"}
+{"query": "data store interrupt caused by icbi.........0", "answer": "data store interrupt caused by icbi.........{variables}"}
+{"query": "uncorrectable error detected in external DDR...1", "answer": "uncorrectable error detected in external DDR...{variables}"}
+{"query": "CE sym 10, at 0x0249e060, mask 0x04", "answer": "CE sym {variables}, at {variables}, mask {variables}"}
+{"query": "rror threshold, consider replacing the card", "answer": "rror threshold, consider replacing the card"}
+{"query": "L3 ecc status register: 00200000", "answer": "L3 ecc status register: {variables}"}
+{"query": "external input interrupt enable...0", "answer": "external input interrupt enable...{variables}"}
+{"query": "data read plb error...............0", "answer": "data read plb error...............{variables}"}

@@ -1,0 +1,32 @@
+{"query": "BIOS-e820: 0000000000000000 - 00000000000a0000 (usable)", "answer": "BIOS-{variables}: {variables} - {variables} (usable)"}
+{"query": "WARNING: Could not chdir to home directory /Net/usr/home/#95#: No such file or directory", "answer": "WARNING: Could not chdir to home directory {variables}: No such file or directory"}
+{"query": "ACPI: LAPIC (acpi_id[0x03] lapic_id[0x01] disabled)", "answer": "ACPI: LAPIC (acpi_id[{variables}] lapic_id[{variables}] disabled)"}
+{"query": "RAMDISK driver initialized: 16 RAM disks of 16384K size 1024 blocksize", "answer": "RAMDISK driver initialized: {variables} RAM disks of {variables} size {variables} blocksize"}
+{"query": "[ib_sm_sweep.c:1442]: Topology changed", "answer": "[{variables}]: Topology changed"}
+{"query": "warning: unable to look up public/pickup: No such file or directory", "answer": "warning: unable to look up {variables}: No such file or directory"}
+{"query": "Sending on LPF/eth1/00:11:43:e3:b9:ec/C_net", "answer": "Sending on {variables}"}
+{"query": "STATS: dropped 0", "answer": "STATS: dropped {variables}"}
+{"query": "EXT3-fs: sda3: 27 orphan inodes deleted", "answer": "EXT3-fs: {variables}: {variables} orphan inodes deleted"}
+{"query": "Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2", "answer": "Uniform Multi-Platform E-IDE driver Revision: {variables}"}
+{"query": "Received signal 15; terminating.", "answer": "Received signal {variables}; terminating."}
+{"query": "ACPI: Using IOAPIC for interrupt routing", "answer": "ACPI: Using IOAPIC for interrupt routing"}
+{"query": "Detected 3591.360 MHz processor.", "answer": "Detected {variables} MHz processor."}
+{"query": "Server listening on :: port 22.", "answer": "Server listening on {variables} port {variables}."}
+{"query": "Unable to monitor any SMART enabled devices. Try debug (-d) option. Exiting...", "answer": "Unable to monitor any SMART enabled devices. Try debug (-d) option. Exiting..."}
+{"query": "Kerberos password accepted for user #23# (#23#@#24#).", "answer": "Kerberos password accepted for user {variables} ({variables})."}
+{"query": "setup NTP client", "answer": "setup NTP client"}
+{"query": "biosie.bin: page allocation failure. order:9, mode:0xd0", "answer": "biosie.bin: page allocation failure. order:{variables}, mode:{variables}"}
+{"query": "Physical Processor ID: 0", "answer": "Physical Processor ID: {variables}"}
+{"query": "Local disconnected: Connection closed.", "answer": "Local disconnected: Connection closed."}
+{"query": "rpc.idmapd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "PCI-DMA: Using software bounce buffering for IO (SWIOTLB)", "answer": "PCI-DMA: Using software bounce buffering for IO (SWIOTLB)"}
+{"query": "#47# : TTY=pts/8 ; PWD=/mnt_projects/sysapps/#117#/largerun ; USER=root ; COMMAND=/apps/contrib/ccmd.sh all ps xauwwww", "answer": "{variables} : TTY={variables} ; PWD={variables} ; USER={variables} ; COMMAND={variables}"}
+{"query": "DMI 2.3 present.", "answer": "DMI {variables} present."}
+{"query": "Free swap: 0kB", "answer": "Free swap: {variables}"}
+{"query": "Detected 12.469 MHz APIC timer.", "answer": "Detected {variables} MHz APIC timer."}
+{"query": "Disabled at runtime.", "answer": "Disabled at runtime."}
+{"query": "Started working: 0 available services", "answer": "Started working: {variables} available services"}
+{"query": "EXT3 FS on sda6, internal journal", "answer": "EXT3 FS on {variables}, internal journal"}
+{"query": "THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[2363]: XHH_hob_fatal_err_thread: RECEIVED FATAL ERROR WAKEUP", "answer": "THH({variables}): {variables}[{variables}]: XHH_hob_fatal_err_thread: RECEIVED FATAL ERROR WAKEUP"}
+{"query": "testing NMI watchdog ... OK.", "answer": "testing NMI watchdog ... OK."}
+{"query": "jADBPUuH026143: 3: fl=0x2, mode=140777: SOCK localhost->[[UNIX: /dev/log]]", "answer": "{variables}: {variables}: fl={variables}, mode={variables}: SOCK localhost->[[UNIX: {variables}]]"}

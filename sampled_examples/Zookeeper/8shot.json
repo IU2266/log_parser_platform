@@ -1,0 +1,8 @@
+{"query": "Server environment:os.arch=amd64", "answer": "Server environment:os.arch={variables}"}
+{"query": "Server environment:java.vendor=Oracle Corporation", "answer": "Server environment:java.vendor={variables}"}
+{"query": "Interrupted while waiting for message on queue", "answer": "Interrupted while waiting for message on queue"}
+{"query": "Server environment:java.home=/usr/lib/jvm/java-7-openjdk-amd64/jre", "answer": "Server environment:java.home={variables}"}
+{"query": "autopurge.snapRetainCount set to 3", "answer": "autopurge.snapRetainCount set to {variables}"}
+{"query": "TCP NoDelay set to: true", "answer": "TCP NoDelay set to: {variables}"}
+{"query": "Server environment:java.compiler=<NA>", "answer": "Server environment:java.compiler={variables}"}
+{"query": "Received connection request /10.10.34.13:60789", "answer": "Received connection request {variables}"}

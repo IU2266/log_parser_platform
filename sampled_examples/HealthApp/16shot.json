@@ -1,0 +1,16 @@
+{"query": "registerLogCallback com.huawei.health.c.c@d990a94", "answer": "registerLogCallback {variables}"}
+{"query": "screen status unknown,think screen on", "answer": "screen status unknown,think screen {variables}"}
+{"query": "flush sensor data", "answer": "flush sensor data"}
+{"query": "bulkSaveDetailHiHealthData() size = 3,totalTime = 12", "answer": "bulkSaveDetailHiHealthData() size = {variables},totalTime = {variables}"}
+{"query": "setGoalNotifiShownRecord 1514112824312 true", "answer": "setGoalNotifiShownRecord {variables}"}
+{"query": "getStringHuid() who is com.huawei.health", "answer": "getStringHuid() who is {variables}"}
+{"query": "upLoadOneMinuteDataToEngine time=25235296,0,25,0,20002", "answer": "upLoadOneMinuteDataToEngine time={variables}"}
+{"query": "supportPrivateStandStepcounter=true,supportStandStepCounter=true", "answer": "supportPrivateStandStepcounter={variables},supportStandStepCounter={variables}"}
+{"query": "start compare with midware counter", "answer": "start compare with midware counter"}
+{"query": "getDeviceShutDownTime shutDownTime=0", "answer": "getDeviceShutDownTime shutDownTime={variables}"}
+{"query": "saveRealTimeHealthDatasStat() size = 1,totalTime = 22", "answer": "saveRealTimeHealthDatasStat() size = {variables},totalTime = {variables}"}
+{"query": "InsertCallBack() onSuccess type = 0 data=true", "answer": "InsertCallBack() onSuccess type = {variables} data={variables}"}
+{"query": "target init: target10000", "answer": "target init: {variables}"}
+{"query": "ifCanSync not! no cloud version", "answer": "ifCanSync not! no cloud version"}
+{"query": "Alarm uploadStaticsToDB totalSteps=9189Calories:188645Floor:0Distance:6288", "answer": "Alarm uploadStaticsToDB totalSteps={variables}"}
+{"query": "processHandleBroadcastAction action:android.intent.action.SCREEN_ON", "answer": "processHandleBroadcastAction action:{variables}"}

@@ -1,0 +1,16 @@
+{"query": "[instance: c075ca86-6e43-45c7-b075-9032b87748cd] Creating image", "answer": "[instance: {variables}] Creating image"}
+{"query": "Active base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Active base files: {variables}"}
+{"query": "[instance: caa5ea26-441f-472f-addc-7ce062d2d400] Instance spawned successfully.", "answer": "[instance: {variables}] Instance spawned successfully."}
+{"query": "Running instance usage audit for host cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us from 2017-05-15 01:00:00 to 2017-05-15 02:00:00. 88 instances.", "answer": "Running instance usage audit for host {variables} from {variables} to {variables}. {variables} instances."}
+{"query": "Base or swap file too young to remove: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Base or swap file too young to remove: {variables}"}
+{"query": "[instance: caa5ea26-441f-472f-addc-7ce062d2d400] Took 0.59 seconds to deallocate network for instance.", "answer": "[instance: {variables}] Took {variables} seconds to deallocate network for instance."}
+{"query": "[instance: a1bd5ca3-5be7-49aa-baea-066d58fd97ac] Terminating instance", "answer": "[instance: {variables}] Terminating instance"}
+{"query": "Total usable vcpus: 16, total allocated vcpus: 1", "answer": "Total usable vcpus: {variables}, total allocated vcpus: {variables}"}
+{"query": "HTTP exception thrown: No instances found for any event", "answer": "HTTP exception thrown: No instances found for any event"}
+{"query": "[instance: 45d54c78-36c7-4a4b-b402-3daa54d446b1] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU", "answer": "[instance: {variables}] Attempting claim: memory {variables} MB, disk {variables} GB, vcpus {variables} CPU"}
+{"query": "Removing base or swap file: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Removing base or swap file: {variables}"}
+{"query": "image 0673dd71-34c5-4fbb-86c4-40623fbe45b4 at (/var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742): in use: on this node 1 local, 0 on other nodes sharing this instance storage", "answer": "image {variables} at ({variables}): in use: on this node {variables} local, {variables} on other nodes sharing this instance storage"}
+{"query": "While synchronizing instance power states, found 1 instances in the database and 0 instances on the hypervisor.", "answer": "While synchronizing instance power states, found {variables} instances in the database and {variables} instances on the hypervisor."}
+{"query": "[instance: 01648529-9cfe-4dcd-af4a-da30bdae69f1] Claim successful", "answer": "[instance: {variables}] Claim successful"}
+{"query": "Creating event network-vif-plugged:5590876a-79e7-4ce0-825b-8006b4971781 for instance 604e65fe-55f8-430f-98b0-47a6b8efade1", "answer": "Creating event {variables} for instance {variables}"}
+{"query": "[instance: 112e18db-92ec-43f0-9a5e-8f58b868d02b] vcpu limit not specified, defaulting to unlimited", "answer": "[instance: {variables}] vcpu limit not specified, defaulting to unlimited"}

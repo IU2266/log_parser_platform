@@ -1,0 +1,128 @@
+{"query": "mod_jk child init 1 -2", "answer": "mod_jk child init {variables} {variables}"}
+{"query": "mod_jk child init 1 -2", "answer": "mod_jk child init {variables} {variables}"}
+{"query": "mod_jk child init 1 -2", "answer": "mod_jk child init {variables} {variables}"}
+{"query": "mod_jk child init 1 0", "answer": "mod_jk child init {variables} {variables}"}
+{"query": "mod_jk child init 1 0", "answer": "mod_jk child init {variables} {variables}"}
+{"query": "suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)", "answer": "suEXEC mechanism enabled (wrapper: {variables})"}
+{"query": "suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)", "answer": "suEXEC mechanism enabled (wrapper: {variables})"}
+{"query": "suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)", "answer": "suEXEC mechanism enabled (wrapper: {variables})"}
+{"query": "suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)", "answer": "suEXEC mechanism enabled (wrapper: {variables})"}
+{"query": "suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)", "answer": "suEXEC mechanism enabled (wrapper: {variables})"}
+{"query": "mod_jk child workerEnv in error state 7", "answer": "mod_jk child workerEnv in error state {variables}"}
+{"query": "mod_jk child workerEnv in error state 1", "answer": "mod_jk child workerEnv in error state {variables}"}
+{"query": "mod_jk child workerEnv in error state 6", "answer": "mod_jk child workerEnv in error state {variables}"}
+{"query": "mod_jk child workerEnv in error state 7", "answer": "mod_jk child workerEnv in error state {variables}"}
+{"query": "mod_jk child workerEnv in error state 1", "answer": "mod_jk child workerEnv in error state {variables}"}
+{"query": "env.createBean2(): Factory error creating worker.jni:onStartup ( worker.jni, onStartup)", "answer": "env.createBean2(): Factory error creating {variables} ({variables}, {variables})"}
+{"query": "env.createBean2(): Factory error creating worker.jni:onStartup ( worker.jni, onStartup)", "answer": "env.createBean2(): Factory error creating {variables} ({variables}, {variables})"}
+{"query": "env.createBean2(): Factory error creating worker.jni:onShutdown ( worker.jni, onShutdown)", "answer": "env.createBean2(): Factory error creating {variables} ({variables}, {variables})"}
+{"query": "env.createBean2(): Factory error creating worker.jni:onStartup ( worker.jni, onStartup)", "answer": "env.createBean2(): Factory error creating {variables} ({variables}, {variables})"}
+{"query": "env.createBean2(): Factory error creating worker.jni:onShutdown ( worker.jni, onShutdown)", "answer": "env.createBean2(): Factory error creating {variables} ({variables}, {variables})"}
+{"query": "config.update(): Can't create worker.jni:onShutdown", "answer": "config.update(): Can't create {variables}"}
+{"query": "config.update(): Can't create worker.jni:onShutdown", "answer": "config.update(): Can't create {variables}"}
+{"query": "config.update(): Can't create worker.jni:onShutdown", "answer": "config.update(): Can't create {variables}"}
+{"query": "config.update(): Can't create worker.jni:onShutdown", "answer": "config.update(): Can't create {variables}"}
+{"query": "config.update(): Can't create worker.jni:onShutdown", "answer": "config.update(): Can't create {variables}"}
+{"query": "[client 210.115.233.107] script not found or unable to stat: /var/www/cgi-bin/awstats", "answer": "[client {variables}] script not found or unable to stat: {variables}"}
+{"query": "[client 61.172.105.102] script not found or unable to stat: /var/www/cgi-bin/prxjdg.cgi", "answer": "[client {variables}] script not found or unable to stat: {variables}"}
+{"query": "[client 211.138.105.36] script not found or unable to stat: /var/www/cgi-bin/jud.cgi", "answer": "[client {variables}] script not found or unable to stat: {variables}"}
+{"query": "[client 212.238.198.203] script not found or unable to stat: /var/www/cgi-bin/openwebmail", "answer": "[client {variables}] script not found or unable to stat: {variables}"}
+{"query": "[client 210.115.233.107] script not found or unable to stat: /var/www/cgi-bin/awstats.pl", "answer": "[client {variables}] script not found or unable to stat: {variables}"}
+{"query": "config.update(): Can't create worker.jni:onStartup", "answer": "config.update(): Can't create {variables}"}
+{"query": "config.update(): Can't create worker.jni:onStartup", "answer": "config.update(): Can't create {variables}"}
+{"query": "config.update(): Can't create worker.jni:onStartup", "answer": "config.update(): Can't create {variables}"}
+{"query": "config.update(): Can't create worker.jni:onStartup", "answer": "config.update(): Can't create {variables}"}
+{"query": "config.update(): Can't create worker.jni:onStartup", "answer": "config.update(): Can't create {variables}"}
+{"query": "[client 213.253.218.81] File does not exist: /var/www/html/chat", "answer": "[client {variables}] File does not exist: {variables}"}
+{"query": "[client 172.152.131.48] File does not exist: /var/www/html/scripts/..%5c..", "answer": "[client {variables}] File does not exist: {variables}"}
+{"query": "[client 83.114.8.4] File does not exist: /var/www/html/_vti_bin", "answer": "[client {variables}] File does not exist: {variables}"}
+{"query": "[client 219.218.0.118] File does not exist: /var/www/html/scripts/..\\xc1\\x1c..", "answer": "[client {variables}] File does not exist: {variables}"}
+{"query": "[client 218.144.240.75] File does not exist: /var/www/html/awstats/cgi-bin", "answer": "[client {variables}] File does not exist: {variables}"}
+{"query": "config.update(): Can't create vm:", "answer": "config.update(): Can't create {variables}"}
+{"query": "config.update(): Can't create vm:", "answer": "config.update(): Can't create {variables}"}
+{"query": "config.update(): Can't create vm:", "answer": "config.update(): Can't create {variables}"}
+{"query": "config.update(): Can't create vm:", "answer": "config.update(): Can't create {variables}"}
+{"query": "config.update(): Can't create channel.jni:jni", "answer": "config.update(): Can't create {variables}"}
+{"query": "[client 218.65.235.56] request failed: error reading the headers", "answer": "[client {variables}] request failed: error reading the headers"}
+{"query": "[client 218.65.235.56] request failed: error reading the headers", "answer": "[client {variables}] request failed: error reading the headers"}
+{"query": "[client 218.65.235.56] request failed: error reading the headers", "answer": "[client {variables}] request failed: error reading the headers"}
+{"query": "[client 217.12.49.10] request failed: error reading the headers", "answer": "[client {variables}] request failed: error reading the headers"}
+{"query": "[client 217.12.49.10] request failed: error reading the headers", "answer": "[client {variables}] request failed: error reading the headers"}
+{"query": "jk2_init() Found child 4229 in scoreboard slot 27", "answer": "jk2_init() Found child {variables} in scoreboard slot {variables}"}
+{"query": "jk2_init() Found child 3690 in scoreboard slot 31", "answer": "jk2_init() Found child {variables} in scoreboard slot {variables}"}
+{"query": "jk2_init() Found child 3740 in scoreboard slot 81", "answer": "jk2_init() Found child {variables} in scoreboard slot {variables}"}
+{"query": "jk2_init() Found child 10284 in scoreboard slot 7", "answer": "jk2_init() Found child {variables} in scoreboard slot {variables}"}
+{"query": "jk2_init() Found child 13855 in scoreboard slot 6", "answer": "jk2_init() Found child {variables} in scoreboard slot {variables}"}
+{"query": "jk2_init() Can't find child 25122 in scoreboard", "answer": "jk2_init() Can't find child {variables} in scoreboard"}
+{"query": "jk2_init() Can't find child 32016 in scoreboard", "answer": "jk2_init() Can't find child {variables} in scoreboard"}
+{"query": "jk2_init() Can't find child 3714 in scoreboard", "answer": "jk2_init() Can't find child {variables} in scoreboard"}
+{"query": "jk2_init() Can't find child 31776 in scoreboard", "answer": "jk2_init() Can't find child {variables} in scoreboard"}
+{"query": "jk2_init() Can't find child 27186 in scoreboard", "answer": "jk2_init() Can't find child {variables} in scoreboard"}
+{"query": "LDAP: Built with OpenLDAP LDAP SDK", "answer": "LDAP: Built with OpenLDAP LDAP SDK"}
+{"query": "LDAP: Built with OpenLDAP LDAP SDK", "answer": "LDAP: Built with OpenLDAP LDAP SDK"}
+{"query": "LDAP: Built with OpenLDAP LDAP SDK", "answer": "LDAP: Built with OpenLDAP LDAP SDK"}
+{"query": "LDAP: Built with OpenLDAP LDAP SDK", "answer": "LDAP: Built with OpenLDAP LDAP SDK"}
+{"query": "LDAP: Built with OpenLDAP LDAP SDK", "answer": "LDAP: Built with OpenLDAP LDAP SDK"}
+{"query": "LDAP: SSL support unavailable", "answer": "LDAP: SSL support unavailable"}
+{"query": "LDAP: SSL support unavailable", "answer": "LDAP: SSL support unavailable"}
+{"query": "LDAP: SSL support unavailable", "answer": "LDAP: SSL support unavailable"}
+{"query": "LDAP: SSL support unavailable", "answer": "LDAP: SSL support unavailable"}
+{"query": "LDAP: SSL support unavailable", "answer": "LDAP: SSL support unavailable"}
+{"query": "[client 200.172.22.150] request failed: URI too long (longer than 8190)", "answer": "[client {variables}] request failed: URI too long (longer than {variables})"}
+{"query": "[client 61.109.224.194] request failed: URI too long (longer than 8190)", "answer": "[client {variables}] request failed: URI too long (longer than {variables})"}
+{"query": "[client 150.161.187.25] request failed: URI too long (longer than 8190)", "answer": "[client {variables}] request failed: URI too long (longer than {variables})"}
+{"query": "[client 63.160.17.140] request failed: URI too long (longer than 8190)", "answer": "[client {variables}] request failed: URI too long (longer than {variables})"}
+{"query": "[client 63.96.34.131] request failed: URI too long (longer than 8190)", "answer": "[client {variables}] request failed: URI too long (longer than {variables})"}
+{"query": "Apache/2.0.49 (Fedora) configured -- resuming normal operations", "answer": "Apache/{variables} configured -- resuming normal operations"}
+{"query": "Apache/2.0.49 (Fedora) configured -- resuming normal operations", "answer": "Apache/{variables} configured -- resuming normal operations"}
+{"query": "Apache/2.0.49 (Fedora) configured -- resuming normal operations", "answer": "Apache/{variables} configured -- resuming normal operations"}
+{"query": "Apache/2.0.49 (Fedora) configured -- resuming normal operations", "answer": "Apache/{variables} configured -- resuming normal operations"}
+{"query": "Apache/2.0.49 (Fedora) configured -- resuming normal operations", "answer": "Apache/{variables} configured -- resuming normal operations"}
+{"query": "env.createBean2(): Factory error creating channel.jni:jni ( channel.jni, jni)", "answer": "env.createBean2(): Factory error creating {variables} ({variables}, {variables})"}
+{"query": "env.createBean2(): Factory error creating channel.jni:jni ( channel.jni, jni)", "answer": "env.createBean2(): Factory error creating {variables} ({variables}, {variables})"}
+{"query": "env.createBean2(): Factory error creating channel.jni:jni ( channel.jni, jni)", "answer": "env.createBean2(): Factory error creating {variables} ({variables}, {variables})"}
+{"query": "env.createBean2(): Factory error creating channel.jni:jni ( channel.jni, jni)", "answer": "env.createBean2(): Factory error creating {variables} ({variables}, {variables})"}
+{"query": "env.createBean2(): Factory error creating vm: ( vm, )", "answer": "env.createBean2(): Factory error creating {variables} ({variables}, {variables})"}
+{"query": "[client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/", "answer": "[client {variables}] attempt to invoke directory as script: {variables}"}
+{"query": "[client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/", "answer": "[client {variables}] attempt to invoke directory as script: {variables}"}
+{"query": "[client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/", "answer": "[client {variables}] attempt to invoke directory as script: {variables}"}
+{"query": "[client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/", "answer": "[client {variables}] attempt to invoke directory as script: {variables}"}
+{"query": "[client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/", "answer": "[client {variables}] attempt to invoke directory as script: {variables}"}
+{"query": "Digest: done", "answer": "Digest: done"}
+{"query": "Digest: done", "answer": "Digest: done"}
+{"query": "Digest: done", "answer": "Digest: done"}
+{"query": "Digest: done", "answer": "Digest: done"}
+{"query": "Digest: done", "answer": "Digest: done"}
+{"query": "mod_jk2 Shutting down", "answer": "mod_jk2 Shutting down"}
+{"query": "mod_jk2 Shutting down", "answer": "mod_jk2 Shutting down"}
+{"query": "mod_jk2 Shutting down", "answer": "mod_jk2 Shutting down"}
+{"query": "mod_jk2 Shutting down", "answer": "mod_jk2 Shutting down"}
+{"query": "mod_jk2 Shutting down", "answer": "mod_jk2 Shutting down"}
+{"query": "Digest: generating secret for digest authentication ...", "answer": "Digest: generating secret for digest authentication ..."}
+{"query": "Digest: generating secret for digest authentication ...", "answer": "Digest: generating secret for digest authentication ..."}
+{"query": "Digest: generating secret for digest authentication ...", "answer": "Digest: generating secret for digest authentication ..."}
+{"query": "Digest: generating secret for digest authentication ...", "answer": "Digest: generating secret for digest authentication ..."}
+{"query": "workerEnv.init() ok /etc/httpd/conf/workers2.properties", "answer": "workerEnv.init() ok {variables}"}
+{"query": "workerEnv.init() ok /etc/httpd/conf/workers2.properties", "answer": "workerEnv.init() ok {variables}"}
+{"query": "workerEnv.init() ok /etc/httpd/conf/workers2.properties", "answer": "workerEnv.init() ok {variables}"}
+{"query": "workerEnv.init() ok /etc/httpd/conf/workers2.properties", "answer": "workerEnv.init() ok {variables}"}
+{"query": "child process 18805 still did not exit, sending a SIGTERM", "answer": "child process {variables} still did not exit, sending a SIGTERM"}
+{"query": "child process 29766 still did not exit, sending a SIGTERM", "answer": "child process {variables} still did not exit, sending a SIGTERM"}
+{"query": "child process 29765 still did not exit, sending a SIGTERM", "answer": "child process {variables} still did not exit, sending a SIGTERM"}
+{"query": "child process 18803 still did not exit, sending a SIGTERM", "answer": "child process {variables} still did not exit, sending a SIGTERM"}
+{"query": "[client 210.245.151.81] Attempt to serve directory: /var/www/html/", "answer": "[client {variables}] Attempt to serve directory: {variables}"}
+{"query": "[client 210.245.151.81] Attempt to serve directory: /var/www/html/", "answer": "[client {variables}] Attempt to serve directory: {variables}"}
+{"query": "[client 210.245.151.81] Attempt to serve directory: /var/www/html/", "answer": "[client {variables}] Attempt to serve directory: {variables}"}
+{"query": "[client 210.245.151.81] Attempt to serve directory: /var/www/html/", "answer": "[client {variables}] Attempt to serve directory: {variables}"}
+{"query": "[client 63.19.52.174] Directory index forbidden by rule: /var/www/html/", "answer": "[client {variables}] Directory index forbidden by rule: {variables}"}
+{"query": "[client 219.133.175.39] Directory index forbidden by rule: /var/www/html/", "answer": "[client {variables}] Directory index forbidden by rule: {variables}"}
+{"query": "[client 222.79.31.128] Directory index forbidden by rule: /var/www/html/", "answer": "[client {variables}] Directory index forbidden by rule: {variables}"}
+{"query": "[client 137.52.76.165] Directory index forbidden by rule: /var/www/html/", "answer": "[client {variables}] Directory index forbidden by rule: {variables}"}
+{"query": "mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.", "answer": "mod_python: Creating {variables} session mutexes based on {variables} max processes and {variables} max threads."}
+{"query": "mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.", "answer": "mod_python: Creating {variables} session mutexes based on {variables} max processes and {variables} max threads."}
+{"query": "mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.", "answer": "mod_python: Creating {variables} session mutexes based on {variables} max processes and {variables} max threads."}
+{"query": "mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.", "answer": "mod_python: Creating {variables} session mutexes based on {variables} max processes and {variables} max threads."}
+{"query": "Graceful restart requested, doing restart", "answer": "Graceful restart requested, doing restart"}
+{"query": "Graceful restart requested, doing restart", "answer": "Graceful restart requested, doing restart"}
+{"query": "Graceful restart requested, doing restart", "answer": "Graceful restart requested, doing restart"}
+{"query": "Graceful restart requested, doing restart", "answer": "Graceful restart requested, doing restart"}

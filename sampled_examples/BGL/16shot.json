@@ -1,0 +1,16 @@
+{"query": "L3 ecc control register: 00000000", "answer": "L3 ecc control register: {variables}"}
+{"query": "external input interrupt enable...0", "answer": "external input interrupt enable...{variables}"}
+{"query": "Node card VPD check: U11 node in processor card slot J11 do not match. VPD ecid 04D18127482FFFFF080A19E108BD, found 04E28088122FFFFF09021B1096D6", "answer": "Node card VPD check: {variables} node in processor card slot {variables} do not match. VPD ecid {variables}, found {variables}"}
+{"query": "floating pt ex mode 1 enable......0", "answer": "floating pt ex mode {variables} enable......{variables}"}
+{"query": "disable trace broadcast..................0", "answer": "disable trace broadcast..................{variables}"}
+{"query": "memory manager uncorrectable error...............1", "answer": "memory manager uncorrectable error...............{variables}"}
+{"query": "memory and bus summary...........................0", "answer": "memory and bus summary...........................{variables}"}
+{"query": "memory manager store buffer parity...............0", "answer": "memory manager store buffer parity...............{variables}"}
+{"query": "correctable error detected in directory 1......0", "answer": "correctable error detected in directory {variables}"}
+{"query": "guaranteed instruction cache block touch.0", "answer": "guaranteed instruction cache block touch.{variables}"}
+{"query": "program interrupt: privileged instruction...0", "answer": "program interrupt: privileged instruction...{variables}"}
+{"query": "uncorrectable error detected in external DDR...1", "answer": "uncorrectable error detected in external DDR...{variables}"}
+{"query": "ciodb has been restarted.", "answer": "ciodb has been restarted."}
+{"query": "guaranteed data cache block touch........1", "answer": "guaranteed data cache block touch........{variables}"}
+{"query": "external input interrupt (unit=0x02 bit=0x09): torus sender x+ retransmission error was corrected", "answer": "external input interrupt (unit={variables} bit={variables}): torus sender {variables} retransmission error was corrected"}
+{"query": "data TLB error interrupt", "answer": "data TLB error interrupt"}

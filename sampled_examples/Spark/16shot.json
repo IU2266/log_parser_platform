@@ -1,0 +1,16 @@
+{"query": "Asking each executor to shut down", "answer": "Asking each executor to shut down"}
+{"query": "Invoking stop() from shutdown hook", "answer": "Invoking stop() from shutdown hook"}
+{"query": "Error sending message [message = Heartbeat(3,[Lscala.Tuple2;@1b0fac7e,BlockManagerId(3, mesos-slave-19, 36979))] in 1 attempts", "answer": "Error sending message [message = {variables}] in {variables} attempts"}
+{"query": "Changing view acls to: yarn,yxsu", "answer": "Changing view acls to: {variables},{variables}"}
+{"query": "Registering the ApplicationMaster", "answer": "Registering the ApplicationMaster"}
+{"query": "Submitting ResultStage 59 (PythonRDD[126] at reduce at IPLoM.py:527), which has no missing parents", "answer": "Submitting ResultStage {variables} ({variables} at {variables}), which has no missing parents"}
+{"query": "ShuffleMapStage 23 (reduceByKey at pnmf4.py:295) finished in 39.049 s", "answer": "ShuffleMapStage {variables} ({variables} at {variables}) finished in {variables} s"}
+{"query": "stopped o.s.j.s.ServletContextHandler{/,null}", "answer": "stopped o.s.j.s.ServletContextHandler{{variables}}"}
+{"query": "Stopped Spark web UI at http://10.10.34.17:57177", "answer": "Stopped Spark web UI at {variables}"}
+{"query": "RECEIVED SIGNAL 15: SIGTERM", "answer": "RECEIVED SIGNAL {variables}: SIGTERM"}
+{"query": "Started SelectChannelConnector@0.0.0.0:53468", "answer": "Started SelectChannelConnector@{variables}"}
+{"query": "Connecting to ResourceManager at mesos-master-1/10.10.34.11:8030", "answer": "Connecting to ResourceManager at {variables}"}
+{"query": "Registering RDD 6 (reduceByKey at pnmf4.py:352)", "answer": "Registering RDD {variables} (reduceByKey at {variables})"}
+{"query": "MapOutputTrackerMasterEndpoint stopped!", "answer": "MapOutputTrackerMasterEndpoint stopped!"}
+{"query": "Starting job: collect at pnmf4.py:296", "answer": "Starting job: collect at {variables}"}
+{"query": "Resubmitting failed stages", "answer": "Resubmitting failed stages"}

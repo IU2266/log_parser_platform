@@ -1,0 +1,16 @@
+{"query": "Couldn't authenticate user", "answer": "Couldn't authenticate user"}
+{"query": "Device: /dev/hda, found in smartd database.", "answer": "Device: {variables}, found in smartd database."}
+{"query": "tty2: invalid character 0x1b in login name", "answer": "tty2: invalid character {variables} in login name"}
+{"query": "crond startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Memory: 125312k/129720k available (1540k kernel code, 3860k reserved, 599k data, 144k init, 0k highmem)", "answer": "Memory: {variables} available ({variables} kernel code, {variables} reserved, {variables} data, {variables} init, {variables} highmem)"}
+{"query": "Initializing random number generator: succeeded", "answer": "Initializing random number generator: succeeded"}
+{"query": "parport0: PC-style at 0x378 (0x778) [PCSPP,TRISTATE,EPP]", "answer": "parport0: PC-style at {variables} ({variables}) [{variables}]"}
+{"query": "cdrom: open failed.", "answer": "cdrom: open failed."}
+{"query": "connection from 61.199.220.226 (ark.dbstream.co.jp) at Sat Aug 13 11:45:26 2005", "answer": "connection from {variables} ({variables}) at {variables}"}
+{"query": "Security Scaffold v1.0.0 initialized", "answer": "Security Scaffold {variables} initialized"}
+{"query": "connection from 61.218.67.60 (mail.net-star.com.tw) at Mon Jun 13 02:01:27 2005", "answer": "connection from {variables} ({variables}) at {variables}"}
+{"query": "PCI: Invalid ACPI-PCI IRQ routing table", "answer": "PCI: Invalid ACPI-PCI IRQ routing table"}
+{"query": "TCP: Hash tables configured (established 8192 bind 16384)", "answer": "TCP: Hash tables configured (established {variables} bind {variables})"}
+{"query": "Jul 27 14:42:19 Privoxy(-150806400) Info: loading configuration file '/etc/privoxy/config':", "answer": "{variables} Privoxy({variables}) Info: loading configuration file {variables}"}
+{"query": "sdpd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "selinux_register_security: Registering secondary module capability", "answer": "selinux_register_security: Registering secondary module capability"}

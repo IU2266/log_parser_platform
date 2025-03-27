@@ -1,0 +1,8 @@
+{"query": "Done acknowledgement from attempt_1445062781478_0011_m_000001_0", "answer": "Done acknowledgement from {variables}"}
+{"query": "The job-conf file on the remote FS is /tmp/hadoop-yarn/staging/msrabi/.staging/job_1445062781478_0020/job.xml", "answer": "The job-conf file on the remote FS is {variables}"}
+{"query": "(EQUATOR) 13593059 kvi 3398260(13593040)", "answer": "(EQUATOR) {variables} kvi {variables}({variables})"}
+{"query": "Auth successful for job_1445175094696_0002 (auth:SIMPLE)", "answer": "Auth successful for {variables} (auth:{variables})"}
+{"query": "Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context static", "answer": "Added filter {variables} (class={variables}) to context {variables}"}
+{"query": "Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack", "answer": "Resolved {variables} to {variables}"}
+{"query": "Could not contact RM after 360000 milliseconds.", "answer": "Could not contact RM after {variables} milliseconds."}
+{"query": "assigned 1 of 1 to MSRA-SA-39.fareast.corp.microsoft.com:13562 to fetcher#1", "answer": "assigned {variables} of {variables} to {variables} to fetcher#{variables}"}

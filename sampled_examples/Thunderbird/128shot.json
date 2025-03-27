@@ -1,0 +1,128 @@
+{"query": "ACPI: (supports S0 S4 S5)", "answer": "ACPI: (supports {variables})"}
+{"query": "kjournald starting. Commit interval 5 seconds", "answer": "{variables} starting. Commit interval {variables} seconds"}
+{"query": "Server listening on :: port 22.", "answer": "Server listening on {variables} port {variables}."}
+{"query": "Physical Processor ID: 0", "answer": "Physical Processor ID: {variables}"}
+{"query": "sda: asking for cache data failed", "answer": "{variables}: asking for cache data failed"}
+{"query": "Clearing orphaned inode 14 (uid=18252, gid=18252, mode=0100775, size=6036)", "answer": "Clearing orphaned inode {variables} (uid={variables}, gid={variables}, mode={variables}, size={variables})"}
+{"query": "SCSI error : <0 1 0 0> return code = 0x40001", "answer": "SCSI error : {variables} return code = {variables}"}
+{"query": "System clock time adjusted to the past. Resetting next wakeup time.", "answer": "System clock time adjusted to the past. Resetting next wakeup time."}
+{"query": "Copyright (c) 1999-2004 Intel Corporation.", "answer": "Copyright (c) {variables}-{variables} Intel Corporation."}
+{"query": "Linux version 2.6.9-15.EL.rootsmp (#7#@#9#) (gcc version 3.4.3 20050227 (Red Hat 3.4.3-22.1)) #1 SMP Tue Aug 16 12:32:24 MDT 2005", "answer": "Linux version {variables} ({variables}) (gcc version {variables}) {variables} SMP {variables}"}
+{"query": "mount.panfs warning:", "answer": "mount.panfs warning:"}
+{"query": "crond shutdown succeeded", "answer": "{variables} shutdown succeeded"}
+{"query": "dhcpd shutdown succeeded", "answer": "{variables} shutdown succeeded"}
+{"query": "Kickstart: setup the cisco (topspin) ib stack", "answer": "Kickstart: setup the cisco (topspin) ib stack"}
+{"query": "BIOS update verification failed. Version expected: A04, Version found: A02", "answer": "BIOS update verification failed. Version expected: {variables}, Version found: {variables}"}
+{"query": "PCI: Setting latency timer of device 0000:00:1d.1 to 64", "answer": "PCI: Setting latency timer of device {variables} to {variables}"}
+{"query": "fs_client_fm: All RPCs returned", "answer": "fs_client_fm: All RPCs returned"}
+{"query": "Installing all prepared tables", "answer": "Installing all prepared tables"}
+{"query": "Mounted root (ext2 filesystem).", "answer": "Mounted {variables} ({variables} filesystem)."}
+{"query": "cpu 1 cold: low 0, high 32, batch 16", "answer": "cpu {variables} cold: low {variables}, high {variables}, batch {variables}"}
+{"query": "Built 1 zonelists", "answer": "Built {variables} zonelists"}
+{"query": "Kickstart Install: TBIRD Dell FIRMWARE Update Module", "answer": "Kickstart Install: {variables}"}
+{"query": "smartd has fork()ed into background mode. New PID=1951.", "answer": "smartd has fork()ed into background mode. New PID={variables}."}
+{"query": "EXT3-fs: INFO: recovery required on readonly filesystem.", "answer": "EXT3-fs: INFO: recovery required on readonly filesystem."}
+{"query": ": server is down.", "answer": ": server is down."}
+{"query": "SCSI device sda: drive cache: write through", "answer": "SCSI device {variables}: drive cache: write through"}
+{"query": "PCI interrupt 0000:09:0d.0[A] -> GSI 18 (level, low) -> IRQ 201", "answer": "PCI interrupt {variables}[{variables}] -> GSI {variables} (level, {variables}) -> IRQ {variables}"}
+{"query": "to the right place for your system", "answer": "to the right place for your system"}
+{"query": "Unable to register device /dev/sda (no Directive -d removable). Exiting.", "answer": "Unable to register device {variables} (no Directive -d {variables}). Exiting."}
+{"query": "inserting floppy driver for 2.6.9-15.EL.rootsmp", "answer": "inserting floppy driver for {variables}"}
+{"query": "Aborting journal on device sda3.", "answer": "Aborting journal on device {variables}."}
+{"query": "SELinux: Starting in permissive mode", "answer": "SELinux: Starting in permissive mode"}
+{"query": "gmetad shutdown succeeded", "answer": "{variables} shutdown succeeded"}
+{"query": "FAILED LOGIN 1 FROM (null) FOR , Authentication failure", "answer": "FAILED LOGIN {variables} FROM (null) FOR , Authentication failure"}
+{"query": "fs_client: Umounting panfs ...", "answer": "fs_client: Umounting panfs ..."}
+{"query": "PCI Hot Plug PCI Core version: 0.5", "answer": "PCI Hot Plug PCI Core version: {variables}"}
+{"query": "crond startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "panfs mount: If you are running a GenuineIntel kernel, you may get an oops.", "answer": "panfs mount: If you are running a {variables} kernel, you may get an oops."}
+{"query": "FAIL: rsync service_limit from=10.100.34.84", "answer": "FAIL: rsync service_limit from={variables}"}
+{"query": "Loading keyring", "answer": "Loading keyring"}
+{"query": "ACPI: Using IOAPIC for interrupt routing", "answer": "ACPI: Using IOAPIC for interrupt routing"}
+{"query": "Key exchange failed in remote: 'Key exchange failed.'", "answer": "Key exchange failed in remote: {variables}"}
+{"query": "EXT3-fs error (device sda3): ext3_journal_start_sb: Detected aborted journal", "answer": "EXT3-fs error (device {variables}): {variables}: Detected aborted journal"}
+{"query": "LAPIC (acpi_id[0x01] lapic_id[0x00] enabled)", "answer": "LAPIC (acpi_id[{variables}] lapic_id[{variables}] enabled)"}
+{"query": "[ib_sm_discovery.c:163]: Failed to discover port - GUID=5ad0000026d59, port=9", "answer": "[{variables}]: Failed to discover port - GUID={variables}, port={variables}"}
+{"query": "biosie.bin: page allocation failure. order:9, mode:0xd0", "answer": "biosie.bin: page allocation failure. order:{variables}, mode:{variables}"}
+{"query": "Checking root filesystem succeeded", "answer": "Checking {variables} filesystem succeeded"}
+{"query": "smartd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "[/sbin/fsck.ext3 (1) -- /boot] fsck.ext3 -a /dev/sda1", "answer": "[{variables} ({variables}) -- {variables}] {variables} -a {variables}"}
+{"query": "dcevt32d startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "rpc.idmapd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Warning: acpi_table_parse(ACPI_SLIT) returned 0!", "answer": "Warning: acpi_table_parse({variables}) returned {variables}!"}
+{"query": "Install: apply updates", "answer": "Install: apply updates"}
+{"query": "264 pages swap cached", "answer": "{variables} pages swap cached"}
+{"query": "gmond startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "[IB_NET][ipoib_sarp_rewrite_send][/mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/host/ulp/ipoib/obj_host_amd64_custom1_rhel4/ts_ipoib/ipoib_arp.c:1008]ib0: can't find hw address for hash 00:00:00:00:00:00", "answer": "[IB_NET][{variables}][{variables}]ib0: can't find hw address for hash {variables}"}
+{"query": "SELinux: Registering netfilter hooks", "answer": "SELinux: Registering netfilter hooks"}
+{"query": "task migration cache decay timeout: 1 msecs.", "answer": "task migration cache decay timeout: {variables} msecs."}
+{"query": "Vendor: PE/PV Model: 1x2 SCSI BP Rev: 1.0", "answer": "Vendor: {variables} Model: {variables} Rev: {variables}"}
+{"query": "uhci_hcd 0000:00:1d.2: irq 185, io base 000000000000aca0", "answer": "uhci_hcd {variables}: irq {variables}, io base {variables}"}
+{"query": "Mellanox Tavor Device Driver is creating device \"InfiniHost0\" (domain=00, bus=08, devfn=00)", "answer": "Mellanox Tavor Device Driver is creating device {variables} (domain={variables}, bus={variables}, devfn={variables})"}
+{"query": "omsad32 shutdown succeeded", "answer": "{variables} shutdown succeeded"}
+{"query": "nfsd shutdown succeeded", "answer": "{variables} shutdown succeeded"}
+{"query": "dcdbas device driver unloaded", "answer": "{variables} device driver unloaded"}
+{"query": "To start mysqld at boot time you have to copy support-files/mysql.server", "answer": "To start {variables} at boot time you have to copy {variables}"}
+{"query": "Checking aperture...", "answer": "Checking aperture..."}
+{"query": "Kickstart Install: Torque Mom and Maui speconf Tree", "answer": "Kickstart Install: {variables}"}
+{"query": "accepted smux peer: oid SNMPv2-SMI::enterprises.674.10892.1, password , descr Systems Management SNMP MIB Plug-in Manager", "answer": "accepted smux peer: oid {variables}, password , descr {variables}"}
+{"query": "megaraid: fw version:[521S] bios version:[H430]", "answer": "megaraid: fw version:[{variables}] bios version:[{variables}]"}
+{"query": "Faking a node at 0000000000000000-00000001c0000000", "answer": "Faking a node at {variables}"}
+{"query": "Remounting filesystem read-only", "answer": "Remounting filesystem read-only"}
+{"query": "VIPKL(1): [MM_create_mr]:MM_mr_get_keys failed", "answer": "VIPKL({variables}): [MM_create_mr]:MM_mr_get_keys failed"}
+{"query": "IOAPIC (id[0x09] address[0xfec80000] gsi_base[32])", "answer": "IOAPIC (id[{variables}] address[{variables}] gsi_base[{variables}])"}
+{"query": "serio: i8042 AUX port at 0x60,0x64 irq 12", "answer": "serio: {variables} AUX port at {variables},{variables} irq {variables}"}
+{"query": "[trip Temperature is 68 Celsius]", "answer": "[trip Temperature is {variables} Celsius]"}
+{"query": "Package Release ID=R106628 Package Description=Dell BMC Firmware, v.1.40, A05 Support Log path=/var/log/#26#/updatepackage/log/support/R106628.log", "answer": "Package Release ID={variables} Package Description={variables} Support Log path={variables}"}
+{"query": "Dquot-cache hash table entries: 512 (order 0, 4096 bytes)", "answer": "Dquot-cache hash table entries: {variables} (order {variables}, {variables} bytes)"}
+{"query": "Listener created on port 22.", "answer": "Listener created on port {variables}."}
+{"query": "[ib_sm_routing.c:3050]: Failed to set LFT to switch=5ad0000026e10", "answer": "[{variables}]: Failed to set LFT to switch={variables}"}
+{"query": "warning: unable to look up public/pickup: No such file or directory", "answer": "warning: unable to look up {variables}: No such file or directory"}
+{"query": "panfs: module license 'Proprietary' taints kernel.", "answer": "panfs: module license {variables} taints kernel."}
+{"query": "Brought up 2 CPUs", "answer": "Brought up {variables} CPUs"}
+{"query": "scsi[0]: scanning scsi channel 0 [Phy 0] for non-raid devices", "answer": "scsi[{variables}]: scanning scsi channel {variables} [Phy {variables}] for non-raid devices"}
+{"query": "BIOS-provided physical RAM map:", "answer": "BIOS-provided physical RAM map:"}
+{"query": "EXT3-fs: write access #15# be enabled during recovery.", "answer": "EXT3-fs: write access {variables} be enabled during recovery."}
+{"query": "Kernel logging (proc) stopped.", "answer": "Kernel logging {variables} stopped."}
+{"query": "No NUMA configuration found", "answer": "No NUMA configuration found"}
+{"query": "The latest information about MySQL is available on the web at", "answer": "The latest information about {variables} is available on the web at"}
+{"query": "portmap startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "mount.panfs: panfs is not configured in the kernel", "answer": "mount.panfs: panfs is not configured in the kernel"}
+{"query": "USB Universal Host Controller Interface driver v2.2", "answer": "USB Universal Host Controller Interface driver {variables}"}
+{"query": "Now running on #50#'s privileges.", "answer": "Now running on {variables}'s privileges."}
+{"query": "[ib_sm_sweep.c:411]: IB node 0x0005AD0000027556 port 24 is INIT state", "answer": "[{variables}]: IB node {variables} port {variables} is INIT state"}
+{"query": "Accepted publickey for #47# from ::ffff:10.100.8.251 port 60955 ssh2", "answer": "Accepted publickey for {variables} from {variables} port {variables} ssh2"}
+{"query": "[INFO]: Configuration caused by previous GET/SET operation failures", "answer": "[INFO]: Configuration caused by previous GET/SET operation failures"}
+{"query": "Initializing IPsec netlink socket", "answer": "Initializing IPsec netlink socket"}
+{"query": "[INFO]: IB CliSessionThread PID= 24904", "answer": "[INFO]: IB CliSessionThread PID= {variables}"}
+{"query": "Kickstart Install: SUN JDK Package", "answer": "Kickstart Install: {variables}"}
+{"query": "[KERNEL_IB][ib_cache_update][/mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/ib/ts_api_ng/core/obj_host_amd64_custom1_rhel4/ts_ib_core/core_cache.c:389]port_query failed (-22) for InfiniHost0", "answer": "[KERNEL_IB][ib_cache_update][{variables}]port_query failed ({variables}) for {variables}"}
+{"query": "session opened for user #47# by (uid=0)", "answer": "session opened for user {variables} by {variables}(uid={variables})"}
+{"query": "[INFO]: Configuration caused by some ports in INIT state", "answer": "[INFO]: Configuration caused by some ports in INIT state"}
+{"query": "scsi0 : LSI Logic MegaRAID driver", "answer": "{variables} : LSI Logic MegaRAID driver"}
+{"query": "Package Release ID=R106628 Package Description=Dell BMC Firmware, v.1.40, A05 Support Log path=/var/log/#26#/updatepackage/log/support/R106628.log Exit code = 2 (Reboot required)", "answer": "Package Release ID={variables} Package Description={variables} Support Log path={variables} Exit code = {variables} (Reboot required)"}
+{"query": "START: rsync pid=22108 from=10.100.0.90", "answer": "START: rsync pid={variables} from={variables}"}
+{"query": "User jtfish, coming from #45#, authenticated.", "answer": "User {variables}, coming from {variables}, authenticated."}
+{"query": "Entering runlevel: 3", "answer": "Entering runlevel: {variables}"}
+{"query": "Checking all file systems.", "answer": "Checking all file systems."}
+{"query": "Remote host disconnected: Authentication cancelled by user.", "answer": "Remote host disconnected: Authentication cancelled by user."}
+{"query": "LustreError: 14234:0:(module.c:46:kportal_assertion_failed()) LBUG", "answer": "LustreError: {variables}:({variables}) LBUG"}
+{"query": "haldaemon shutdown failed", "answer": "{variables} shutdown failed"}
+{"query": "Kickstart: configure services", "answer": "Kickstart: configure services"}
+{"query": "checking TSC synchronization across 2 CPUs: passed.", "answer": "checking TSC synchronization across {variables} CPUs: passed."}
+{"query": "For info, please visit http://#6#/sw/dhcp/", "answer": "For info, please visit {variables}"}
+{"query": "Node 0 Normal free:8416kB min:2696kB low:5392kB high:8088kB active:587908kB inactive:5171092kB present:7323648kB pages_scanned:0 all_unreclaimable? no", "answer": "Node {variables} {variables} {variables} min:{variables} low:{variables} high:{variables} active:{variables} inactive:{variables} present:{variables} pages_scanned:{variables} all_unreclaimable? {variables}"}
+{"query": "Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes)", "answer": "Dentry cache hash table entries: {variables} (order: {variables}, {variables} bytes)"}
+{"query": "mount.panfs: started PanFS device [panfs://#27#/home]", "answer": "mount.panfs: started PanFS device [{variables}]"}
+{"query": "uhci_hcd 0000:00:1d.1: new USB bus registered, assigned bus number 3", "answer": "uhci_hcd {variables}: new USB bus registered, assigned bus number {variables}"}
+{"query": "72925 pages shared", "answer": "{variables} pages shared"}
+{"query": "testing NMI watchdog ... OK.", "answer": "testing NMI watchdog ... OK."}
+{"query": "THH(2): [XHH_qpm_process_local_mad]: ERROR on port 1: 259", "answer": "THH({variables}): [XHH_qpm_process_local_mad]: ERROR on port {variables}: {variables}"}
+{"query": "many lost ticks.", "answer": "many lost ticks."}
+{"query": "lost page write due to I/O error on sda6", "answer": "lost page write due to I/O error on {variables}"}
+{"query": "Did not receive identification string from ::ffff:10.100.8.251", "answer": "Did not receive identification string from {variables}"}
+{"query": "Using cfq io scheduler", "answer": "Using cfq io scheduler"}
+{"query": "RPC: giant verf size: 2097152", "answer": "RPC: giant verf size: {variables}"}
+{"query": "#38#-rh1 (Release Date: Fri Dec 10 19:02:14 EST 2004)", "answer": "{variables}-rh1 (Release Date: {variables})"}
+{"query": "HighMem zone: 0 pages, LIFO batch:1", "answer": "{variables} pages, LIFO batch:{variables}"}
+{"query": "Kickstart Install: Dell BIOS CONF Package", "answer": "Kickstart Install: {variables}"}

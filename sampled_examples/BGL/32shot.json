@@ -1,0 +1,32 @@
+{"query": "MidplaneSwitchController performing bit sparing on R33-M1-L0-U22-C bit 3", "answer": "MidplaneSwitchController performing bit sparing on {variables} bit {variables}"}
+{"query": "1 torus receiver x+ input pipe error(s) (dcr 0x02ec) detected and corrected", "answer": "{variables} torus receiver {variables} input pipe error(s) (dcr {variables}) detected and corrected"}
+{"query": "total of 1 ddr error(s) detected and corrected", "answer": "total of {variables} ddr error(s) detected and corrected"}
+{"query": "error threshold, consider replacing the card", "answer": "error threshold, consider replacing the card"}
+{"query": "Running as background command", "answer": "Running as background command"}
+{"query": "icache prefetch depth....................0", "answer": "icache prefetch depth....................{variables}"}
+{"query": "L3 ecc control register: 00000000", "answer": "L3 ecc control register: {variables}"}
+{"query": "size of DDR we are caching...............1 (512M)", "answer": "size of DDR we are caching...............{variables} ({variables})"}
+{"query": "disable apu instruction broadcast........0", "answer": "disable apu instruction broadcast........{variables}"}
+{"query": "lr:00004ed0 cr:28244842 xer:20000002 ctr:00086000", "answer": "lr:{variables} cr:{variables} xer:{variables} ctr:{variables}"}
+{"query": "program interrupt: privileged instruction...0", "answer": "program interrupt: privileged instruction...{variables}"}
+{"query": "general purpose registers:", "answer": "general purpose registers:"}
+{"query": "suppressing further interrupts of same type", "answer": "suppressing further interrupts of same type"}
+{"query": "number of correctable errors detected in L3 directories...0", "answer": "number of correctable errors detected in L3 directories...{variables}"}
+{"query": "rts panic! - stopping execution", "answer": "rts panic! - stopping execution"}
+{"query": "Ido chip status changed: FF:F2:9F:16:C9:63:00:0D:60:E9:36:9C ip=10.3.1.147 v=13 t=4 status=M Tue Jun 21 07:36:58 PDT 2005", "answer": "Ido chip status changed: {variables} ip={variables} v={variables} t={variables} status={variables} {variables}"}
+{"query": "disable write lines 2:4..................0", "answer": "disable write lines {variables}..................{variables}"}
+{"query": "instruction cache parity error corrected", "answer": "instruction cache parity error corrected"}
+{"query": "job 20251 timed out. Block freed.", "answer": "job {variables} timed out. Block freed."}
+{"query": "external input interrupt (unit=0x02 bit=0x09): torus sender x+ retransmission error was corrected", "answer": "external input interrupt (unit={variables} bit={variables}): torus sender {variables} retransmission error was corrected"}
+{"query": "rror threshold, consider replacing the card", "answer": "rror threshold, consider replacing the card"}
+{"query": "ciod: Error creating node map from file /p/gb2/cabot/miranda/newmaps/8k_128x64x1_8x4x4.map: No child processes", "answer": "ciod: Error creating node map from file {variables}: No child processes"}
+{"query": "program interrupt: trap instruction.........0", "answer": "program interrupt: trap instruction.........{variables}"}
+{"query": "force load/store alignment...............0", "answer": "force load/store alignment...............{variables}"}
+{"query": "turn on hidden refreshes.................1", "answer": "turn on hidden refreshes.................{variables}"}
+{"query": "imprecise machine check...........0", "answer": "imprecise machine check...........{variables}"}
+{"query": "data write plb error..............0", "answer": "data write plb error..............{variables}"}
+{"query": "ciod: pollControlDescriptors: Detected the debugger died.", "answer": "ciod: pollControlDescriptors: Detected the debugger died."}
+{"query": "4 floating point alignment exceptions", "answer": "{variables} floating point alignment exceptions"}
+{"query": "ciod: LOGIN chdir(/p/gb2/glosli/8M_5000K/t800) failed: No such file or directory", "answer": "ciod: LOGIN chdir({variables}) failed: No such file or directory"}
+{"query": "memory manager refresh contention................0", "answer": "memory manager refresh contention................{variables}"}
+{"query": "rts internal error", "answer": "rts internal error"}

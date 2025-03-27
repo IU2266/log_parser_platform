@@ -1,0 +1,64 @@
+{"query": "Exception while unregistering", "answer": "Exception while unregistering"}
+{"query": "Commit-pending state update from attempt_1445087491445_0002_r_000000_1000", "answer": "Commit-pending state update from {variables}"}
+{"query": "maxTaskFailuresPerNode is 3", "answer": "maxTaskFailuresPerNode is {variables}"}
+{"query": "attempt_1445144423722_0020_r_000000_1000 given a go for committing the task output.", "answer": "{variables} given a go for committing the task output."}
+{"query": "adding path spec: /mapreduce/*", "answer": "adding path spec: {variables}"}
+{"query": "IPC Server listener on 32633: starting", "answer": "IPC Server listener on {variables}: starting"}
+{"query": "Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack", "answer": "Resolved {variables} to {variables}"}
+{"query": "ReduceTask metrics system stopped.", "answer": "{variables} metrics system stopped."}
+{"query": "Opening proxy : MSRA-SA-39.fareast.corp.microsoft.com:28345", "answer": "Opening proxy : {variables}"}
+{"query": "ERROR IN CONTACTING RM.", "answer": "ERROR IN CONTACTING RM."}
+{"query": "Finished spill 5", "answer": "Finished spill {variables}"}
+{"query": "Excluding datanode 10.86.169.121:50010", "answer": "Excluding datanode {variables}"}
+{"query": "TaskAttempt: [attempt_1445087491445_0005_m_000005_0] using containerId: [container_1445087491445_0005_01_000008 on NM: [MSRA-SA-39.fareast.corp.microsoft.com:49130]", "answer": "TaskAttempt: [{variables}] using containerId: [{variables} on NM: [{variables}]"}
+{"query": "Recovering task task_1445087491445_0002_m_000012 from prior app attempt, status was SUCCEEDED", "answer": "Recovering task {variables} from prior app attempt, status was {variables}"}
+{"query": "Issuing kill to other attempt attempt_1445062781478_0017_m_000007_1", "answer": "Issuing kill to other attempt {variables}"}
+{"query": "(EQUATOR) 9726918 kvi 2431724(9726896)", "answer": "(EQUATOR) {variables} kvi {variables}({variables})"}
+{"query": "Assigning MSRA-SA-39.fareast.corp.microsoft.com:13562 with 1 to fetcher#3", "answer": "Assigning {variables} with {variables} to {variables}"}
+{"query": "Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@38fe9315", "answer": "Using ShuffleConsumerPlugin: {variables}"}
+{"query": "blacklistDisablePercent is 33", "answer": "blacklistDisablePercent is {variables}"}
+{"query": "attempt_1445087491445_0005_r_000000_1 Thread started: EventFetcher for fetching Map Completion Events", "answer": "{variables} Thread started: EventFetcher for fetching Map Completion Events"}
+{"query": "Notify JHEH isAMLastRetry: true", "answer": "Notify JHEH isAMLastRetry: {variables}"}
+{"query": "queue: default", "answer": "queue: {variables}"}
+{"query": "Merging 0 segments, 0 bytes from memory into reduce", "answer": "Merging {variables} segments, {variables} bytes from memory into reduce"}
+{"query": "(RESET) equator 44661690 kv 11165416(44661664) kvi 8543992(34175968)", "answer": "(RESET) equator {variables} kv {variables}({variables}) kvi {variables}({variables})"}
+{"query": "Task cleanup failed for attempt attempt_1445144423722_0020_m_000001_0", "answer": "Task cleanup failed for attempt {variables}"}
+{"query": "Copied to done location: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging", "answer": "Copied to done location: {variables}"}
+{"query": "Starting flush of map output", "answer": "Starting flush of map output"}
+{"query": "Putting shuffle token in serviceData", "answer": "Putting shuffle token in serviceData"}
+{"query": "task_1445087491445_0002_r_000000 Task Transitioned from RUNNING to SUCCEEDED", "answer": "{variables} Task Transitioned from {variables} to {variables}"}
+{"query": "attempt_1445087491445_0005_r_000000_1: Got 1 new map-outputs", "answer": "{variables}: Got {variables} new map-outputs"}
+{"query": "Web app /mapreduce started at 61652", "answer": "Web app {variables} started at {variables}"}
+{"query": "Final Stats: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:1 CompletedMaps:13 CompletedReds:0 ContAlloc:27 ContRel:0 HostLocal:12 RackLocal:13", "answer": "Final Stats: PendingReds:{variables} ScheduledMaps:{variables} ScheduledReds:{variables} AssignedMaps:{variables} AssignedReds:{variables} CompletedMaps:{variables} CompletedReds:{variables} ContAlloc:{variables} ContRel:{variables} HostLocal:{variables} RackLocal:{variables}"}
+{"query": "OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter", "answer": "OutputCommitter is {variables}"}
+{"query": "Scheduled snapshot period at 10 second(s).", "answer": "Scheduled snapshot period at {variables} second(s)."}
+{"query": "Connecting to ResourceManager at MSRA-SA-41/10.190.173.170:8030", "answer": "Connecting to ResourceManager at {variables}"}
+{"query": "MSRA-SA-39.fareast.corp.microsoft.com:13562 freed by fetcher#3 in 836ms", "answer": "{variables} freed by fetcher#{variables} in {variables}"}
+{"query": "The job-jar file on the remote FS is hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445087491445_0002/job.jar", "answer": "The job-jar file on the remote FS is {variables}"}
+{"query": "Adding protocol org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB to the server", "answer": "Adding protocol {variables} to the server"}
+{"query": "Recovery is enabled. Will try to recover from previous life on best effort basis.", "answer": "Recovery is enabled. Will try to recover from previous life on best effort basis."}
+{"query": "I/O error constructing remote block reader.", "answer": "I/O error constructing remote block reader."}
+{"query": "Runnning cleanup for the task", "answer": "Runnning cleanup for the task"}
+{"query": "Merging 10 files, 601334942 bytes from disk", "answer": "Merging {variables} files, {variables} bytes from disk"}
+{"query": "fetcher#3 about to shuffle output of map attempt_1445087491445_0002_m_000010_0 decomp: 216998520 len: 216998524 to DISK", "answer": "fetcher#{variables} about to shuffle output of map {variables}: {variables} len: {variables} to DISK"}
+{"query": "RMCommunicator notified that shouldUnregistered is: true", "answer": "RMCommunicator notified that shouldUnregistered is: {variables}"}
+{"query": "Using callQueue class java.util.concurrent.LinkedBlockingQueue", "answer": "Using callQueue class {variables}"}
+{"query": "Reduce slow start threshold reached. Scheduling reduces.", "answer": "Reduce slow start threshold reached. Scheduling reduces."}
+{"query": "soft limit at 83886080", "answer": "soft limit at {variables}"}
+{"query": "Scheduling a redundant attempt for task task_1445087491445_0005_m_000006", "answer": "Scheduling a redundant attempt for task {variables}"}
+{"query": "Shuffle port returned by ContainerManager for attempt_1445062781478_0016_m_000001_0 : 13562", "answer": "Shuffle port returned by ContainerManager for {variables} : {variables}"}
+{"query": "Calling stop for all the services", "answer": "Calling stop for all the services"}
+{"query": "Saved output of task 'attempt_1445087491445_0002_r_000000_1000' to hdfs://msra-sa-41:9000/out/out5/_temporary/2/task_1445087491445_0002_r_000000", "answer": "Saved output of task {variables} to {variables}"}
+{"query": "MapTask metrics system started", "answer": "{variables} metrics system started"}
+{"query": "nodeBlacklistingEnabled:true", "answer": "nodeBlacklistingEnabled:{variables}"}
+{"query": "Cannot assign container Container: [ContainerId: container_1445062781478_0018_01_000013, NodeId: MININT-75DGDAM1.fareast.corp.microsoft.com:51951, NodeHttpAddress: MININT-75DGDAM1.fareast.corp.microsoft.com:8042, Resource: <memory:1024, vCores:1>, Priority: 20, Token: Token { kind: ContainerToken, service: 10.86.165.66:51951 }, ] for a map as either container memory less than required <memory:1024, vCores:1> or no pending map tasks - maps.isEmpty=true", "answer": "Cannot assign container Container: [ContainerId: {variables}, NodeId: {variables}, NodeHttpAddress: {variables}, Resource: {variables}, Priority: {variables}, Token: {variables}, ] for a map as either container memory less than required {variables} or no pending map tasks - maps.isEmpty={variables}"}
+{"query": "Killing taskAttempt:attempt_1445087491445_0005_m_000009_0 because it is running on unusable node:04DN8IQ.fareast.corp.microsoft.com:55452", "answer": "Killing taskAttempt:{variables} because it is running on unusable node:{variables}"}
+{"query": "Registering class org.apache.hadoop.mapreduce.v2.app.job.event.TaskAttemptEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskAttemptEventDispatcher", "answer": "Registering class {variables} for class {variables}"}
+{"query": "Diagnostics report from attempt_1445087491445_0002_m_000005_0: Container killed by the ApplicationMaster.", "answer": "Diagnostics report from {variables}: Container killed by the ApplicationMaster."}
+{"query": "Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context static", "answer": "Added filter {variables} (class={variables}) to context {variables}"}
+{"query": "JVM with ID: jvm_1445062781478_0018_m_000003 given task: attempt_1445062781478_0018_m_000001_0", "answer": "JVM with ID: {variables} given task: {variables}"}
+{"query": "Assigned container container_1445087491445_0002_01_000014 to attempt_1445087491445_0002_m_000012_0", "answer": "Assigned container {variables} to {variables}"}
+{"query": "finalMerge called with 0 in-memory map-outputs and 13 on-disk map-outputs", "answer": "finalMerge called with {variables} in-memory map-outputs and {variables} on-disk map-outputs"}
+{"query": "Starting Socket Reader #1 for port 19061", "answer": "Starting Socket Reader {variables} for port {variables}"}
+{"query": "attempt_1445087491445_0005_m_000010_0: Shuffling to disk since 216998520 is greater than maxSingleShuffleLimit (32663142)", "answer": "{variables}: Shuffling to disk since {variables} is greater than maxSingleShuffleLimit ({variables})"}
+{"query": "Read 60515840 bytes from map-output for attempt_1445062781478_0018_m_000001_0", "answer": "Read {variables} bytes from map-output for {variables}"}

@@ -1,0 +1,16 @@
+{"query": "configured out", "answer": "configured out"}
+{"query": "risBoot (command 2795)", "answer": "risBoot (command {variables})"}
+{"query": "no recent update", "answer": "no recent update"}
+{"query": "fan failure\\ ambient=27", "answer": "fan failure\\ ambient={variables}"}
+{"query": "ambient=41 threshold exceeded", "answer": "ambient={variables}"}
+{"query": "update received", "answer": "update received"}
+{"query": "bootGenvmunix (command 1902)", "answer": "bootGenvmunix (command {variables})"}
+{"query": "clusterAddMember (command 1905)", "answer": "clusterAddMember (command {variables})"}
+{"query": "1 failed to configure resourcemgmt subsystem err = 10", "answer": "{variables} failed to configure resourcemgmt subsystem err = {variables}"}
+{"query": "Temperature (41C) exceeds warning threshold", "answer": "Temperature {variables} exceeds warning threshold"}
+{"query": "NIFF: node node-129 detected a failed network connection on network 5.5.226.0 via interface alt0", "answer": "NIFF: node {variables} detected a failed network connection on network {variables} via interface {variables}"}
+{"query": "inconsistent nodesets node-31 0x1fffffffe <ok> node-0 0x01fffffe <ok> node-1 0x01fffffe <ok> node-2 0x01fffffe <ok> node-15 0x01fffffe <ok> node-23 0x01fffffe <ok>", "answer": "inconsistent nodesets {variables} {variables} <ok> {variables} {variables} <ok>"}
+{"query": "member_delete (command 2967)", "answer": "member_delete (command {variables})"}
+{"query": "Command has been aborted", "answer": "Command has been aborted"}
+{"query": "boot (command 2580)", "answer": "boot (command {variables})"}
+{"query": "Targeting domains:node-D7 and nodes:node-[224-231] child of command 2875", "answer": "Targeting domains:{variables} and nodes:{variables}"}

@@ -1,0 +1,8 @@
+{"query": "config.update(): Can't create worker.jni:onStartup", "answer": "config.update(): Can't create {variables}"}
+{"query": "LDAP: Built with OpenLDAP LDAP SDK", "answer": "LDAP: Built with OpenLDAP LDAP SDK"}
+{"query": "suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)", "answer": "suEXEC mechanism enabled (wrapper: {variables})"}
+{"query": "config.update(): Can't create worker.jni:onShutdown", "answer": "config.update(): Can't create {variables}"}
+{"query": "[client 210.245.151.81] Attempt to serve directory: /var/www/html/", "answer": "[client {variables}] Attempt to serve directory: {variables}"}
+{"query": "[client 210.115.233.107] script not found or unable to stat: /var/www/cgi-bin/awstats.pl", "answer": "[client {variables}] script not found or unable to stat: {variables}"}
+{"query": "[client 210.91.137.35] request failed: URI too long (longer than 8190)", "answer": "[client {variables}] request failed: URI too long (longer than {variables})"}
+{"query": "[client 218.1.115.14] Directory index forbidden by rule: /var/www/html/", "answer": "[client {variables}] Directory index forbidden by rule: {variables}"}

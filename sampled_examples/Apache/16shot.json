@@ -1,0 +1,16 @@
+{"query": "Graceful restart requested, doing restart", "answer": "Graceful restart requested, doing restart"}
+{"query": "jk2_init() Can't find child 12569 in scoreboard", "answer": "jk2_init() Can't find child {variables} in scoreboard"}
+{"query": "config.update(): Can't create worker.jni:onShutdown", "answer": "config.update(): Can't create {variables}"}
+{"query": "[client 63.192.33.37] request failed: URI too long (longer than 8190)", "answer": "[client {variables}] request failed: URI too long (longer than {variables})"}
+{"query": "mod_jk2 Shutting down", "answer": "mod_jk2 Shutting down"}
+{"query": "config.update(): Can't create worker.jni:onStartup", "answer": "config.update(): Can't create {variables}"}
+{"query": "suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)", "answer": "suEXEC mechanism enabled (wrapper: {variables})"}
+{"query": "[client 222.173.144.38] request failed: error reading the headers", "answer": "[client {variables}] request failed: error reading the headers"}
+{"query": "mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.", "answer": "mod_python: Creating {variables} session mutexes based on {variables} max processes and {variables} max threads."}
+{"query": "mod_jk child init 1 -2", "answer": "mod_jk child init {variables} {variables}"}
+{"query": "config.update(): Can't create vm:", "answer": "config.update(): Can't create {variables}"}
+{"query": "[client 216.104.137.150] Directory index forbidden by rule: /var/www/html/", "answer": "[client {variables}] Directory index forbidden by rule: {variables}"}
+{"query": "[client 213.150.166.78] File does not exist: /var/www/html/sumthin", "answer": "[client {variables}] File does not exist: {variables}"}
+{"query": "Digest: done", "answer": "Digest: done"}
+{"query": "Digest: generating secret for digest authentication ...", "answer": "Digest: generating secret for digest authentication ..."}
+{"query": "child process 29765 still did not exit, sending a SIGTERM", "answer": "child process {variables} still did not exit, sending a SIGTERM"}

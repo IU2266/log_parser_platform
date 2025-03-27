@@ -1,0 +1,32 @@
+{"query": "xinetd Version 2.3.13 started with libwrap loadavg options compiled in.", "answer": "xinetd Version {variables} started with {variables} options compiled in."}
+{"query": "isapnp: No Plug & Play device found", "answer": "isapnp: No Plug & Play device found"}
+{"query": "Bluetooth: Core ver 2.4", "answer": "Bluetooth: {variables} ver {variables}"}
+{"query": "configure: keyword \"authenticate\" unknown, line ignored", "answer": "configure: keyword {variables} unknown, line ignored"}
+{"query": "ICH: chipset revision 2", "answer": "ICH: chipset revision {variables}"}
+{"query": "There is already a security framework initialized, register_security failed.", "answer": "There is already a security framework initialized, register_security failed."}
+{"query": "ACPI: Interpreter disabled.", "answer": "ACPI: Interpreter disabled."}
+{"query": "FDC 0 is a National Semiconductor PC87306", "answer": "FDC {variables} is a National Semiconductor {variables}"}
+{"query": "hda: max request size: 128KiB", "answer": "hda: max request size: {variables}"}
+{"query": "authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=211.191.53.101 user=root", "answer": "authentication failure; logname={variables} uid={variables} euid={variables} tty={variables} ruser={variables} rhost={variables} user={variables}"}
+{"query": "No such internal service: services/stream - DISABLING", "answer": "No such internal service: {variables} - DISABLING"}
+{"query": "named startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "User unknown timed out after 900 seconds at Thu Sep 15 17:45:15 2005", "answer": "User {variables} timed out after {variables} seconds at {variables}"}
+{"query": "RAMDISK: Compressed image found at block 0", "answer": "RAMDISK: Compressed image found at block {variables}"}
+{"query": "CPU: L1 I cache: 16K, L1 D cache: 16K", "answer": "CPU: L1 I cache: {variables}, L1 D cache: {variables}"}
+{"query": "Using tsc for high-res timesource", "answer": "Using tsc for high-res timesource"}
+{"query": "PCI: Using configuration type 1", "answer": "PCI: Using configuration type {variables}"}
+{"query": "3c59x: Donald Becker and others. www.scyld.com/network/vortex.html", "answer": "{variables}: Donald Becker and others. {variables}"}
+{"query": "connection from 61.199.220.226 (ark.dbstream.co.jp) at Sat Aug 13 11:45:26 2005", "answer": "connection from {variables} ({variables}) at {variables}"}
+{"query": "hcid startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "audit(1118403053.397:0): initialized", "answer": "audit({variables}): initialized"}
+{"query": "removing device node '/udev/vcs2'", "answer": "removing device node {variables}"}
+{"query": "listening on IPv4 interface eth0:1, 63.126.79.69#53", "answer": "listening on IPv4 interface {variables}, {variables}"}
+{"query": "Checking 'hlt' instruction... OK.", "answer": "Checking {variables} instruction... OK."}
+{"query": "DMI 2.3 present.", "answer": "DMI {variables} present."}
+{"query": "RAMDISK driver initialized: 16 RAM disks of 16384K size 1024 blocksize", "answer": "RAMDISK driver initialized: {variables} RAM disks of {variables} size {variables} blocksize"}
+{"query": "Freeing unused kernel memory: 144k freed", "answer": "Freeing unused kernel memory: {variables} freed"}
+{"query": "Version 1.0.6 Starting", "answer": "Version {variables} Starting"}
+{"query": "Starting hpoj: succeeded", "answer": "Starting hpoj: succeeded"}
+{"query": "Capability LSM initialized", "answer": "Capability LSM initialized"}
+{"query": "ttloop: peer died: Invalid or incomplete multibyte or wide character", "answer": "ttloop: peer died: Invalid or incomplete multibyte or wide character"}
+{"query": "EXT3-fs: mounted filesystem with ordered data mode.", "answer": "EXT3-fs: mounted filesystem with ordered data mode."}

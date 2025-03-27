@@ -1,0 +1,16 @@
+{"query": "Interrupted while waiting for message on queue", "answer": "Interrupted while waiting for message on queue"}
+{"query": "minSessionTimeout set to -1", "answer": "minSessionTimeout set to {variables}"}
+{"query": "TCP NoDelay set to: true", "answer": "TCP NoDelay set to: {variables}"}
+{"query": "Server environment:java.version=1.7.0_79", "answer": "Server environment:java.version={variables}"}
+{"query": "Reading configuration from: /etc/zookeeper/conf/zoo.cfg", "answer": "Reading configuration from: {variables}"}
+{"query": "initLimit set to 10", "answer": "initLimit set to {variables}"}
+{"query": "Server environment:java.home=/usr/lib/jvm/java-7-openjdk-amd64/jre", "answer": "Server environment:java.home={variables}"}
+{"query": "Server environment:user.name=zookeeper", "answer": "Server environment:user.name={variables}"}
+{"query": "Notification time out: 3200", "answer": "Notification time out: {variables}"}
+{"query": "Starting quorum peer", "answer": "Starting quorum peer"}
+{"query": "autopurge.snapRetainCount set to 3", "answer": "autopurge.snapRetainCount set to {variables}"}
+{"query": "Server environment:java.vendor=Oracle Corporation", "answer": "Server environment:java.vendor={variables}"}
+{"query": "Server environment:java.class.path=/etc/zookeeper/conf:/usr/share/java/jline.jar:/usr/share/java/log4j-1.2.jar:/usr/share/java/xercesImpl.jar:/usr/share/java/xmlParserAPIs.jar:/usr/share/java/netty.jar:/usr/share/java/slf4j-api.jar:/usr/share/java/slf4j-log4j12.jar:/usr/share/java/zookeeper.jar", "answer": "Server environment:java.class.path={variables}"}
+{"query": "maxSessionTimeout set to -1", "answer": "maxSessionTimeout set to {variables}"}
+{"query": "acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation", "answer": "acceptedEpoch not found! Creating with a reasonable default of {variables}. This should only happen when you are upgrading your installation"}
+{"query": "Server environment:host.name=node1", "answer": "Server environment:host.name={variables}"}

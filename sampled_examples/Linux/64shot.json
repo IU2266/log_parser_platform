@@ -1,0 +1,64 @@
+{"query": "Charge: * * * (-1% unknown)", "answer": "Charge: * * * ({variables} unknown)"}
+{"query": "Opened configuration file /etc/smartd.conf", "answer": "Opened configuration file {variables}"}
+{"query": "input: AT Translated Set 2 keyboard on isa0060/serio0", "answer": "input: {variables} on {variables}"}
+{"query": "Started working: 30 available services", "answer": "Started working: {variables} available services"}
+{"query": "Bluetooth: HCI device and connection manager initialized", "answer": "Bluetooth: HCI device and connection manager initialized"}
+{"query": "ACPI: Subsystem revision 20040326", "answer": "ACPI: Subsystem revision {variables}"}
+{"query": "agpgart: Maximum main memory to use for agp memory: 93M", "answer": "agpgart: Maximum main memory to use for agp memory: {variables}"}
+{"query": "anacron startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Version 1.0.6 Starting", "answer": "Version {variables} Starting"}
+{"query": "Initializing IPsec netlink socket", "answer": "Initializing IPsec netlink socket"}
+{"query": "VFS: Disk quotas dquot_6.5.1", "answer": "VFS: Disk quotas {variables}"}
+{"query": "connection from 68.143.90.52 (iis.willowtec.com) at Tue Aug 16 03:59:57 2005", "answer": "connection from {variables} ({variables}) at {variables}"}
+{"query": "bind failed (Address already in use (errno = 98)). service = telnet", "answer": "bind failed (Address already in use (errno = {variables})). service = {variables}"}
+{"query": "Starting MySQL: succeeded", "answer": "Starting MySQL: succeeded"}
+{"query": "Home page is http://smartmontools.sourceforge.net/", "answer": "Home page is {variables}"}
+{"query": "Initializing random number generator: succeeded", "answer": "Initializing random number generator: succeeded"}
+{"query": "Kernel command line: ro root=LABEL=/ rhgb quiet", "answer": "Kernel command line: ro root={variables} rhgb quiet"}
+{"query": "sdpd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "rsyncd version 2.6.2 starting, listening on port 873", "answer": "rsyncd version {variables} starting, listening on port {variables}"}
+{"query": "listening on IPv4 interface eth0:21, 63.126.79.120#53", "answer": "listening on IPv4 interface {variables}, {variables}"}
+{"query": "uhci_hcd 0000:00:1f.2: UHCI Host Controller", "answer": "uhci_hcd {variables}: UHCI Host Controller"}
+{"query": "uhci_hcd 0000:00:1f.2: irq 11, io base 0000ff80", "answer": "uhci_hcd {variables}: irq {variables}, io base {variables}"}
+{"query": "input: ImPS/2 Logitech Wheel Mouse on isa0060/serio1", "answer": "input: {variables} on {variables}"}
+{"query": "atd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Jun 09 06:06:44 Privoxy(-150093696) Info: loading configuration file '/etc/privoxy/config':", "answer": "{variables} Privoxy({variables}) Info: loading configuration file {variables}"}
+{"query": "snmpd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "kjournald starting. Commit interval 5 seconds", "answer": "kjournald starting. Commit interval {variables} seconds"}
+{"query": "apmd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Bluetooth: RFCOMM ver 1.2", "answer": "Bluetooth: {variables} ver {variables}"}
+{"query": "imps2: Auto-detected intellimouse PS/2", "answer": "imps2: Auto-detected intellimouse PS/2"}
+{"query": "Adding 262072k swap on /dev/hda3. Priority:-1 extents:1", "answer": "Adding {variables} swap on {variables}. Priority:{variables} extents:{variables}"}
+{"query": "FAILED LOGIN 2 FROM (null) FOR , Authentication failure", "answer": "FAILED LOGIN {variables} FROM ({variables}) FOR , Authentication failure"}
+{"query": "connection from 61.218.67.60 (mail.net-star.com.tw) at Mon Jun 13 02:01:27 2005", "answer": "connection from {variables} ({variables}) at {variables}"}
+{"query": "checking if image is initramfs...it isn't (no cpio magic); looks like an initrd", "answer": "checking if image is initramfs...it isn't (no cpio magic); looks like an initrd"}
+{"query": "htt startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "connection from 211.167.68.59 () at Sat Jun 25 19:25:31 2005", "answer": "connection from {variables} ({variables}) at {variables}"}
+{"query": "ACPI: Interpreter disabled.", "answer": "ACPI: Interpreter disabled."}
+{"query": "synchronized to LOCAL(0), stratum=10", "answer": "synchronized to LOCAL({variables}), stratum={variables}"}
+{"query": "parport0: PC-style at 0x378 (0x778) [PCSPP,TRISTATE,EPP]", "answer": "parport0: PC-style at {variables} ({variables}) [{variables}]"}
+{"query": "mapped 4G/4G trampoline to ffff3000.", "answer": "mapped {variables} trampoline to {variables}."}
+{"query": "microcode: No suitable data for cpu 0", "answer": "microcode: No suitable data for cpu {variables}"}
+{"query": "PCI: Probing PCI hardware", "answer": "PCI: Probing PCI hardware"}
+{"query": "rpc.statd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "POSIX conformance testing by UNIFIX", "answer": "POSIX conformance testing by UNIFIX"}
+{"query": "xinetd Version 2.3.13 started with libwrap loadavg options compiled in.", "answer": "xinetd Version {variables} started with {variables} options compiled in."}
+{"query": "ide0: BM-DMA at 0xffa0-0xffa7, BIOS settings: hda:DMA, hdb:pio", "answer": "ide0: BM-DMA at {variables}, BIOS settings: hda:{variables}, hdb:{variables}"}
+{"query": "Console: colour VGA+ 80x25", "answer": "Console: colour {variables}"}
+{"query": "md: autorun ...", "answer": "md: autorun ..."}
+{"query": "zapping low mappings.", "answer": "zapping low mappings."}
+{"query": "SELinux: Starting in permissive mode", "answer": "SELinux: Starting in permissive mode"}
+{"query": "kernel time sync disabled 0041", "answer": "kernel time sync disabled {variables}"}
+{"query": "Starting hpoj: succeeded", "answer": "Starting hpoj: succeeded"}
+{"query": "serio: i8042 KBD port at 0x60,0x64 irq 1", "answer": "serio: i8042 KBD port at {variables},{variables} irq {variables}"}
+{"query": "Uniform CD-ROM driver Revision: 3.20", "answer": "Uniform CD-ROM driver Revision: {variables}"}
+{"query": "Authentication failed from 163.27.187.39 (163.27.187.39): Permission denied in replay cache code", "answer": "Authentication failed from {variables} ({variables}): Permission denied in replay cache code"}
+{"query": "SELinux: Registering netfilter hooks", "answer": "SELinux: Registering netfilter hooks"}
+{"query": "Initializing Cryptographic API", "answer": "Initializing Cryptographic API"}
+{"query": "microcode: CPU0 already at revision 0x8 (current=0x8)", "answer": "microcode: CPU0 already at revision {variables} (current={variables})"}
+{"query": "*** info [startup.c(95)]:", "answer": "*** info [startup.c({variables})]:"}
+{"query": "klogd 1.4.1, log source = /proc/kmsg started.", "answer": "klogd {variables}, log source = {variables} started."}
+{"query": "agpgart: AGP aperture is 64M @ 0xf4000000", "answer": "agpgart: AGP aperture is {variables} @ {variables}"}
+{"query": "automount startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Started gpm successfully. Entered daemon mode.", "answer": "Started gpm successfully. Entered daemon mode."}
+{"query": "removing device node '/udev/vcsa6'", "answer": "removing device node {variables}"}

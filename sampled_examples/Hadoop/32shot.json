@@ -1,0 +1,32 @@
+{"query": "Starting Socket Reader #1 for port 61655", "answer": "Starting Socket Reader {variables} for port {variables}"}
+{"query": "Got allocated containers 10", "answer": "Got allocated containers {variables}"}
+{"query": "JobHistoryEventHandler notified that forceJobCompletion is true", "answer": "JobHistoryEventHandler notified that forceJobCompletion is {variables}"}
+{"query": "Exception in getting events", "answer": "Exception in getting events"}
+{"query": "Resolved MSRA-SA-41.fareast.corp.microsoft.com to /default-rack", "answer": "Resolved {variables} to {variables}"}
+{"query": "Calling handler for JobFinishedEvent", "answer": "Calling handler for JobFinishedEvent"}
+{"query": "I/O error constructing remote block reader.", "answer": "I/O error constructing remote block reader."}
+{"query": "Issuing kill to other attempt attempt_1445062781478_0011_m_000006_1", "answer": "Issuing kill to other attempt {variables}"}
+{"query": "Error communicating with RM: Could not contact RM after 360000 milliseconds.", "answer": "Error communicating with RM: Could not contact RM after {variables} milliseconds."}
+{"query": "Default file system [hdfs://msra-sa-41:9000]", "answer": "Default file system [{variables}]"}
+{"query": "Error writing History Event: org.apache.hadoop.mapreduce.jobhistory.TaskAttemptUnsuccessfulCompletionEvent@7317849d", "answer": "Error writing History Event: {variables}"}
+{"query": "Task:attempt_1445175094696_0005_m_000003_0 is done. And is in the process of committing", "answer": "Task:{variables} is done. And is in the process of committing"}
+{"query": "Task succeeded with attempt attempt_1445062781478_0016_m_000007_0", "answer": "Task succeeded with attempt {variables}"}
+{"query": "Stopping IPC Server Responder", "answer": "Stopping IPC Server Responder"}
+{"query": "mapResourceRequest:<memory:1024, vCores:1>", "answer": "mapResourceRequest:<memory:{variables}, vCores:{variables}"}
+{"query": "Progress of TaskAttempt attempt_1445144423722_0020_m_000000_0 is : 0.10635664", "answer": "Progress of TaskAttempt {variables} is : {variables}"}
+{"query": "Waiting for application to be successfully unregistered.", "answer": "Waiting for application to be successfully unregistered."}
+{"query": "Successfully connected to /10.190.173.170:50010 for BP-1347369012-10.190.173.170-1444972147527:blk_1073742826_2022", "answer": "Successfully connected to {variables} for {variables}"}
+{"query": "Final Stats: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:1 CompletedMaps:10 CompletedReds:0 ContAlloc:15 ContRel:0 HostLocal:11 RackLocal:3", "answer": "Final Stats: PendingReds:{variables} ScheduledMaps:{variables} ScheduledReds:{variables} AssignedMaps:{variables} AssignedReds:{variables} CompletedMaps:{variables} CompletedReds:{variables} ContAlloc:{variables} ContRel:{variables} HostLocal:{variables} RackLocal:{variables}"}
+{"query": "Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context mapreduce", "answer": "Added filter {variables} (class={variables}) to context {variables}"}
+{"query": "soft limit at 83886080", "answer": "soft limit at {variables}"}
+{"query": "Opening proxy : MININT-FNANLI5.fareast.corp.microsoft.com:64642", "answer": "Opening proxy : {variables}"}
+{"query": "Finished spill 6", "answer": "Finished spill {variables}"}
+{"query": "ERROR IN CONTACTING RM.", "answer": "ERROR IN CONTACTING RM."}
+{"query": "RMCommunicator notified that shouldUnregistered is: true", "answer": "RMCommunicator notified that shouldUnregistered is: {variables}"}
+{"query": "MapCompletionEvents request from attempt_1445062781478_0017_r_000000_0. startIndex 7 maxEvents 10000", "answer": "MapCompletionEvents request from {variables}. startIndex {variables} maxEvents {variables}"}
+{"query": "Shuffle port returned by ContainerManager for attempt_1445144423722_0020_m_000004_0 : 13562", "answer": "Shuffle port returned by ContainerManager for {variables} : {variables}"}
+{"query": "Connecting to ResourceManager at msra-sa-41/10.190.173.170:8030", "answer": "Connecting to ResourceManager at {variables}"}
+{"query": "Notify JHEH isAMLastRetry: true", "answer": "Notify JHEH isAMLastRetry: {variables}"}
+{"query": "Assigning MSRA-SA-39.fareast.corp.microsoft.com:13562 with 2 to fetcher#1", "answer": "Assigning {variables} with {variables} to {variables}"}
+{"query": "Upper limit on the thread pool size is 500", "answer": "Upper limit on the thread pool size is {variables}"}
+{"query": "attempt_1445062781478_0018_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events", "answer": "{variables} Thread started: EventFetcher for fetching Map Completion Events"}

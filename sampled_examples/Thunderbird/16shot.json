@@ -1,0 +1,16 @@
+{"query": "__journal_remove_journal_head: freeing b_committed_data", "answer": "__journal_remove_journal_head: freeing {variables}"}
+{"query": "PCI: Using configuration type 1", "answer": "PCI: Using configuration type {variables}"}
+{"query": "LustreError: dumping log to /tmp/lustre-log-#25#.1131656212.12054", "answer": "LustreError: dumping log to {variables}"}
+{"query": "User root, coming from tbird-admin2, authenticated.", "answer": "User {variables}, coming from {variables}, authenticated."}
+{"query": "/boot1: recovering journal", "answer": "{variables}: recovering journal"}
+{"query": "time.c: Using 14.318180 MHz HPET timer.", "answer": "{variables}: Using {variables} MHz HPET timer."}
+{"query": "Remounting filesystem read-only", "answer": "Remounting filesystem read-only"}
+{"query": "WARNING: DNS lookup failed for \"#122#\".", "answer": "WARNING: DNS lookup failed for \"{variables}\"."}
+{"query": "ehci_hcd 0000:00:1d.7: USB 2.0 enabled, EHCI 1.00, driver 2004-May-10", "answer": "ehci_hcd {variables}: USB {variables} enabled, EHCI {variables}, driver {variables}"}
+{"query": "audit: initializing netlink socket (disabled)", "answer": "audit: initializing netlink socket (disabled)"}
+{"query": "Using MMCONFIG at e0000000", "answer": "Using MMCONFIG at {variables}"}
+{"query": "Switching to runlevel: 0", "answer": "Switching to runlevel: {variables}"}
+{"query": "[ib_sm_sweep.c:411]: IB node 0x0005AD0000027556 port 24 is INIT state", "answer": "[{variables}]: IB node {variables} port {variables} is INIT state"}
+{"query": "Instrumentation Service EventID: 1404 Memory device status is critical Memory device location: DIMM3_B Possible memory module event cause:Single bit error logging disabled", "answer": "Instrumentation Service EventID: {variables} Memory device status is critical Memory device location: {variables} Possible memory module event cause:{variables}"}
+{"query": "LustreError: 30442:0:(obd_config.c:636:class_process_config()) previously skipped 1 similar messages", "answer": "LustreError: {variables}:({variables}) previously skipped {variables} similar messages"}
+{"query": "ACPI: Using IOAPIC for interrupt routing", "answer": "ACPI: Using IOAPIC for interrupt routing"}

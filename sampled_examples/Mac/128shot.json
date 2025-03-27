@@ -1,0 +1,128 @@
+{"query": "network changed: v4(en0!:10.105.163.202) DNS+ Proxy+ SMB", "answer": "network changed: {variables} DNS+ Proxy+ SMB"}
+{"query": "ARPT: 626126.086214: wl0: setup_keepalive: Local IP: 10.105.160.95", "answer": "ARPT: {variables}: {variables}: setup_keepalive: Local IP: {variables}"}
+{"query": "Opened file /var/log/SleepWakeStacks.bin, size 172032, extents 1, maxio 2000000 ssd 1", "answer": "Opened file {variables}, size {variables}, extents {variables}, maxio {variables} ssd {variables}"}
+{"query": "<IMMacNotificationCenterManager: 0x7fdcc9d16380>: NC Disabled: NO", "answer": "<IMMacNotificationCenterManager: {variables}: NC Disabled: {variables}"}
+{"query": "USBMSC Identifier (non-unique): 000000000820 0x5ac 0x8406 0x820, 3", "answer": "USBMSC Identifier (non-unique): {variables} {variables} {variables} {variables}, {variables}"}
+{"query": "GVA warning: addNewReferenceEntry_MMCO mmcoFunc1 not found requested 9, curr = 11", "answer": "GVA warning: addNewReferenceEntry_MMCO mmcoFunc1 not found requested {variables} curr = {variables}"}
+{"query": "BuildActDeviceEntry exit", "answer": "BuildActDeviceEntry exit"}
+{"query": "Failed to stop a scan - central is not powered on: 4", "answer": "Failed to {variables} a scan - central is not powered on: {variables}"}
+{"query": "plugin com.apple.ncplugin.WorldClock invalidated", "answer": "plugin {variables} invalidated"}
+{"query": "-[ABAddressBook save] failed. (<ABAddressBook: 0x7fdb42c27700>)", "answer": "-[ABAddressBook save] failed. ({variables})"}
+{"query": "00:27:35.437 : BTLE scanning started", "answer": "{variables} : BTLE scanning started"}
+{"query": "Captive: en0: Not probing 'AirBears2' (cache indicates not captive)", "answer": "Captive: {variables}: Not probing {variables} (cache indicates not captive)"}
+{"query": "Attempted search for modules of unknown type (4)", "answer": "Attempted search for modules of unknown type ({variables})"}
+{"query": "full wake promotion (reason 1) 368 ms", "answer": "full wake promotion (reason {variables}) {variables} ms"}
+{"query": "CCIOReporterFormatter::refreshSubscriptionsFromStreamRegistry clearing out any previous subscriptions", "answer": "CCIOReporterFormatter::refreshSubscriptionsFromStreamRegistry clearing out any previous subscriptions"}
+{"query": "Unexpected payload found for message 9, dataLen 0", "answer": "Unexpected payload found for message {variables}, dataLen {variables}"}
+{"query": "Previous sleep cause: 5", "answer": "Previous sleep cause: {variables}"}
+{"query": "[HID] [MT] AppleActuatorHIDEventDriver::start entered", "answer": "[HID] [MT] AppleActuatorHIDEventDriver::start entered"}
+{"query": "Error in CoreDragRemoveTrackingHandler: -1856", "answer": "Error in CoreDragRemoveTrackingHandler: {variables}"}
+{"query": "vm_compressor_flush - starting", "answer": "vm_compressor_flush - starting"}
+{"query": "ASSERTION FAILED: dvcAddrRef != ((void *)0) -[DriverServices getDeviceAddress:] line: 2789", "answer": "ASSERTION FAILED: dvcAddrRef != {variables} -[DriverServices getDeviceAddress:] line: {variables}"}
+{"query": "ARPT: 671750.785400: wl0: MDNS: 0 SRV Recs, 0 TXT Recs", "answer": "ARPT: {variables}: {variables}: MDNS: {variables} SRV Recs, {variables} TXT Recs"}
+{"query": "ARPT: 672076.252792: wl0: wl_update_tcpkeep_seq: mDNSOffloadUserClient::GetKeepaliveData failed", "answer": "ARPT: {variables}: {variables}: {variables} failed"}
+{"query": "CCFile::captureLog", "answer": "CCFile::captureLog"}
+{"query": "2017-07-02 15:46:40.696 GoogleSoftwareUpdateAgent[32432/0x7000002a0000] [lvl=2] -[KSAgentApp updateProductWithProductID:usingEngine:] Checking for updates for \"All Products\" using engine <KSUpdateEngine:0x100539530", "answer": "{variables} {variables} GoogleSoftwareUpdateAgent[{variables}] [lvl={variables}] -[KSAgentApp updateProductWithProductID:usingEngine:] Checking for updates for {variables} using engine <KSUpdateEngine:{variables}"}
+{"query": "Wake reason: EC.PME (User)", "answer": "Wake reason: {variables}"}
+{"query": "CoreAnimation: warning, deleted thread with uncommitted CATransaction; set CA_DEBUG_TRANSACTIONS=1 in environment to log backtraces.", "answer": "CoreAnimation: warning, deleted thread with uncommitted CATransaction; set CA_DEBUG_TRANSACTIONS={variables} in environment to log backtraces."}
+{"query": "__73-[NetworkAnalyticsEngine observeValueForKeyPath:ofObject:change:context:]_block_invoke unexpected switch value 2", "answer": "{variables}[NetworkAnalyticsEngine observeValueForKeyPath:ofObject:change:context:]_block_invoke unexpected switch value {variables}"}
+{"query": "com.apple.icloud.fmfd.heartbeat: scheduler_evaluate_activity told me to run this job; however, but the start time isn't for 318156 seconds. Ignoring.", "answer": "{variables}: scheduler_evaluate_activity told me to run this job; however, but the start time isn't for {variables} seconds. Ignoring."}
+{"query": "moduleFromLegacyDefaults: <ScreenSaverDefaults: 0x7ffcb0730c10>", "answer": "moduleFromLegacyDefaults: <ScreenSaverDefaults: {variables}"}
+{"query": "nw_path_query_lqm Tried to query LQM on path with no interfaces", "answer": "nw_path_query_lqm Tried to query LQM on path with no interfaces"}
+{"query": "[HID] [MT] AppleMultitouchDevice::stop entered", "answer": "[HID] [MT] AppleMultitouchDevice::stop entered"}
+{"query": "-[NETAWDManager reportStats:metricID:] AWDServerConnection newMetricContainerWithIdentifier failed for metric 2686985, server 0x7faf937117d0, not reporting:", "answer": "-[NETAWDManager reportStats:metricID:] AWDServerConnection newMetricContainerWithIdentifier failed for metric {variables}, server {variables}, not reporting:"}
+{"query": "IOBluetoothUSBDFU::probe", "answer": "IOBluetoothUSBDFU::probe"}
+{"query": "-[NetworkAnalyticsEngine _writeJournalRecord:fromCellFingerprint:key:atLOI:ofKind:lqm:isFaulty:] Hashing of the primary key failed. Dropping the journal record.", "answer": "-[NetworkAnalyticsEngine _writeJournalRecord:fromCellFingerprint:key:atLOI:ofKind:lqm:isFaulty:] Hashing of the primary key failed. Dropping the journal record."}
+{"query": "payload Data 01 00", "answer": "payload Data {variables} {variables}"}
+{"query": "IO80211AWDLPeerManager::setAwdlAutoMode Resuming AWDL", "answer": "IO80211AWDLPeerManager::setAwdlAutoMode Resuming AWDL"}
+{"query": "XPC Error while checking if iCDP is enabled for DSID 874161398: Error Domain=NSCocoaErrorDomain Code=4099 \"The connection to service named com.apple.cdp.daemon was invalidated.\" UserInfo={NSDebugDescription=The connection to service named com.apple.cdp.daemon was invalidated.}", "answer": "XPC Error while checking if iCDP is enabled for DSID {variables}: Error Domain={variables} Code={variables} {variables} UserInfo={NSDebugDescription={variables}}"}
+{"query": "ARPT: 640509.020647: IOPMPowerSource Information: onSleep, SleepType: Standby, 'ExternalConnected': No, 'TimeRemaining': 627,", "answer": "ARPT: {variables}: IOPMPowerSource Information: onSleep, SleepType: {variables}, 'ExternalConnected': {variables}, 'TimeRemaining': {variables},"}
+{"query": "WARNING: hibernate_page_list_setall skipped 56540 xpmapped pages", "answer": "WARNING: hibernate_page_list_setall skipped {variables} xpmapped pages"}
+{"query": "CCFile::captureLogRun Skipping current file Dir file [2017-07-02_22,24,03.781711]-io80211Family-003.pcapng, Current File [2017-07-02_22,24,03.781711]-io80211Family-003.pcapng", "answer": "CCFile::captureLogRun Skipping current file Dir file {variables}, Current File {variables}"}
+{"query": "[com.apple.calendar.store.log.caldav.queue] [WARNING: CalDAVAccountRefreshQueueableOperation :: after refresh failed]", "answer": "[{variables}] [WARNING: CalDAVAccountRefreshQueueableOperation :: {variables} refresh failed]"}
+{"query": "CCXPCService::setStreamEventHandler Registered for notification callback.", "answer": "CCXPCService::setStreamEventHandler Registered for notification callback."}
+{"query": "did discard act 20718 inact 8924 purgeable 75580 spec 39094 cleaned 0", "answer": "did discard act {variables} inact {variables} purgeable {variables} spec {variables} cleaned {variables}"}
+{"query": "Wake reason: ?", "answer": "Wake reason: {variables}"}
+{"query": "KeychainGetICDPStatus: keychain: -25300", "answer": "KeychainGetICDPStatus: keychain: {variables}"}
+{"query": "tcp_connection_tls_session_error_callback_imp 2062 __tcp_connection_tls_session_callback_write_block_invoke.434 error 22", "answer": "tcp_connection_tls_session_error_callback_imp {variables} {variables} error {variables}"}
+{"query": "AppleActuatorDevice::stop Entered", "answer": "AppleActuatorDevice::{variables} Entered"}
+{"query": "FA||Url||taskID[2019353024] dealloc", "answer": "FA||Url||taskID[{variables}] dealloc"}
+{"query": "GVA warning: addNewReferenceEntry_MMCO force release -4", "answer": "GVA warning: addNewReferenceEntry_MMCO force release {variables}"}
+{"query": "NETWORK: no response from server, reachability, 2, queryRetries, 0", "answer": "NETWORK: no response from server, reachability, {variables}, queryRetries, {variables}"}
+{"query": "Running weekly periodic task.", "answer": "Running weekly periodic task."}
+{"query": "02:20:05.837 : Starting AirDrop server for user 501 on wake", "answer": "{variables} : Starting AirDrop server for user {variables} on wake"}
+{"query": "2017-07-02 15:46:40.437 GoogleSoftwareUpdateAgent[32432/0x7000002a0000] [lvl=2] -[KSAgentApp(KeystoneThread) runKeystonesInThreadWithArg:] No functional system update engine detected. Only user tickets will be processed.", "answer": "{variables} {variables} GoogleSoftwareUpdateAgent[{variables}] [lvl={variables}] -[KSAgentApp(KeystoneThread) runKeystonesInThreadWithArg:] No functional system update engine detected. Only user tickets will be processed."}
+{"query": "Invalidating watch set.", "answer": "Invalidating watch set."}
+{"query": "-[WebSocketNetWork webSocket:didReceiveMessage:]", "answer": "-[WebSocketNetWork webSocket:didReceiveMessage:]"}
+{"query": "Garcon is ready (1 alive).", "answer": "Garcon is ready ({variables} alive)."}
+{"query": "[CardDAVPlugin-ERROR] -getPrincipalInfo:[_controller supportsRequestCompressionAtURL:https://xpcben%40gmail.com@www.googleapis.com/carddav/v1/principals/xpcben%40gmail.com/] Error Domain=NSURLErrorDomain Code=-1005 \"The network connection was lost.\" UserInfo={NSUnderlyingError=0x7f9fb4903390 {Error Domain=kCFErrorDomainCFNetwork Code=-1005 \"The network connection was lost.\" UserInfo={NSErrorFailingURLStringKey=https://xpcben%40gmail.com@www.googleapis.com/carddav/v1/principals/xpcben%40gmail.com/, NSErrorFailingURLKey=https://xpcben%40gmail.com@www.googleapis.com/carddav/v1/principals/xpcben%40gmail.com/, _kCFStreamErrorCodeKey=-4, _kCFStreamErrorDomainKey=4, NSLocalizedDescription=The network connection was lost.}}, NSErrorFailingURLStringKey=https://xpcben%40gmail.com@www.googleapis.com/carddav/v1/principals/xpcben%40gmail.com/, NSErrorFailingURLKey=https://xpcben%40gmail.com@www.googleapis.com/carddav/v1/principals/xpcben%40gmail.com/, _kCFStreamErrorDomainKey=4, _kCFStreamErrorCodeKey=-4, NSLocalizedDescription=The network connection was lost.}", "answer": "[CardDAVPlugin-ERROR] -getPrincipalInfo:[_controller {variables}] Error Domain={variables} Code={variables} {variables} UserInfo={NSUnderlyingError={variables} {Error Domain={variables} Code=-{variables} {variables} UserInfo={NSErrorFailingURLStringKey={variables}, NSErrorFailingURLKey={variables}, _kCFStreamErrorCodeKey={variables}, _kCFStreamErrorDomainKey={variables}, NSLocalizedDescription={variables}}}, NSErrorFailingURLStringKey={variables}, NSErrorFailingURLKey={variables}, _kCFStreamErrorDomainKey={variables}, _kCFStreamErrorCodeKey={variables}, NSLocalizedDescription={variables}}"}
+{"query": "client 32767 plug-in com.getdropbox.dropbox.garcon election := 1", "answer": "client {variables} plug-in {variables} election := {variables}"}
+{"query": "tcp_connection_handle_connect_conditions_bad 19694 failed: 3 - No network route", "answer": "tcp_connection_handle_connect_conditions_bad {variables} failed: {variables} - No network route"}
+{"query": "-[NETClientConnection effectiveBundleID] using process name apsd as bundle ID (this is expected for daemons without bundle ID", "answer": "-[NETClientConnection effectiveBundleID] using process name {variables} as bundle ID (this is expected for daemons without bundle ID"}
+{"query": "ASL Sender Statistics", "answer": "ASL Sender Statistics"}
+{"query": "CFPasteboardBeginGenerationReturn CFPasteboardBeginGeneration(CFPasteboardRef) : Lock timeout", "answer": "CFPasteboardBeginGenerationReturn CFPasteboardBeginGeneration({variables}) : Lock timeout"}
+{"query": "tcp_connection_destination_handle_tls_close_notify 37 closing socket due to TLS CLOSE_NOTIFY alert", "answer": "tcp_connection_destination_handle_tls_close_notify {variables} closing socket due to TLS CLOSE_NOTIFY alert"}
+{"query": "<IMMacNotificationCenterManager: 0x7ff1b2e00ba0>: notification observer: com.apple.iChat notification: __CFNotification 0x7ff1b2f3c9c0 {name = _NSDoNotDisturbDisabledNotification}", "answer": "<IMMacNotificationCenterManager: {variables}: notification observer: {variables} notification: __CFNotification {variables} {name = {variables}}"}
+{"query": "no sleep images for WillPowerOffWithImages", "answer": "no sleep images for {variables}"}
+{"query": "<IMMacNotificationCenterManager: 0x7ff1b2e00ba0>: Updating enabled: NO (Topics: (", "answer": "<IMMacNotificationCenterManager: {variables}: Updating enabled: {variables} (Topics: ("}
+{"query": "Wake reason: RTC (Alarm)", "answer": "Wake reason: {variables}"}
+{"query": "hibernate_page_list_setall found pageCount 431869", "answer": "hibernate_page_list_setall found pageCount {variables}"}
+{"query": "[17:19:11.342] <<<< IQ-CA >>>> piqca_setUsePreQueue: (0x7f9242554200) rejecting report of layer being serviced - IQ has not yet begun to update", "answer": "[{variables}] <<<< IQ-CA >>>> piqca_setUsePreQueue: {variables} rejecting report of layer being serviced - IQ has not yet begun to update"}
+{"query": "00:41:11.113 : Discoverable mode changed to Contacts Only", "answer": "{variables} : Discoverable mode changed to Contacts Only"}
+{"query": "Failed to connect (colorGridView) outlet from (NSApplication) to (NSColorPickerGridView): missing setter or instance variable", "answer": "Failed to connect {variables} outlet from {variables} to {variables}: missing setter or instance variable"}
+{"query": "Saw change in network reachability (isReachable=0)", "answer": "Saw change in network reachability (isReachable={variables})"}
+{"query": "Received Capture Event", "answer": "Received Capture Event"}
+{"query": "Endpoint has been activated through legacy launch(3) APIs. Please switch to XPC or bootstrap_check_in(): com.apple.CoreLocation.agent", "answer": "Endpoint has been activated through legacy launch({variables}) APIs. Please switch to XPC or bootstrap_check_in(): {variables}"}
+{"query": "Bluetooth -- LE is supported - Disable LE meta event", "answer": "Bluetooth -- LE is supported - Disable LE meta event"}
+{"query": "hibernate_machine_init: state 2, image pages 391592, sum was a6dc1ff4, imageSize 0x2846d000, image1Size 0x1ed37000, conflictCount 5006, nextFree 480b", "answer": "hibernate_machine_init: state {variables}, image pages {variables}, sum was {variables}, imageSize {variables}, image1Size {variables}, conflictCount {variables}, nextFree {variables}"}
+{"query": "Failed to start scanning", "answer": "Failed to start scanning"}
+{"query": "Previous shutdown cause: 3", "answer": "Previous shutdown cause: {variables}"}
+{"query": "INIT -- Host controller is published", "answer": "INIT -- Host controller is published"}
+{"query": "network changed: v4(en0-:10.105.160.95) DNS- Proxy-", "answer": "network changed: {variables} DNS- Proxy-"}
+{"query": "2017-07-02 10:40:07.790 ksfetch[32013/0x7fff79824000] [lvl=2] KSHelperReceiveAllData() KSHelperTool read 1938 bytes from stdin.", "answer": "{variables} {variables} ksfetch[{variables}] [lvl={variables}] KSHelperReceiveAllData() KSHelperTool read {variables} bytes from stdin."}
+{"query": "ARPT: 623032.042757: AirPort_Brcm43xx::powerChange: System Sleep", "answer": "ARPT: {variables}: AirPort_Brcm43xx::powerChange: System Sleep"}
+{"query": "handle_will_sleep_auth_and_shield_windows: err 0x0", "answer": "handle_will_sleep_auth_and_shield_windows: err {variables}"}
+{"query": "-> DNSServiceGetAddrInfo 0x4000D000 0 v4v6 gmail-imap.l.google.com. PID[11203]()", "answer": "-> DNSServiceGetAddrInfo {variables} v4v6 {variables}. PID[{variables}]()"}
+{"query": "dnssd_clientstub ConnectToServer: connect() failed path:/var/run/mDNSResponder Socket:4 Err:-1 Errno:1 Operation not permitted", "answer": "dnssd_clientstub ConnectToServer: connect() failed path:{variables} Socket:{variables} Err:{variables} Errno:{variables} Operation not permitted"}
+{"query": "2017/07/02 21:48:54.422 | I | VoipWrapper | DAVEngineImpl.cpp:1400:Close | close video chat. llFriendUIN = 535204893.", "answer": "{variables} {variables} | I | VoipWrapper | DAVEngineImpl.cpp:{variables}:Close | close video chat. llFriendUIN = {variables}"}
+{"query": "en0: BSSID changed to 5c:50:15:4c:18:1d", "answer": "{variables}: BSSID changed to {variables}"}
+{"query": "vm_compressor_fastwake_warmup (533272 - 539006) - starting", "answer": "vm_compressor_fastwake_warmup ({variables} - {variables}) - starting"}
+{"query": "Stream 0x7ff7c48646f0 is sending an event before being opened", "answer": "Stream {variables} is sending an event before being opened"}
+{"query": "DB Error: 1 \"no such table: tb_c2cMsg_2909288299\"", "answer": "DB Error: {variables} \"no such table: {variables}\""}
+{"query": "Actually performing action comment for 22589429328", "answer": "Actually performing action comment for {variables}"}
+{"query": "Error -60005 creating authorization", "answer": "Error {variables} creating authorization"}
+{"query": "RTC: PowerByCalendarDate setting ignored", "answer": "RTC: PowerByCalendarDate setting ignored"}
+{"query": "01:30:30.415 : BTLE scanner Powered On", "answer": "{variables} : BTLE scanner Powered {variables}"}
+{"query": "hibernate image path: /var/vm/sleepimage", "answer": "hibernate image path: {variables}"}
+{"query": "CCFile::captureLogRun() Exiting CCFile::captureLogRun", "answer": "CCFile::captureLogRun() Exiting CCFile::captureLogRun"}
+{"query": "11:20:51.361 : Finished generating hashes", "answer": "{variables} : Finished generating hashes"}
+{"query": "com.apple.Addres(646) deny mach-lookup com.apple.cdp.daemon", "answer": "{variables}({variables}) deny mach-lookup {variables}"}
+{"query": "AppleActuatorHIDEventDriver: message service is terminated", "answer": "{variables}: message service is terminated"}
+{"query": "[20:23:28.917] fragManifold_PushBytes signalled err=-16046 (kFigManifoldError_UnexpectedInitData) (Second 'ftyp' atom encountered) at /Library/Caches/com.apple.xbs/Sources/CoreMedia/CoreMedia-1731.15.207/Prototypes/FormatHandlers/Movie/FigMovieFragmentManifold.c line 1680", "answer": "[{variables}] fragManifold_PushBytes signalled err={variables} ({variables}) (Second 'ftyp' atom encountered) at {variables} line {variables}"}
+{"query": "IO80211AWDLPeerManager::setAwdlOperatingMode Setting the AWDL operation mode from AUTO to SUSPENDED", "answer": "IO80211AWDLPeerManager::setAwdlOperatingMode Setting the AWDL operation mode from {variables} to {variables}"}
+{"query": "[22:24:03.499] <<<< CRABS >>>> crabsFlumeHostUnavailable: [0x7fce15fda600] Byte flume reports host unavailable.", "answer": "[{variables}] <<<< CRABS >>>> crabsFlumeHostUnavailable: [{variables}] Byte flume reports host unavailable."}
+{"query": "[22:32:34.846] <<<< Boss >>>> figPlaybackBossPrerollCompleted: unexpected preroll-complete notification", "answer": "[{variables}] <<<< Boss >>>> figPlaybackBossPrerollCompleted: unexpected preroll-complete notification"}
+{"query": "Location icon should now be in state 'Inactive'", "answer": "Location icon should now be in state {variables}"}
+{"query": "ARPT: 621197.509729: framerdy 0x0 bmccmd 3 framecnt 1024", "answer": "ARPT: {variables}: framerdy {variables} bmccmd {variables} framecnt {variables}"}
+{"query": "Wake reason: EC.ACDetach (Maintenance)", "answer": "Wake reason: {variables}"}
+{"query": "Could not signal service com.apple.WebKit.WebContent: 113: Could not find specified service", "answer": "Could not signal service {variables}: {variables}: Could not find specified service"}
+{"query": "11:20:51.293 : BTLE discovered device with hash <01faa200 00000000 0000>", "answer": "{variables} : BTLE discovered device with hash {variables}"}
+{"query": "Session 101760 created", "answer": "Session {variables} created"}
+{"query": "bitmap_size 0x7f0fc, previewSize 0x6fb760, writing 445881 pages @ 0x78e87c", "answer": "bitmap_size {variables}, previewSize {variables}, writing {variables} pages @ {variables}"}
+{"query": "-[ISGenerateImageOp generateImageWithCompletion:] Failed to composit image for descriptor <ISBindingImageDescriptor: 0x7f995060a600>.", "answer": "-[ISGenerateImageOp generateImageWithCompletion:] Failed to composit image for descriptor {variables}."}
+{"query": "hciControllerOnline; HID devices? 0", "answer": "hciControllerOnline; HID devices? {variables}"}
+{"query": "[HID] [MT] MTActuatorManagement::getActuatorRef Calling MTActuatorOpen() outside of MTTrackpadHIDManager.", "answer": "[HID] [MT] MTActuatorManagement::getActuatorRef Calling MTActuatorOpen() outside of MTTrackpadHIDManager."}
+{"query": "[QL] After retry, preview was from a different type for <QLPreview 0x7fbd57d7c1b0 131963 file:///Users/xpc/Desktop/%E6%96%87%E6%A1%A36.docx>", "answer": "[QL] After retry, preview was from a different type for <QLPreview {variables}"}
+{"query": "[IOBluetoothHostController::setConfigState] calling registerService", "answer": "[IOBluetoothHostController::setConfigState] calling registerService"}
+{"query": "CCDataTap::profileRemoved, Owner: com.apple.driver.AirPort.Brcm4360.0, Name: StateSnapshots", "answer": "CCDataTap::profileRemoved, Owner: {variables}, Name: {variables}"}
+{"query": "IO80211AWDLPeerManager::setAwdlSuspendedMode() Suspending AWDL, enterQuietMode(true)", "answer": "IO80211AWDLPeerManager::setAwdlSuspendedMode() Suspending AWDL, enterQuietMode({variables})"}
+{"query": "PM response took 28004 ms (54, powerd)", "answer": "PM response took {variables} ms ({variables}, {variables})"}
+{"query": "Watch set is now: {(", "answer": "Watch set is now: {("}
+{"query": "NSURLSession/NSURLConnection HTTP load failed (kCFStreamErrorDomainSSL, -9802)", "answer": "NSURLSession/NSURLConnection HTTP load failed (kCFStreamErrorDomainSSL, {variables})"}
+{"query": "handle_will_sleep_auth_and_shield_windows: NULL shield_window (lock state: 1)", "answer": "handle_will_sleep_auth_and_shield_windows: NULL shield_window (lock state: {variables})"}
+{"query": "Logging disabled completely for device:1: /Volumes/Recovery HD", "answer": "Logging disabled completely for device:{variables}: {variables} {variables}"}
+{"query": "SpotlightNetHelp(352) deny ipc-posix-shm-read-data CFPBS:186A7:", "answer": "SpotlightNetHelp({variables}) deny ipc-posix-shm-read-data {variables}:"}
+{"query": "2017-07-02 10:40:08.376 GoogleSoftwareUpdateAgent[32012/0x7000002a0000] [lvl=2] -[KSAgentApp(KeystoneThread) runKeystonesInThreadWithArg:] About to run checks for any other apps.", "answer": "{variables} {variables} GoogleSoftwareUpdateAgent[{variables}] [lvl={variables}] -[KSAgentApp(KeystoneThread) runKeystonesInThreadWithArg:] About to run checks for any other apps."}
+{"query": "WARNING: Type1 font data isn't in the correct format required by the Adobe Type 1 Font Format specification.", "answer": "WARNING: {variables} font data isn't in the correct format required by the Adobe Type {variables} Font Format specification."}
+{"query": "ARPT: 669632.212631: wlc_dump_aggfifo:", "answer": "ARPT: {variables}: wlc_dump_aggfifo:"}
+{"query": "handle_will_sleep_auth_and_shield_windows: Deferring.", "answer": "handle_will_sleep_auth_and_shield_windows: Deferring."}

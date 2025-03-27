@@ -1,0 +1,64 @@
+{"query": "dcdbas device driver loaded", "answer": "{variables} device driver loaded"}
+{"query": "DHCPREQUEST for 10.100.22.2 (10.100.22.250) from 00:11:43:e5:bc:ba via eth1: unknown lease 10.100.22.2.", "answer": "DHCPREQUEST for {variables} from {variables} via {variables}: unknown lease {variables}."}
+{"query": "Remote host disconnected: Key exchange failed.", "answer": "Remote host disconnected: Key exchange failed."}
+{"query": "0x23a1 (pan_sock: timeout)", "answer": "{variables} (pan_sock: timeout)"}
+{"query": "pan_common: load aborted", "answer": "pan_common: load aborted"}
+{"query": "Kickstart Install: Prepare speconf_sync to work", "answer": "Kickstart Install: {variables}"}
+{"query": "NET: Registered protocol family 17", "answer": "NET: Registered protocol family {variables}"}
+{"query": "[ib_sm_assign.c:229]: Set port GUID=5ad000004cd7c, port=1 DOWN (port prefix fe80000000000000, subnet_prefix fe80000000", "answer": "[{variables}]: Set port GUID={variables}, port={variables} DOWN (port prefix {variables}, subnet_prefix {variables}"}
+{"query": "bad username []", "answer": "bad username {variables}"}
+{"query": "/sbin/ip route add 10.0.0.0/8 via 10.100.23.254 dev eth0", "answer": "{variables} route add {variables} via {variables} dev {variables}"}
+{"query": "dhcpd shutdown succeeded", "answer": "{variables} shutdown succeeded"}
+{"query": "pbs_mom shutdown succeeded", "answer": "{variables} shutdown succeeded"}
+{"query": "Install: Removing tftpboot installation link from 10.100.32.250", "answer": "Install: Removing tftpboot installation link from {variables}"}
+{"query": "Using HPET based timekeeping.", "answer": "Using HPET based timekeeping."}
+{"query": "Listening on LPF/eth1/00:11:43:e3:ba:ad/D_net", "answer": "Listening on {variables}"}
+{"query": "ntpd exiting on signal 15", "answer": "{variables} exiting on signal {variables}"}
+{"query": "PCI-DMA: Using software bounce buffering for IO (SWIOTLB)", "answer": "PCI-DMA: Using software bounce buffering for IO (SWIOTLB)"}
+{"query": "step time server 10.100.0.250 offset -0.000102 sec", "answer": "step time server {variables} offset {variables} sec"}
+{"query": "PCI: Transparent bridge - 0000:00:1e.0", "answer": "PCI: Transparent bridge - {variables}"}
+{"query": "Capability LSM initialized as secondary", "answer": "Capability LSM initialized as secondary"}
+{"query": "Free swap: 0kB", "answer": "Free swap: {variables}"}
+{"query": "Node 0 Normal free:2520kB min:2696kB low:5392kB high:8088kB active:2876728kB inactive:3087836kB present:7323648kB pages_scanned:16793898 all_unreclaimable? yes", "answer": "Node {variables} {variables} {variables} min:{variables} low:{variables} high:{variables} active:{variables} inactive:{variables} present:{variables} pages_scanned:{variables} all_unreclaimable? {variables}"}
+{"query": "mount.panfs warning: mount still trying to ping realm. Mount has been trying to ping for 2 seconds and may try for another 8 seconds", "answer": "mount.panfs warning: mount still trying to ping realm. Mount has been trying to ping for {variables} seconds and may try for another {variables} seconds"}
+{"query": "Bringing up interface ib0: failed", "answer": "Bringing up interface {variables}: failed"}
+{"query": "cd /usr ; /usr/bin/mysqld_safe &", "answer": "cd {variables} ; {variables} &"}
+{"query": "THH(2): [XHH_qpm_process_local_mad]: ERROR on port 1: 259", "answer": "THH({variables}): [XHH_qpm_process_local_mad]: ERROR on port {variables}: {variables}"}
+{"query": "No mptable found.", "answer": "No mptable found."}
+{"query": "Swap cache: add 64536622, delete 64536412, find 9606733/15749207, race 11+82", "answer": "Swap cache: add {variables}, delete {variables}, find {variables}, race {variables}"}
+{"query": "ACPI: HPET id: 0xffffffff base: 0xfed00000", "answer": "ACPI: HPET id: {variables} base: {variables}"}
+{"query": "can't open /var/lib/ntp/drift.TEMP: Read-only file system", "answer": "can't open {variables}: Read-only file system"}
+{"query": "shutting down for system halt", "answer": "shutting down for system {variables}"}
+{"query": "mount to NFS server 'nfs1' failed", "answer": "mount to NFS server {variables} failed"}
+{"query": "time.c: Using 14.318180 MHz HPET timer.", "answer": "{variables}: Using {variables} MHz HPET timer."}
+{"query": "LAPIC (acpi_id[0x03] lapic_id[0x01] enabled)", "answer": "LAPIC (acpi_id[{variables}] lapic_id[{variables}] enabled)"}
+{"query": "Lustre: 12417:0:(module.c:164:init_kportals_module()) maximum lustre stack 8192", "answer": "Lustre: {variables}:({variables}) maximum lustre stack {variables}"}
+{"query": "STATS: dropped 323", "answer": "STATS: dropped {variables}"}
+{"query": "PCI Interrupt Routing Table [\\_SB_.PCI0.PICH._PRT]", "answer": "PCI Interrupt Routing Table [{variables}]"}
+{"query": "/usr/bin/mysqladmin -u root -h tbird-admin1 password 'new-password'", "answer": "{variables} -u {variables} -h {variables} password '{variables}'"}
+{"query": "lockd -KILL succeeded", "answer": "lockd -KILL succeeded"}
+{"query": "dcdbas: no version for \"struct_module\" found: kernel tainted.", "answer": "dcdbas: no version for {variables} found: kernel tainted."}
+{"query": "Kickstart Install: setup CAP sysconfig file", "answer": "Kickstart Install: {variables}"}
+{"query": "[/sbin/fsck.ext3 (1) -- /tmp] fsck.ext3 -a /dev/sda6", "answer": "[{variables} ({variables}) -- {variables}] {variables} -a {variables}"}
+{"query": "ACPI: PM-Timer IO Port: 0x808", "answer": "ACPI: PM-Timer IO Port: {variables}"}
+{"query": "ACPI: PCI Interrupt Routing Table [\\_SB_.PCI0.PBHI._PRT]", "answer": "ACPI: PCI Interrupt Routing Table [{variables}]"}
+{"query": "User jtfish, coming from #45#, authenticated.", "answer": "User {variables}, coming from {variables}, authenticated."}
+{"query": "testing NMI watchdog ... OK.", "answer": "testing NMI watchdog ... OK."}
+{"query": "(root) CMD (/projects/tbird/temps/get_temps a)", "answer": "({variables}) CMD ({variables})"}
+{"query": "Calibrating delay loop... 7176.19 BogoMIPS (lpj=3588096)", "answer": "Calibrating delay loop... {variables} BogoMIPS (lpj={variables})"}
+{"query": "THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[2452]: XHH_hob_fatal_error: device=InfiniHost0, err_type=5, syndrome=12", "answer": "THH({variables}): {variables}[{variables}]: XHH_hob_fatal_error: device={variables}, err_type={variables}, syndrome={variables}"}
+{"query": "PCI: Probing PCI hardware (bus 00)", "answer": "PCI: Probing PCI hardware (bus {variables})"}
+{"query": "syslog-ng startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "probe of vesafb0 failed with error -6", "answer": "probe of {variables} failed with error {variables}"}
+{"query": "Using local APIC timer interrupts.", "answer": "Using local APIC timer interrupts."}
+{"query": "Unknown cmd fd(5) cmd(80081272){00} arg(ffffda44) on /dev/sda", "answer": "Unknown cmd fd({variables}) cmd({variables}){{variables}} arg({variables}) on {variables}"}
+{"query": "Using IO APIC NMI watchdog", "answer": "Using IO APIC NMI watchdog"}
+{"query": "PCI Interrupt Link [LNKH] (IRQs 3 4 5 6 7 10 11 12) *0, disabled.", "answer": "PCI Interrupt Link [{variables}] (IRQs {variables}) {variables}"}
+{"query": "acpid startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "lockd shutdown failed", "answer": "{variables} shutdown failed"}
+{"query": "pan_common: init complete", "answer": "pan_common: init complete"}
+{"query": "authentication failure; logname=LOGIN uid=0 euid=0 tty=tty2 ruser= rhost=", "answer": "authentication failure; logname={variables} uid={variables} euid={variables} tty={variables} ruser={variables} rhost={variables}"}
+{"query": "pan_ips: error -- cfg target addresses, 0x5 (Out of memory), err_loc=1, rhel_4_amd64/release/build/panfs/ips/pan_ips_cfg.c:294", "answer": "pan_ips: error -- cfg target addresses, {variables} (Out of memory), {variables}"}
+{"query": "warning: many lost ticks.", "answer": "warning: many lost ticks."}
+{"query": "Kickstart Install: pdsh + ssh packages", "answer": "Kickstart Install: {variables}"}
+{"query": "bad username [\\\\\\\\\\\\\\\\\\\\\\\\\\\\]", "answer": "bad username {variables}"}

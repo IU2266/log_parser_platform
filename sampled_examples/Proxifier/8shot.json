@@ -1,0 +1,8 @@
+{"query": "get.sogou.com:80 close, 879 bytes sent, 316 bytes received, lifetime <1 sec", "answer": "{variables} close, {variables} bytes sent, {variables} bytes received, lifetime {variables}"}
+{"query": "183.62.156.108:22 close, 89652 bytes (87.5 KB) sent, 599249 bytes (585 KB) received, lifetime 37:51", "answer": "{variables} close, {variables} bytes ({variables}) sent, {variables} bytes ({variables}) received, lifetime {variables}"}
+{"query": "183.62.156.108:22 open through proxy socks.cse.cuhk.edu.hk:1080 SOCKS5", "answer": "{variables} open through proxy {variables} SOCKS5"}
+{"query": "183.62.156.108:22 open through proxy socks.cse.cuhk.edu.hk:1080 SOCKS5", "answer": "{variables} open through proxy {variables} SOCKS5"}
+{"query": "tcpconn6.tencent.com:443 error : A connection request was canceled before the completion.", "answer": "{variables} error : A connection request was canceled before the completion."}
+{"query": "tcpconn6.tencent.com:80 error : A connection request was canceled before the completion.", "answer": "{variables} error : A connection request was canceled before the completion."}
+{"query": "proxy.cse.cuhk.edu.hk:5070 close, 3663 bytes (3.57 KB) sent, 7928 bytes (7.74 KB) received, lifetime 08:00", "answer": "{variables} close, {variables} bytes ({variables}) sent, {variables} bytes ({variables}) received, lifetime {variables}"}
+{"query": "proxy.cse.cuhk.edu.hk:5070 open through proxy proxy.cse.cuhk.edu.hk:5070 HTTPS", "answer": "{variables} open through proxy {variables} HTTPS"}

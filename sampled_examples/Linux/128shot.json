@@ -1,0 +1,128 @@
+{"query": "SELinux: Disabled at runtime.", "answer": "SELinux: Disabled at runtime."}
+{"query": "cdrom: open failed.", "answer": "cdrom: open failed."}
+{"query": "Starting hpoj: succeeded", "answer": "Starting hpoj: succeeded"}
+{"query": "privoxy startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "*** info [client.c(137)]:", "answer": "*** info [client.c({variables})]:"}
+{"query": "md: Autodetecting RAID arrays.", "answer": "md: Autodetecting RAID arrays."}
+{"query": "ide1: BM-DMA at 0xffa8-0xffaf, BIOS settings: hdc:DMA, hdd:pio", "answer": "ide1: BM-DMA at {variables}, BIOS settings: hdc:{variables}, hdd:{variables}"}
+{"query": "selinux_register_security: Registering secondary module capability", "answer": "selinux_register_security: Registering secondary module capability"}
+{"query": "FDC 0 is a National Semiconductor PC87306", "answer": "FDC {variables} is a National Semiconductor {variables}"}
+{"query": "httpd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "connection from 208.62.55.75 () at Wed Jun 29 10:48:12 2005", "answer": "connection from {variables} ({variables}) at {variables}"}
+{"query": "Bluetooth: Core ver 2.4", "answer": "Bluetooth: {variables} ver {variables}"}
+{"query": "Authentication failed from 163.27.187.39 (163.27.187.39): Software caused connection abort", "answer": "Authentication failed from {variables} ({variables}): Software caused connection abort"}
+{"query": "mice: PS/2 mouse device common for all mice", "answer": "mice: {variables} mouse device common for all mice"}
+{"query": "FAILED LOGIN 1 FROM (null) FOR , Authentication failure", "answer": "FAILED LOGIN {variables} FROM ({variables}) FOR , Authentication failure"}
+{"query": "hda: 29336832 sectors (15020 MB) w/1916KiB Cache, CHS=29104/16/63, UDMA(66)", "answer": "hda: {variables} sectors ({variables} MB) w/{variables} Cache, CHS={variables}, UDMA({variables})"}
+{"query": "tty2: invalid character 0x1b in login name", "answer": "tty2: invalid character {variables} in login name"}
+{"query": "Started gpm successfully. Entered daemon mode.", "answer": "Started gpm successfully. Entered daemon mode."}
+{"query": "ntpd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "*** info [mice.c(1766)]:", "answer": "*** info [mice.c({variables})]:"}
+{"query": "ide1 at 0x170-0x177,0x376 on irq 15", "answer": "ide1 at {variables} on irq {variables}"}
+{"query": "messagebus startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Kernel command line: ro root=LABEL=/ rhgb quiet", "answer": "Kernel command line: ro root={variables} rhgb quiet"}
+{"query": "ICH: IDE controller at PCI slot 0000:00:1f.1", "answer": "ICH: IDE controller at PCI slot {variables}"}
+{"query": "Calibrating delay loop... 1445.88 BogoMIPS", "answer": "Calibrating delay loop... {variables} BogoMIPS"}
+{"query": "connection from 61.199.220.226 (ark.dbstream.co.jp) at Sat Aug 13 11:45:26 2005", "answer": "connection from {variables} ({variables}) at {variables}"}
+{"query": "rsyncd version 2.6.2 starting, listening on port 873", "answer": "rsyncd version {variables} starting, listening on port {variables}"}
+{"query": "Configuration file /etc/smartd.conf parsed.", "answer": "Configuration file {variables} parsed."}
+{"query": "select reported EBADF but no bad file descriptors were found", "answer": "select reported EBADF but no bad file descriptors were found"}
+{"query": "htt startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "starting BIND 9.2.3 -u named -t /var/named/chroot", "answer": "starting BIND {variables} -u {variables} -t {variables}"}
+{"query": "using 1 CPU", "answer": "using {variables} CPU"}
+{"query": "CPU: Intel Pentium III (Coppermine) stepping 06", "answer": "CPU: Intel Pentium III (Coppermine) stepping {variables}"}
+{"query": "check pass; user unknown", "answer": "check pass; user {variables}"}
+{"query": "isapnp: Scanning for PnP cards...", "answer": "isapnp: Scanning for PnP cards..."}
+{"query": "TCP: Hash tables configured (established 8192 bind 16384)", "answer": "TCP: Hash tables configured (established {variables} bind {variables})"}
+{"query": "parport0: PC-style at 0x378 (0x778) [PCSPP,TRISTATE,EPP]", "answer": "parport0: PC-style at {variables} ({variables}) [{variables}]"}
+{"query": "Transparent bridge - 0000:00:1e.0", "answer": "Transparent bridge - {variables}"}
+{"query": "Kerberos authentication failed", "answer": "Kerberos authentication failed"}
+{"query": "ICH: chipset revision 2", "answer": "ICH: chipset revision {variables}"}
+{"query": "On node 0 totalpages: 32430", "answer": "On node {variables} totalpages: {variables}"}
+{"query": "RAMDISK driver initialized: 16 RAM disks of 16384K size 1024 blocksize", "answer": "RAMDISK driver initialized: {variables} RAM disks of {variables} size {variables} blocksize"}
+{"query": "snmpd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Jun 10 11:32:05 Privoxy(-150769536) Info: loading configuration file '/etc/privoxy/config':", "answer": "{variables} Privoxy({variables}) Info: loading configuration file {variables}"}
+{"query": "Freeing unused kernel memory: 144k freed", "answer": "Freeing unused kernel memory: {variables} freed"}
+{"query": "apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)", "answer": "apm: BIOS version {variables} Flags {variables} (Driver version {variables})"}
+{"query": "gpm startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Using cfq io scheduler", "answer": "Using {variables} io scheduler"}
+{"query": "imps2: Auto-detected intellimouse PS/2", "answer": "imps2: Auto-detected intellimouse PS/2"}
+{"query": "kernel time sync status 0040", "answer": "kernel time sync status {variables}"}
+{"query": "agpgart: detected 4MB dedicated video ram.", "answer": "agpgart: detected {variables} dedicated video ram."}
+{"query": "uhci_hcd 0000:00:1f.2: irq 11, io base 0000ff80", "answer": "uhci_hcd {variables}: irq {variables}, io base {variables}"}
+{"query": "Setting network parameters: succeeded", "answer": "Setting network parameters: succeeded"}
+{"query": "xinetd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "hda: max request size: 128KiB", "answer": "hda: max request size: {variables}"}
+{"query": "sendmail startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "SELinux: Unregistering netfilter hooks", "answer": "SELinux: Unregistering netfilter hooks"}
+{"query": "agpgart: Maximum main memory to use for agp memory: 93M", "answer": "agpgart: Maximum main memory to use for agp memory: {variables}"}
+{"query": "rpc.statd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Bluetooth: RFCOMM TTY layer initialized", "answer": "Bluetooth: RFCOMM TTY layer initialized"}
+{"query": "ACPI: Interpreter disabled.", "answer": "ACPI: Interpreter disabled."}
+{"query": "connection from 61.218.67.60 (mail.net-star.com.tw) at Mon Jun 13 02:01:28 2005", "answer": "connection from {variables} ({variables}) at {variables}"}
+{"query": "*** info [startup.c(95)]:", "answer": "*** info [startup.c({variables})]:"}
+{"query": "EXT3-fs: recovery complete.", "answer": "EXT3-fs: recovery complete."}
+{"query": "connection from 68.143.90.52 (iis.willowtec.com) at Tue Aug 16 03:59:58 2005", "answer": "connection from {variables} ({variables}) at {variables}"}
+{"query": "Bringing up loopback interface: succeeded", "answer": "Bringing up loopback interface: succeeded"}
+{"query": "Connecting at fd 6", "answer": "Connecting at fd {variables}"}
+{"query": "input: ImPS/2 Logitech Wheel Mouse on isa0060/serio1", "answer": "input: {variables} on {variables}"}
+{"query": "usbcore: registered new driver hub", "answer": "usbcore: registered new driver {variables}"}
+{"query": "Initializing IPsec netlink socket", "answer": "Initializing IPsec netlink socket"}
+{"query": "Stopping MySQL: succeeded", "answer": "Stopping MySQL: succeeded"}
+{"query": "CPU 0 irqstacks, hard=02345000 soft=02344000", "answer": "CPU {variables} irqstacks, hard={variables} soft={variables}"}
+{"query": "Uniform CD-ROM driver Revision: 3.20", "answer": "Uniform CD-ROM driver Revision: {variables}"}
+{"query": "ide0: BM-DMA at 0xffa0-0xffa7, BIOS settings: hda:DMA, hdb:pio", "answer": "ide0: BM-DMA at {variables}, BIOS settings: hda:{variables}, hdb:{variables}"}
+{"query": "sm-client startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "loading configuration from '/etc/named.conf'", "answer": "loading configuration from {variables}"}
+{"query": "ACPI: Subsystem revision 20040326", "answer": "ACPI: Subsystem revision {variables}"}
+{"query": "automount startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Version 3.0.2 (APM BIOS 1.2, Linux driver 1.16ac)", "answer": "Version {variables} (APM BIOS {variables}, Linux driver {variables})"}
+{"query": "Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)", "answer": "Dentry cache hash table entries: {variables} (order: {variables}, {variables} bytes)"}
+{"query": "Service telnet failed to start and is deactivated.", "answer": "Service telnet failed to start and is deactivated."}
+{"query": "Squid Parent: child process 2264 started", "answer": "Squid Parent: child process {variables} started"}
+{"query": "Capability LSM initialized", "answer": "Capability LSM initialized"}
+{"query": "authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=yang.dorm13.nctu.edu.tw user=nobody", "answer": "authentication failure; logname={variables} uid={variables} euid={variables} tty={variables} ruser={variables} rhost={variables} user={variables}"}
+{"query": "atd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "ACPI: ACPI tables contain no PCI IRQ routing entries", "answer": "ACPI: ACPI tables contain no PCI IRQ routing entries"}
+{"query": "BIOS-e820: 00000000ffb00000 - 0000000100000000 (reserved)", "answer": "BIOS-e820: {variables} - {variables} (reserved)"}
+{"query": "Built 1 zonelists", "answer": "Built {variables} zonelists"}
+{"query": "PCI: PCI BIOS revision 2.10 entry at 0xfc0ce, last bus=1", "answer": "PCI: PCI BIOS revision {variables} entry at {variables}, last bus={variables}"}
+{"query": "Bluetooth: L2CAP ver 2.1", "answer": "Bluetooth: {variables} ver {variables}"}
+{"query": "rpc.idmapd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "cupsd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Failure registering capabilities with the kernel", "answer": "Failure registering capabilities with the kernel"}
+{"query": "Device: /dev/hda, is SMART capable. Adding to \"monitor\" list.", "answer": "Device: {variables}, is SMART capable. Adding to \"monitor\" list."}
+{"query": "BIOS-e820: 0000000000100000 - 0000000007eae000 (usable)", "answer": "BIOS-e820: {variables} - {variables} (usable)"}
+{"query": "NET: Registered protocol family 2", "answer": "NET: Registered protocol family {variables}"}
+{"query": "You can enable it with acpi=force", "answer": "You can enable it with {variables}"}
+{"query": "getpeername (ftpd): Transport endpoint is not connected", "answer": "getpeername (ftpd): Transport endpoint is not connected"}
+{"query": "ACPI disabled because your bios is from 2000 and too old", "answer": "ACPI disabled because your bios is from {variables} and too old"}
+{"query": "Linux agpgart interface v0.100 (c) Dave Jones", "answer": "Linux agpgart interface {variables} (c) Dave Jones"}
+{"query": "3c59x: Donald Becker and others. www.scyld.com/network/vortex.html", "answer": "{variables}: Donald Becker and others. {variables}"}
+{"query": "Started working: 30 available services", "answer": "Started working: {variables} available services"}
+{"query": "Device: /dev/hda, found in smartd database.", "answer": "Device: {variables}, found in smartd database."}
+{"query": "Opened configuration file /etc/smartd.conf", "answer": "Opened configuration file {variables}"}
+{"query": "EXT3-fs: hda2: 4 orphan inodes deleted", "answer": "EXT3-fs: {variables}: {variables} orphan inodes deleted"}
+{"query": "ttloop: peer died: Invalid or incomplete multibyte or wide character", "answer": "ttloop: peer died: Invalid or incomplete multibyte or wide character"}
+{"query": "Adding 262072k swap on /dev/hda3. Priority:-1 extents:1", "answer": "Adding {variables} swap on {variables}. Priority:{variables} extents:{variables}"}
+{"query": "Real Time Clock Driver v1.12", "answer": "Real Time Clock Driver {variables}"}
+{"query": "SELinux: Starting in permissive mode", "answer": "SELinux: Starting in permissive mode"}
+{"query": "agpgart: AGP aperture is 64M @ 0xf4000000", "answer": "agpgart: AGP aperture is {variables} @ {variables}"}
+{"query": "file descriptor of service comsat has been closed", "answer": "file descriptor of service comsat has been closed"}
+{"query": "Version 1.0.6 Starting", "answer": "Version {variables} Starting"}
+{"query": "session opened for user root by (uid=0)", "answer": "session opened for user {variables} by {variables}"}
+{"query": "Disabled Privacy Extensions on device 022db720(lo)", "answer": "Disabled Privacy Extensions on device {variables}({variables})"}
+{"query": "irqbalance startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Detected 731.219 MHz processor.", "answer": "Detected {variables} MHz processor."}
+{"query": "md: autorun ...", "answer": "md: autorun ..."}
+{"query": "PCI: Probing PCI hardware (bus 00)", "answer": "PCI: Probing PCI hardware (bus {variables})"}
+{"query": "VFS: Mounted root (ext2 filesystem).", "answer": "VFS: Mounted root (ext2 filesystem)."}
+{"query": "Starting readahead: succeeded", "answer": "Starting readahead: succeeded"}
+{"query": "session opened for user cyrus by (uid=0)", "answer": "session opened for user {variables} by {variables}"}
+{"query": "Initializing random number generator: succeeded", "answer": "Initializing random number generator: succeeded"}
+{"query": "There is already a security framework initialized, register_security failed.", "answer": "There is already a security framework initialized, register_security failed."}
+{"query": "SCSI subsystem initialized", "answer": "SCSI subsystem initialized"}
+{"query": "Mount-cache hash table entries: 512 (order: 0, 4096 bytes)", "answer": "Mount-cache hash table entries: {variables} (order: {variables}, {variables} bytes)"}
+{"query": "IPv6 over IPv4 tunneling driver", "answer": "IPv6 over IPv4 tunneling driver"}
+{"query": "session closed for user root", "answer": "session closed for user {variables}"}
+{"query": "smartd startup succeeded", "answer": "{variables} startup succeeded"}

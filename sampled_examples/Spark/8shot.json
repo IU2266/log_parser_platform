@@ -1,0 +1,8 @@
+{"query": "Updating epoch to 40 and clearing cache", "answer": "Updating epoch to {variables} and clearing cache"}
+{"query": "ResultStage 32 (collect at pnmf4.py:296) finished in 2.316 s", "answer": "ResultStage {variables} (collect at {variables}) finished in {variables} s"}
+{"query": "ResultStage 5 (collect at pnmf4.py:377) failed in 995.551 s", "answer": "ResultStage {variables} (collect at {variables}) failed in {variables} s"}
+{"query": "Lost executor 1 on mesos-slave-08: Container marked as failed: container_1485248649253_0076_02_000002 on host: mesos-slave-08. Exit status: 143. Diagnostics: Container killed on request. Exit code is 143", "answer": "Lost executor {variables} on {variables}: Container marked as failed: {variables} on host: {variables}. Exit status: {variables}. Diagnostics: {variables}. Exit code is {variables}"}
+{"query": "Driver now available: 10.10.34.11:39495", "answer": "Driver now available: {variables}"}
+{"query": "running: Set()", "answer": "running: Set()"}
+{"query": "BlockManager stopped", "answer": "BlockManager stopped"}
+{"query": "Unregistering ApplicationMaster with SUCCEEDED", "answer": "Unregistering ApplicationMaster with {variables}"}

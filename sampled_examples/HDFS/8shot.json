@@ -1,0 +1,8 @@
+{"query": "BLOCK* NameSystem.allocateBlock: /user/root/sortrand/_temporary/_task_200811092030_0002_r_000178_0/part-00178. blk_5520757060240137887", "answer": "BLOCK* NameSystem.allocateBlock: {variables} {variables}"}
+{"query": "10.251.214.130:50010:Got exception while serving blk_5982980142110510292 to /10.250.17.177:", "answer": "{variables}:Got exception while serving {variables} to {variables}:"}
+{"query": "BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for blk_74623038764341097 on 10.251.123.33:50010 size 67108864 But it does not belong to any file.", "answer": "BLOCK* NameSystem.addStoredBlock: addStoredBlock request received for {variables} on {variables} size {variables} But it does not belong to any file."}
+{"query": "10.251.71.16:50010 Starting thread to transfer block blk_-7185835789497405029 to 10.251.35.1:50010, 10.251.107.196:50010", "answer": "{variables} Starting thread to transfer block {variables} to {variables}, {variables}"}
+{"query": "BLOCK* ask 10.251.70.37:50010 to replicate blk_-1388948464379446201 to datanode(s) 10.251.123.33:50010", "answer": "BLOCK* ask {variables} to replicate {variables} to datanode(s) {variables}"}
+{"query": "Verification succeeded for blk_4370488341975955090", "answer": "Verification succeeded for {variables}"}
+{"query": "10.251.65.237:50010:Transmitted block blk_-1552272238828007233 to /10.251.67.211:50010", "answer": "{variables}:Transmitted block {variables} to {variables}"}
+{"query": "Unexpected error trying to delete block blk_-8513351748579810786. BlockInfo not found in volumeMap.", "answer": "Unexpected error trying to delete block {variables}. BlockInfo not found in volumeMap."}
