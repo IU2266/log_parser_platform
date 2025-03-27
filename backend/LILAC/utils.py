@@ -1,6 +1,7 @@
 import pickle
 import json
 
+
 def cache_to_file(log_tuples, cached_file):
     with open(cached_file, "w") as fw:
         for tuples in log_tuples:

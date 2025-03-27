@@ -13,6 +13,7 @@ from .utils import load_pickle, save_pickle, load_tuple_list, cache_to_file, rea
 from tqdm import tqdm
 
 
+
 def save_results_to_csv(log_file, template_file, cache_file, output_file, output_template_file):
     try:
         with open(template_file, 'r') as f:

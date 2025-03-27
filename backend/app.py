@@ -12,6 +12,7 @@ from flask_cors import CORS  # 导入 CORS
 app = Flask(__name__)
 CORS(app)  # 配置允许的源
 
+#产生更改
 # 配置项
 LOG_FILE_PATH = 'log.txt'
 TEMPLATE_DIR = os.path.join(os.path.dirname(__file__), 'templates')
