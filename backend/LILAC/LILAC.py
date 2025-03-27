@@ -117,7 +117,15 @@ class LogParser:
             cache = ParsingCache()
             idx = 0
 
-        prompt_cases = None if self.shot == 0 else read_json_file(f"../../full_dataset/sampled_examples/{dataset_name}/{self.shot}shot.json")
+        if self.shot > 0:
+            file_path = f"D:/log_parser_platform/sampled_examples/{dataset_name}/{self.shot}shot.json"
+            if os.path.exists(file_path):
+                prompt_cases = read_json_file(file_path)
+            else:
+                print(f"文件 {file_path} 不存在，将不使用示例数据。")
+                prompt_cases = None
+        else:
+            prompt_cases = None
 
         num_query = 0
         total_line = len(self.df_log)
