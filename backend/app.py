@@ -4,14 +4,13 @@ import time
 import socket
 import pandas as pd
 from flask import Flask, request, jsonify, send_file, send_from_directory
-from LILAC.parsing_cache import ParsingCache
-from LILAC.gpt_query import query_template_from_deepseek_with_check
-from LILAC.LILAC import save_results_to_csv
+from benchmark.logparser.LILAC.parsing_cache import ParsingCache
+from benchmark.logparser.LILAC.gpt_query import query_template_from_deepseek_with_check
+from benchmark.logparser.LILAC.LILAC import save_results_to_csv
 from flask_cors import CORS  # 导入 CORS
 
 app = Flask(__name__)
 CORS(app)  # 配置允许的源
-
 
 # 配置项
 LOG_FILE_PATH = 'log.txt'
@@ -75,6 +74,7 @@ def preprocess_logs(log_data):
     except Exception as e:
         print(f"Preprocess logs error: {e}")
         return [], "", "", 0, 0
+
 def generate_logformat_regex(logformat):
     headers = []
     splitters = re.split(r'(<[^<>]+>)', logformat)
@@ -120,6 +120,9 @@ def cache_templates(log_data, cache):
         return cache, 0, 0
 
 # 日志解析模块
+# ... existing code ...
+
+# 日志解析模块
 def parse_logs(log_data, cache):
     start_time = time.time()
     parsed_count = 0
@@ -129,8 +132,9 @@ def parse_logs(log_data, cache):
     for log in log_data:
         result = cache.match_event(log)
         if result[0] == "NoMatch":
-            # 修改为 deepseek-chat
-            new_template, normal = query_template_from_deepseek_with_check(log, model="deepseek-chat")
+            # 本地实现的日志模板提取逻辑
+            new_template = extract_template(log)
+            normal = True  # 假设正常
             template_id = cache.add_templates(new_template, normal, result[2])
         else:
             template_id = result[1]
@@ -158,6 +162,18 @@ def parse_logs(log_data, cache):
 
     return parsed_count, parsing_speed, parsed_results
 
+# 本地实现的日志模板提取逻辑
+def extract_template(log):
+    # 简单示例：将日期和时间替换为占位符
+    import re
+    pattern = r'\[\w+ \w+ \d+ \d+:\d+:\d+ \d+\]'
+    log = re.sub(pattern, '[{timestamp}]', log)
+    pattern = r'\[\w+\]'
+    log = re.sub(pattern, '[{log_level}]', log)
+    return log
+
+# ... existing code ...
+
 # 结果输出模块
 def output_results(parsed_results):
     # 保存为 CSV 文件
@@ -167,7 +183,14 @@ def output_results(parsed_results):
     cache_file = 'cache.pkl'
     output_file = 'output.csv'
     output_template_file = 'output_templates.csv'
-    save_results_to_csv(log_file, template_file, cache_file, output_file, output_template_file)
+
+    try:
+        # 保存为 CSV 文件
+        save_results_to_csv(log_file, template_file, cache_file, output_file, output_template_file)
+    except ValueError as e:
+        print(f"Error saving results to CSV: {e}")
+        # 可以根据需要进行其他处理，例如返回错误信息给客户端
+
     # 统计不同模板的出现频率
     frequency = {}
     for result in parsed_results:
@@ -219,8 +242,6 @@ def upload():
             'collection_speed': collection_speed
         })
     return jsonify({"error": "No log file provided"}), 400
-
-
 
 @app.route('/preprocess', methods=['GET'])
 def preprocess():

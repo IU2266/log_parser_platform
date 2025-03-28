@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <title>基于模板缓存的系统日志解析平台</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
     <div class="header">
         <h1>基于模板缓存的系统日志解析平台</h1>
@@ -30,11 +28,34 @@
             <button onclick="resetUpload()">重新上传</button>
             <div id="data-source-list"></div>
             <div id="collection-status"></div>
+            <canvas id="collection-chart"></canvas>
+            <p>采集的数据将用于 LogPPT 和 LILAC 算法的采样比较，请关注后续解析结果。</p>
             <a href="#" onclick="showModule('log-preprocessing'); preprocessLogs()">日志预处理</a>
         </div>
         <div id="log-preprocessing" class="module">
             <h2>日志预处理</h2>
             <div id="preprocessing-result"></div>
+            <table id="preprocessing-table">
+                <thead>
+                    <tr>
+                        <th>算法</th>
+                        <th>噪声去除率</th>
+                        <th>格式统一程度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>LogPPT</td>
+                        <td id="logppt-noise-removal">0%</td>
+                        <td id="logppt-format-unification">0%</td>
+                    </tr>
+                    <tr>
+                        <td>LILAC</td>
+                        <td id="lilac-noise-removal">0%</td>
+                        <td id="lilac-format-unification">0%</td>
+                    </tr>
+                </tbody>
+            </table>
             <a href="#" onclick="showModule('template-cache'); cacheTemplates()">模板缓存</a>
         </div>
         <div id="template-cache" class="module">
@@ -42,18 +63,44 @@
             <div id="cache-status"></div>
             <button onclick="clearCache()">清空缓存</button>
             <button onclick="viewCache()">查看缓存列表</button>
+            <canvas id="cache-hit-rate-chart"></canvas>
+            <canvas id="cache-update-chart"></canvas>
             <a href="#" onclick="showModule('log-parsing'); parseLogs()">日志解析</a>
         </div>
         <div id="log-parsing" class="module">
             <h2>日志解析</h2>
             <div id="parsing-progress"></div>
             <div id="parsing-result"></div>
+            <canvas id="parsing-accuracy-chart"></canvas>
+            <canvas id="parsing-speed-chart"></canvas>
+            <table id="parsing-error-table">
+                <thead>
+                    <tr>
+                        <th>算法</th>
+                        <th>错误类型</th>
+                        <th>错误数量</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>LogPPT</td>
+                        <td id="logppt-error-type">无</td>
+                        <td id="logppt-error-count">0</td>
+                    </tr>
+                    <tr>
+                        <td>LILAC</td>
+                        <td id="lilac-error-type">无</td>
+                        <td id="lilac-error-count">0</td>
+                    </tr>
+                </tbody>
+            </table>
             <a href="#" onclick="showModule('result-output'); outputResults()">结果输出</a>
         </div>
         <div id="result-output" class="module">
             <h2>结果输出</h2>
             <div id="output-report"></div>
             <div id="output-chart"></div>
+            <canvas id="result-comparison-chart"></canvas>
         </div>
     </div>
     <script src="script.js"></script>
@@ -66,12 +113,6 @@
                 document.getElementById('username-display').textContent = username;
             }
         });
-
-        function logout() {
-            localStorage.removeItem('username');
-            window.location.href = 'login.html';
-        }
     </script>
 </body>
-
 </html>

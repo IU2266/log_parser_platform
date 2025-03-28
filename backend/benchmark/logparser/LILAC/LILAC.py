@@ -14,6 +14,10 @@ from tqdm import tqdm
 
 
 
+# ... existing code ...
+
+# ... existing code ...
+
 def save_results_to_csv(log_file, template_file, cache_file, output_file, output_template_file):
     try:
         with open(template_file, 'r') as f:
@@ -35,23 +39,25 @@ def save_results_to_csv(log_file, template_file, cache_file, output_file, output
     event_templates = [''] * total_len
     templates_set = []
     print("start writing log structured csv.")
-    for (line_a, line_b) in zip(lines_a, lines_b):
-        idx_a, str_a = line_a.strip().split(' ', 1)
-        idx_b, str_b = line_b.strip().split(' ', 1)
-        idx_a, idx_b = int(idx_a), int(idx_b)
-        str_b = cache.template_list[int(str_b)]
-        if idx_a != idx_b:
-            print(f"Error in line: {idx_a} {idx_b}")
-            return
-        if str_b in templates_set:
-            template_id = templates_set.index(str_b) + 1
-        else:
-            templates_set.append(str_b)
-            template_id = len(templates_set)
-        # print(idx_a)
-        contents[idx_a] = str_a
-        event_templates[idx_a] = str_b
-        eventids[idx_a] = f"E{template_id}"
+    for idx, (line_a, line_b) in enumerate(zip(lines_a, lines_b), start=1):
+        try:
+            # 不再尝试拆分出整数索引，直接使用行内容
+            str_a = line_a.strip()
+            str_b = line_b.strip()
+            # 不再将 str_b 转换为整数，直接使用作为模板内容
+            if str_b in templates_set:
+                template_id = templates_set.index(str_b) + 1
+            else:
+                templates_set.append(str_b)
+                template_id = len(templates_set)
+            # 使用 idx 作为行索引
+            contents[idx - 1] = str_a
+            event_templates[idx - 1] = str_b
+            eventids[idx - 1] = f"E{template_id}"
+        except Exception as e:
+            print(f"处理日志行时出现错误: {e}")
+            continue
+
     print("end writing log structured csv.")
 
     df = pd.DataFrame({'LineId': lineids, 'EventId': eventids, 'Content': contents, 'EventTemplate': event_templates})
@@ -60,6 +66,8 @@ def save_results_to_csv(log_file, template_file, cache_file, output_file, output
     template_ids = [f"E{i+1}" for i in range(len(templates_set))]
     df = pd.DataFrame({'EventId': template_ids, 'EventTemplate': templates_set})
     df.to_csv(output_template_file, index=False)
+
+# ... existing code ...
 
 
 def load_regs():
