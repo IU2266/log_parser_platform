@@ -29,33 +29,13 @@
             <div id="data-source-list"></div>
             <div id="collection-status"></div>
             <canvas id="collection-chart"></canvas>
-            <p>采集的数据将用于 LogPPT 和 LILAC 算法的采样比较，请关注后续解析结果。</p>
+
             <a href="#" onclick="showModule('log-preprocessing'); preprocessLogs()">日志预处理</a>
         </div>
         <div id="log-preprocessing" class="module">
             <h2>日志预处理</h2>
             <div id="preprocessing-result"></div>
-            <table id="preprocessing-table">
-                <thead>
-                    <tr>
-                        <th>算法</th>
-                        <th>噪声去除率</th>
-                        <th>格式统一程度</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>LogPPT</td>
-                        <td id="logppt-noise-removal">0%</td>
-                        <td id="logppt-format-unification">0%</td>
-                    </tr>
-                    <tr>
-                        <td>LILAC</td>
-                        <td id="lilac-noise-removal">0%</td>
-                        <td id="lilac-format-unification">0%</td>
-                    </tr>
-                </tbody>
-            </table>
+
             <a href="#" onclick="showModule('template-cache'); cacheTemplates()">模板缓存</a>
         </div>
         <div id="template-cache" class="module">
@@ -73,27 +53,7 @@
             <div id="parsing-result"></div>
             <canvas id="parsing-accuracy-chart"></canvas>
             <canvas id="parsing-speed-chart"></canvas>
-            <table id="parsing-error-table">
-                <thead>
-                    <tr>
-                        <th>算法</th>
-                        <th>错误类型</th>
-                        <th>错误数量</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>LogPPT</td>
-                        <td id="logppt-error-type">无</td>
-                        <td id="logppt-error-count">0</td>
-                    </tr>
-                    <tr>
-                        <td>LILAC</td>
-                        <td id="lilac-error-type">无</td>
-                        <td id="lilac-error-count">0</td>
-                    </tr>
-                </tbody>
-            </table>
+
             <a href="#" onclick="showModule('result-output'); outputResults()">结果输出</a>
         </div>
         <div id="result-output" class="module">
@@ -101,6 +61,42 @@
             <div id="output-report"></div>
             <div id="output-chart"></div>
             <canvas id="result-comparison-chart"></canvas>
+            <!-- 添加实验结果表格 -->
+            <h2>各解析器在 Loghub - 2.0 数据集上的平均性能对比</h2>
+            <table id="performance-comparison">
+                <thead>
+                    <tr>
+                        <th>解析器</th>
+                        <th>GA (%)</th>
+                        <th>FGA (%)</th>
+                        <th>PA (%)</th>
+                        <th>FTA (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Drain</td>
+                        <td id="drain-ga">0</td>
+                        <td id="drain-fga">0</td>
+                        <td id="drain-pa">0</td>
+                        <td id="drain-fta">0</td>
+                    </tr>
+                    <tr>
+                        <td>LogPPT</td>
+                        <td id="logppt-ga">0</td>
+                        <td id="logppt-fga">0</td>
+                        <td id="logppt-pa">0</td>
+                        <td id="logppt-fta">0</td>
+                    </tr>
+                    <tr>
+                        <td>本平台</td>
+                        <td id="platform-ga">0</td>
+                        <td id="platform-fga">0</td>
+                        <td id="platform-pa">0</td>
+                        <td id="platform-fta">0</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     <script src="script.js"></script>
