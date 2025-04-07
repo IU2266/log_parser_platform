@@ -47,6 +47,92 @@ body {
     padding: 10px;
 }
 
+.parsing-progress-container {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.parsing-result-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#parsing-result {
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#result-output {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.output-report-container,
+.output-chart-container{
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.output-report-container h3,
+.output-chart-container h3{
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+#output-report {
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 300px; /* 设置最大高度，超过该高度将显示滚动条 */
+    overflow-y: auto; /* 垂直方向上自动显示滚动条 */
+}
+
+/* 自定义滚动条样式 */
+#output-report::-webkit-scrollbar {
+    width: 8px;
+}
+
+#output-report::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+#output-report::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+#output-report::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#output-chart {
+    font-size: 16px;
+    color: #555;
+}
+
+
+
 /* 添加表格样式 */
 table {
     width: 100%;
