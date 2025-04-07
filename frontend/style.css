@@ -1,9 +1,13 @@
+/* 全局样式 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4; /* 整体背景颜色 */
+    color: #333;
 }
 
+/* 头部样式 */
 .header {
     background-color: #333;
     color: white;
@@ -13,29 +17,51 @@ body {
     align-items: center;
 }
 
+/* 侧边栏样式 */
 .sidebar {
-    width: 200px;
-    background-color: #f4f4f4;
+    width: 20%; /* 调整侧边栏宽度以铺满左边 */
+    background-color: #eaeaea; /* 侧边栏背景颜色 */
     padding: 20px;
     float: left;
+    box-sizing: border-box;
+    min-height: calc(100vh - 60px); /* 侧边栏高度铺满页面剩余部分 */
 }
 
 .sidebar button {
     display: block;
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 15px; /* 增大按钮内边距 */
+    margin-bottom: 15px; /* 增大按钮底部外边距 */
+    background-color: #fff; /* 按钮背景颜色 */
+    border: 1px solid #ccc; /* 按钮边框 */
+    border-radius: 5px; /* 按钮圆角 */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* 按钮背景颜色过渡效果 */
 }
 
+.sidebar button:hover {
+    background-color: #f0f0f0; /* 按钮悬停背景颜色 */
+}
+
+/* 内容区域样式 */
 .content {
-    margin-left: 220px;
+    width: 80%; /* 内容区域宽度 */
+    margin-left: 20%; /* 内容区域左外边距 */
     padding: 20px;
+    box-sizing: border-box;
 }
 
+/* 模块样式 */
 .module {
     display: none;
+    background-color: #fff; /* 模块背景颜色 */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 模块阴影 */
+    margin-bottom: 20px;
 }
 
+/* 登录容器样式 */
 .login-container {
     text-align: center;
     margin-top: 100px;
@@ -45,8 +71,11 @@ body {
 .login-container button {
     margin: 10px;
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
+/* 日志解析模块进度容器样式 */
 .parsing-progress-container {
     background-color: #f4f4f4;
     border: 1px solid #ddd;
@@ -55,6 +84,7 @@ body {
     border-radius: 5px;
 }
 
+/* 日志解析模块结果容器样式 */
 .parsing-result-container {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
@@ -70,6 +100,7 @@ body {
     word-wrap: break-word;
 }
 
+/* 结果输出模块样式 */
 #result-output {
     padding: 20px;
     background-color: #f9f9f9;
@@ -78,8 +109,9 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* 输出报告和输出图表容器样式 */
 .output-report-container,
-.output-chart-container{
+.output-chart-container {
     margin-bottom: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -89,13 +121,14 @@ body {
 }
 
 .output-report-container h3,
-.output-chart-container h3{
+.output-chart-container h3 {
     margin-top: 0;
     margin-bottom: 10px;
     color: #333;
     font-size: 18px;
 }
 
+/* 输出报告样式 */
 #output-report {
     font-family: 'Courier New', Courier, monospace;
     white-space: pre-wrap;
@@ -103,8 +136,8 @@ body {
     background-color: #f4f4f4;
     padding: 10px;
     border-radius: 5px;
-    max-height: 300px; /* 设置最大高度，超过该高度将显示滚动条 */
-    overflow-y: auto; /* 垂直方向上自动显示滚动条 */
+    max-height: 300px;
+    overflow-y: auto;
 }
 
 /* 自定义滚动条样式 */
@@ -131,26 +164,28 @@ body {
     color: #555;
 }
 
+/* 模板缓存模块查看缓存列表容器样式，与日志解析模块结果容器样式保持一致 */
 .scrollable-container {
-    height: 200px; /* 设置固定高度 */
-    overflow-y: auto; /* 添加垂直滚动条 */
-    border: 1px solid #ccc; /* 添加边框 */
-    padding: 10px; /* 添加内边距 */
-    margin-top: 10px; /* 添加顶部外边距 */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 10px;
 }
 
 .scrollable-container ul {
-    list-style-type: none; /* 去除列表默认样式 */
+    list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
 .scrollable-container li {
-    margin-bottom: 5px; /* 添加列表项底部外边距 */
+    margin-bottom: 5px;
 }
 
-
-/* 添加表格样式 */
+/* 表格样式 */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -165,4 +200,4 @@ th, td {
 
 th {
     background-color: #f2f2f2;
-}
+}    
