@@ -20,6 +20,9 @@ CACHE_FILE_PATH = 'cache.pkl'
 OUTPUT_FILE_PATH = 'output.csv'
 OUTPUT_TEMPLATE_FILE_PATH = 'output_templates.csv'
 
+# 全局缓存对象
+global_cache = ParsingCache()
+
 # 获取本地 IP 地址
 def get_local_ip():
     try:
@@ -120,9 +123,6 @@ def cache_templates(log_data, cache):
         return cache, 0, 0
 
 # 日志解析模块
-# ... existing code ...
-
-# 日志解析模块
 def parse_logs(log_data, cache):
     start_time = time.time()
     parsed_count = 0
@@ -171,8 +171,6 @@ def extract_template(log):
     pattern = r'\[\w+\]'
     log = re.sub(pattern, '[{log_level}]', log)
     return log
-
-# ... existing code ...
 
 # 结果输出模块
 def output_results(parsed_results):
@@ -227,7 +225,6 @@ def calculate_performance():
         }
     }
     return performance
-
 
 # 添加根路径路由
 @app.route('/')
@@ -289,8 +286,8 @@ def cache():
     try:
         with open(LOG_FILE_PATH, 'r') as f:
             log_data = f.readlines()
-        cache = ParsingCache()
-        cache, template_count, cache_hit_rate = cache_templates(log_data, cache)
+        global global_cache
+        global_cache, template_count, cache_hit_rate = cache_templates(log_data, global_cache)
         return jsonify({
             'template_count': template_count,
             'cache_hit_rate': cache_hit_rate
@@ -302,8 +299,8 @@ def cache():
 def clear_cache():
     try:
         # 实际的清空缓存逻辑
-        cache = ParsingCache()
-        cache.clear()
+        global global_cache
+        global_cache.clear()
         return jsonify({
             'message': '缓存已清空'
         })
@@ -314,9 +311,9 @@ def clear_cache():
 @app.route('/view-cache', methods=['GET'])
 def view_cache():
     try:
-        # 实际的查看缓存逻辑
-        cache = ParsingCache()
-        templates = cache.get_templates()
+        # 返回全局缓存中的模板列表
+        global global_cache
+        templates = global_cache.get_templates()
         return jsonify({
             'templates': templates
         })
@@ -328,22 +325,20 @@ def view_cache():
 def parse():
     with open('log.txt', 'r') as f:
         log_data = f.readlines()
-    cache = ParsingCache()
-    # 修改为 deepseek-chat
-    parsed_count, parsing_speed, parsed_results = parse_logs(log_data, cache)
+    global global_cache
+    parsed_count, parsing_speed, parsed_results = parse_logs(log_data, global_cache)
     return jsonify({
         'parsed_count': parsed_count,
         'parsing_speed': parsing_speed,
         'results': parsed_results
     })
 
-
 @app.route('/output', methods=['GET'])
 def output():
     with open('log.txt', 'r') as f:
         log_data = f.readlines()
-    cache = ParsingCache()
-    parsed_count, parsing_speed, parsed_results = parse_logs(log_data, cache)
+    global global_cache
+    parsed_count, parsing_speed, parsed_results = parse_logs(log_data, global_cache)
     frequency, accuracy = output_results(parsed_results)
 
     # 计算各解析器在 Loghub - 2.0 数据集上的平均性能指标
@@ -354,7 +349,6 @@ def output():
         'accuracy': accuracy,
         'performance': performance  # 将性能指标添加到返回的数据中
     })
-
 
 # 404 错误处理
 @app.errorhandler(404)

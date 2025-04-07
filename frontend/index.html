@@ -21,6 +21,7 @@
         <button onclick="showModule('result-output')">结果输出</button>
     </div>
     <div class="content">
+        <!-- 日志采集模块 -->
         <div id="log-collection" class="module">
             <h2>日志采集</h2>
             <input type="file" id="log-file" accept=".log">
@@ -32,46 +33,54 @@
 
             <a href="#" onclick="showModule('log-preprocessing'); preprocessLogs()">日志预处理</a>
         </div>
+        <!-- 日志预处理模块 -->
         <div id="log-preprocessing" class="module">
             <h2>日志预处理</h2>
             <div id="preprocessing-result"></div>
 
             <a href="#" onclick="showModule('template-cache'); cacheTemplates()">模板缓存</a>
         </div>
+        <!-- 模板缓存模块 -->
         <div id="template-cache" class="module">
             <h2>模板缓存</h2>
             <div id="cache-status"></div>
             <button onclick="clearCache()">清空缓存</button>
             <button onclick="viewCache()">查看缓存列表</button>
+            <!-- 添加具有滚动条的容器 -->
+            <div id="cache-list-container" class="scrollable-container">
+                <ul id="cache-list"></ul>
+            </div>
             <canvas id="cache-hit-rate-chart"></canvas>
             <canvas id="cache-update-chart"></canvas>
             <a href="#" onclick="showModule('log-parsing'); parseLogs()">日志解析</a>
         </div>
 
+        <!-- 日志解析模块 -->
         <div id="log-parsing" class="module">
             <h2>日志解析</h2>
-    <div class="parsing-progress-container">
-        <div id="parsing-progress"></div>
-    </div>
-    <div class="parsing-result-container">
-        <pre id="parsing-result"></pre>
-    </div>
-    <canvas id="parsing-accuracy-chart"></canvas>
-    <canvas id="parsing-speed-chart"></canvas>
+            <div class="parsing-progress-container">
+                <div id="parsing-progress"></div>
+            </div>
+            <div class="parsing-result-container">
+                <pre id="parsing-result"></pre>
+            </div>
+            <canvas id="parsing-accuracy-chart"></canvas>
+            <canvas id="parsing-speed-chart"></canvas>
 
             <a href="#" onclick="showModule('result-output'); outputResults()">结果输出</a>
         </div>
 
+        <!-- 结果输出模块 -->
         <div id="result-output" class="module">
             <h2>结果输出</h2>
-             <div class="output-report-container">
-        <h3>输出报告</h3>
-        <pre id="output-report"></pre>
-    </div>
-    <div class="output-chart-container">
-        <h3>输出图表</h3>
-        <p id="output-chart"></p>
-    </div>
+            <div class="output-report-container">
+                <h3>输出报告</h3>
+                <pre id="output-report"></pre>
+            </div>
+            <div class="output-chart-container">
+                <h3>输出图表</h3>
+                <p id="output-chart"></p>
+            </div>
             <canvas id="result-comparison-chart"></canvas>
             <!-- 添加实验结果表格 -->
             <h2>各解析器在 Loghub - 2.0 数据集上的平均性能对比</h2>

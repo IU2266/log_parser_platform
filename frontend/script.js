@@ -119,12 +119,17 @@ function clearCache() {
 
 function viewCache() {
     fetch('/view-cache')
-    .then(response => response.json())
-    .then(data => {
-        alert(data.templates.join('\n'));
+   .then(response => response.json())
+   .then(data => {
+        const cacheList = document.getElementById('cache-list');
+        cacheList.innerHTML = ''; // 清空原有内容
+        data.templates.forEach(template => {
+            const listItem = document.createElement('li');
+            listItem.textContent = template;
+            cacheList.appendChild(listItem);
+        });
     });
 }
-
 function parseLogs() {
     fetch('/parse')
     .then(response => response.json())
